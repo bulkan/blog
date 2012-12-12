@@ -1,0 +1,12 @@
+Jinja2==2.6
+Pygments==1.5
+Unidecode==0.04.10
+argparse==1.2.1
+blinker==1.2
+docutils==0.9.1
+feedgenerator==1.2.1
+ipython==0.13.1
+lk==1.1
+pelican==3.1.1
+pytz==2012h
+wsgiref==0.1.2
