@@ -1,4 +1,5 @@
 Title: {{ title }}
+Status: {% if status %} draft {% endif %}
 Date: {{ date }}
 Tags: {{ tags }}
 Category: {{ category }}
