@@ -1,0 +1,1752 @@
+[
+  {
+    "pk": 2, 
+    "model": "blog.category", 
+    "fields": {
+      "name": "Ney"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "blog.category", 
+    "fields": {
+      "name": "Front Page"
+    }
+  }, 
+  {
+    "pk": 126, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<p>Out of all the parts of Django I struggle with forms, especially when you want to customize it. Did you ever try to change the rendering of a django.forms.ChoiceField that uses a RadioSelect as it's widget ? If you have then you know the pain.<\/p>\n<h3>Diagram<\/h3>\n<p>Here is a diagram to show the hierarchy of how forms, fields and widget fit together. <\/p>\n<img src=\"http:\/\/i.imgur.com\/8Gire.jpg\" alt=\"I used a Noodlers Ink Fountain Pen and Lamy Turqoise Ink\" width=\"350px\"\/>\n\n<p>in code this looks like the following example; <\/p>\n<pre><code>from django.forms import Form, CharField, TextInput\n\nclass ContactForm(django.forms.Form):\n      name = CharField(widget=TextInput(attrs={\"value\": \"Enter text\"}))\n<\/code><\/pre>", 
+      "category": 1, 
+      "updated": "2012-12-07 15:43:06", 
+      "tags": "django python forms", 
+      "title": "Django forms", 
+      "body_override": 0, 
+      "date_published": "2012-12-06 14:56:12", 
+      "draft": 1, 
+      "body_markdown": "Out of all the parts of Django I struggle with forms, especially when you want to customize it. Did you ever try to change the rendering of a django.forms.ChoiceField that uses a RadioSelect as it's widget ? If you have then you know the pain.\r\n\r\n### Diagram \r\n\r\nHere is a diagram to show the hierarchy of how forms, fields and widget fit together. \r\n\r\n<img src=\"http:\/\/i.imgur.com\/8Gire.jpg\" alt=\"I used a Noodlers Ink Fountain Pen and Lamy Turqoise Ink\" width=\"350px\"\/>\r\n\r\n\r\nin code this looks like the following example; \r\n\r\n\r\n    from django.forms import Form, CharField, TextInput\r\n\r\n    class ContactForm(django.forms.Form):\r\n          name = CharField(widget=TextInput(attrs={\"value\": \"Enter text\"}))\r\n\r\n\r\n\r\n\r\n        \r\n", 
+      "slug": "Django_forms"
+    }
+  }, 
+  {
+    "pk": 125, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "", 
+      "category": 1, 
+      "updated": "2012-12-06 14:17:55", 
+      "tags": "python django multiwidget forms", 
+      "title": "How To Create a Django MultiWidget", 
+      "body_override": 0, 
+      "date_published": "2012-12-06 14:16:40", 
+      "draft": 1, 
+      "body_markdown": "", 
+      "slug": "How_To_Create_Django_MultiWidget"
+    }
+  }, 
+  {
+    "pk": 113, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<p>If you are not familiar with Robot Framework (RF) here is a quote from the homepage;<\/p>\n<blockquote>\n<p>Robot Framework is a Python-based, extensible keyword-driven test automation framework for end-to-end acceptance testing and acceptance-test-driven development (ATDD). It can be used for testing distributed, heterogeneous applications, where verification requires touching several technologies and interfaces.<\/p>\n<\/blockquote>\n<p>Robot Framework comes with a great set of built-in keywords that will help you get started in writing test cases for all sort programs. You have Selenium Library to test web applications. There is also keyword libraries for Sikuli and AutoIt for desktop application testing. This post will show give a quick example of how to create your own custom keyword library using Python.<\/p>\n<p>A keyword library is just a Python file containing a class with the same name as the file. For example the OperatingSystem that comes with RF is in a file called OperatingSystem.py and contains a class with the same name.<br \/>\n<\/p>\n<p><a href=\"http:\/\/robotframework.googlecode.com\/svn\/tags\/robotframework-2.5.6\/doc\/userguide\/RobotFrameworkUserGuide.html#creating-test-libraries\">See here for more information<\/a><\/p>", 
+      "category": 1, 
+      "updated": "2011-08-16 15:43:52", 
+      "tags": "python robotframework", 
+      "title": "Creating a Robot Framework Test Library", 
+      "body_override": 0, 
+      "date_published": "2011-08-16 15:01:35", 
+      "draft": 1, 
+      "body_markdown": "If you are not familiar with Robot Framework (RF) here is a quote from the homepage;\r\n\r\n> Robot Framework is a Python-based, extensible keyword-driven test automation framework for end-to-end acceptance testing and acceptance-test-driven development (ATDD). It can be used for testing distributed, heterogeneous applications, where verification requires touching several technologies and interfaces.\r\n\r\nRobot Framework comes with a great set of built-in keywords that will help you get started in writing test cases for all sort programs. You have Selenium Library to test web applications. There is also keyword libraries for Sikuli and AutoIt for desktop application testing. This post will show give a quick example of how to create your own custom keyword library using Python.\r\n\r\nA keyword library is just a Python file containing a class with the same name as the file. For example the OperatingSystem that comes with RF is in a file called OperatingSystem.py and contains a class with the same name.  \r\n\r\n\r\n[See here for more information](http:\/\/robotframework.googlecode.com\/svn\/tags\/robotframework-2.5.6\/doc\/userguide\/RobotFrameworkUserGuide.html#creating-test-libraries)\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n", 
+      "slug": "creating_test_library_robot_framework"
+    }
+  }, 
+  {
+    "pk": 124, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<p>Here is a Python script that will export out test cases in a <em>folder<\/em> from Quality Center into a CSV file. <\/p>\n<p>The following script will not handle Attachments. Will work on that later when I have time. <\/p>\n<script src=\"https:\/\/gist.github.com\/963655.js?file=qc.py\"><\/script>", 
+      "category": 1, 
+      "updated": "2011-05-24 10:44:41", 
+      "tags": "python, quality center", 
+      "title": "Export Test Cases From Quality Center Using Python", 
+      "body_override": 0, 
+      "date_published": "2011-05-10 09:50:02", 
+      "draft": 0, 
+      "body_markdown": "Here is a Python script that will export out test cases in a _folder_ from Quality Center into a CSV file. \r\n\r\nThe following script will not handle Attachments. Will work on that later when I have time. \r\n\r\n<script src=\"https:\/\/gist.github.com\/963655.js?file=qc.py\"><\/script>\r\n", 
+      "slug": "export_test_cases_quality_center_using_python"
+    }
+  }, 
+  {
+    "pk": 123, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<ul>\n <li>\n     Download WebDriver (Selenium 2)\n <\/li>\n\n <li>\n     Add jars to class path\n <\/li>\n\n <li>\n     import classes\n <\/li>\n\n <li>\n     create rspec to test google search ?\n <\/li>\n<\/ul>", 
+      "category": 1, 
+      "updated": "2010-10-20 18:15:20", 
+      "tags": "jruby webdriver rspec", 
+      "title": "Using WebDriver with JRuby and RSpec ", 
+      "body_override": 0, 
+      "date_published": "2010-10-20 11:04:35", 
+      "draft": 1, 
+      "body_markdown": "* Download WebDriver (Selenium 2)\r\n* Add jars to class path\r\n* import classes\r\n* create rspec to test google search ?\r\n", 
+      "slug": "using_webdriver_with_jruby_rspec"
+    }
+  }, 
+  {
+    "pk": 119, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<h2>Background<\/h2>\n<p><em>questions.com is currently down. My slicehost VPS has been blacklisted by Twitter because I misread the documentation for tweetstream<\/em><\/p>\n<p><em>all the code is available at https:\/\/github.com\/bulkan\/queshuns<\/em><\/p>\n<p>Since reading <a href=\"http:\/\/simonwillison.net\/2009\/Oct\/22\/redis\/\">this post by Simon Willison<\/a> \nI've been interested in <a href=\"http:\/\/code.google.com\/p\/redis\">Redis<\/a> and have been following \nits development. After having a quick play around with Redis I've been looking\nfor a project to work on that uses Redis as a data store. I then came across this <a href=\"http:\/\/www.digitalhobbit.com\/2009\/11\/08\/building-a-twitter-filter-with-sinatra-redis-and-tweetstream\/\">blog post<\/a> by Mirko Froehlich, in which he shows the steps and code\nto create a Twitter filter using Redis as the datastore and Sinatra as the web app. \nThis blog post will explain how I created <a href=\"http:\/\/queshuns.com\">queshuns.com<\/a>\nin Python and the various listed tools below.<\/p>\n<h2>Tools<\/h2>\n<ul>\n<li><a href=\"http:\/\/pypi.python.org\/pypi\/tweetstream\">tweetstream<\/a> - provides the interface to the Twitter Streaming API<\/li>\n<li><a href=\"http:\/\/www.cherrypy.org\/\">CherryPy<\/a> - used for handling the web app side, no need for an ORM<\/li>\n<li><a href=\"http:\/\/jinja.pocoo.org\/2\/\">Jinja2<\/a> - HTML templating<\/li>\n<li><a href=\"http:\/\/jquery.com\/\">jQuery<\/a> - for doing the AJAXy stuff and visual effects<\/li>\n<li><a href=\"http:\/\/github.com\/andymccurdy\/redis-py\">redis-py<\/a> - Python client for Redis<\/li>\n<li><a href=\"http:\/\/code.google.com\/p\/redis\/\">Redis<\/a> - the \"database\", look here for the documenation on how to install it<br \/>\n<\/li>\n<\/ul>\n<br>\n\n<h2>Retrieving tweets<\/h2>\n<p>The first thing we need to is retrieve tweets from the Twitter Streaming API. Thankfully there \nis already a Python module that provides a nice interface called <em>tweetstream<\/em>. For more\ninformation about tweetstream look at the Cheeseshop page for its usage guide. <br \/>\n<\/p>\n<p>Here is the code for the <em>filter_daemon.py<\/em>, which when executed as a script from the command-line\nwill start streaming tweets from Twitter that contain the words \"why\", \"how\", \"when\", \"lol\", \"feeling\"\nand the tweet must end in a question mark.<br \/>\n<\/p>\n<script src=\"http:\/\/gist.github.com\/263158.js?file=filter_daemon.py\"><\/script>\n\n<p>In this script I define a class, <em>FilterRedis<\/em> which I use to abstract some methods that will\nbe used by both <em>filter_daemon.py<\/em> and later by the web app itself.<br \/>\n<\/p>\n<p>The important part of this class is the <em>push<\/em> method, which will push <em>data<\/em> onto the tail of a Redis\nlist. It also keeps a count of items and when it goes over the threshold of 100 items,\nit will trim starting from the head and the first 20th elements (or the oldest tweets).<\/p>\n<p>The <em>schema<\/em> for the tweet data that gets pushed into the Redis list is a dictionary \nof values that gets jsonified (we can probably use then new Redis hash type);<\/p>\n<blockquote>\n<p>{ 'id':\"the tweet id\",\n  'text':\"text of the tweet\",\n  'username':\",\n  'userid':\"userid\",\n  'name': \"name of the twitter user\",\n  'profile_image_url': \"url to profile image\",\n  'received_at':time.time() }<br \/>\n<\/p>\n<\/blockquote>\n<p>'received_at' is important because we will be using that to find <em>new<\/em> tweets to \ndisplay in the web app.<\/p>\n<h2>Web App<\/h2>\n<p>I picked CherryPy to write the web application, because I wanted to learn it for the future\nwhen I need to write a small web frontends that dont need an ORM. Also, CherryPy has a built-in\nHTTP server that is <em>sufficient<\/em> for websites with small loads, which I initially used to run \n<a href=\"http:\/\/queshuns.com\">queshuns.com<\/a> it is now being run with mod_python. For templating, I used Jinja2 because its similair \nin syntax to the Django templating language that I am familiar with. <br \/>\n<\/p>\n<p>The following is the code for <em>questions_app.py<\/em> which is the CherryPy application.<\/p>\n<script src=\"http:\/\/gist.github.com\/263167.js?file=questions_app.py\"><\/script>\n\n<p>The <em>index<\/em> (method) of the web app will get the all the tweets from Redis. The other exposed<br \/>\nfunction is <em>latest<\/em> which accepts an argument <em>since<\/em> which is used to get\ntweets that are newer (<em>since<\/em> is the latest tweets received_at value). <em>nt<\/em> is\nused to create a different URL each time so that IE doesn't cache it. This method returns \nJSON at. <\/p>\n<p>The templates are located in a directory called <em>templates<\/em> :) <\/p>\n<p>Here is the template for the root\/index of the site; index.jinja<br \/>\n<\/p>\n<script src=\"http:\/\/gist.github.com\/263172.js?file=gistfile1.htm\"><\/script>\n\n<p>This template will be used to render a list of tweets and also assign the first\ntweets <em>recieved_at<\/em> value to a variable on the <em>window<\/em> object. This is used by \nthe <em>refreshTweets<\/em> function which will pass it on to \/latest in a GET parameter. \n<em>refreshTweets<\/em> will try to get new tweets and prepend it to the <em>content<\/em> div\nand then slide the <em>latest<\/em> tweets. This is the template used to render the HTML\nfor the latest tweets;<br \/>\n<\/p>\n<script src=\"http:\/\/gist.github.com\/263175.js?file=gistfile1.htm\"><\/script>\n\n<p>I explicitly set the the <em>latest<\/em> div to \"display: none\" so that I can animate it.<\/p>\n<p>Now we should be able to run questions_daemon.py to start retrieving tweets then start\nquestions_app.py to look at the web app. On your browser go to http:\/\/localhost:8080\/ \nand if everything went correctly you should see a list of tweets that update every 10 seconds.<\/p>\n<p>Thats it. Hope this was helpful.<\/p>", 
+      "category": 1, 
+      "updated": "2011-11-19 22:50:16", 
+      "tags": "python redis cherrypy twitter", 
+      "title": "Building a Twitter Filter With CherryPy, Redis, and tweetstream", 
+      "body_override": 0, 
+      "date_published": "2010-03-18 23:04:43", 
+      "draft": 0, 
+      "body_markdown": "## Background  \r\n\r\n_questions.com is currently down. My slicehost VPS has been blacklisted by Twitter because I misread the documentation for tweetstream_\r\n\r\n_all the code is available at https:\/\/github.com\/bulkan\/queshuns_\r\n \r\nSince reading [this post by Simon Willison](http:\/\/simonwillison.net\/2009\/Oct\/22\/redis\/) \r\nI've been interested in [Redis](http:\/\/code.google.com\/p\/redis) and have been following \r\nits development. After having a quick play around with Redis I've been looking\r\nfor a project to work on that uses Redis as a data store. I then came across this [blog post](http:\/\/www.digitalhobbit.com\/2009\/11\/08\/building-a-twitter-filter-with-sinatra-redis-and-tweetstream\/) by Mirko Froehlich, in which he shows the steps and code\r\nto create a Twitter filter using Redis as the datastore and Sinatra as the web app. \r\nThis blog post will explain how I created [queshuns.com](http:\/\/queshuns.com)\r\nin Python and the various listed tools below.\r\n\r\n## Tools  \r\n  \r\n  \r\n* [tweetstream](http:\/\/pypi.python.org\/pypi\/tweetstream) - provides the interface to the Twitter Streaming API\r\n* [CherryPy](http:\/\/www.cherrypy.org\/) - used for handling the web app side, no need for an ORM\r\n* [Jinja2](http:\/\/jinja.pocoo.org\/2\/) - HTML templating\r\n* [jQuery](http:\/\/jquery.com\/) - for doing the AJAXy stuff and visual effects\r\n* [redis-py](http:\/\/github.com\/andymccurdy\/redis-py) - Python client for Redis\r\n* [Redis](http:\/\/code.google.com\/p\/redis\/) - the \"database\", look here for the documenation on how to install it  \r\n  \r\n<br>\r\n## Retrieving tweets    \r\n  \r\n  \r\nThe first thing we need to is retrieve tweets from the Twitter Streaming API. Thankfully there \r\nis already a Python module that provides a nice interface called *tweetstream*. For more\r\ninformation about tweetstream look at the Cheeseshop page for its usage guide.   \r\n\r\nHere is the code for the *filter_daemon.py*, which when executed as a script from the command-line\r\nwill start streaming tweets from Twitter that contain the words \"why\", \"how\", \"when\", \"lol\", \"feeling\"\r\nand the tweet must end in a question mark.  \r\n  \r\n<script src=\"http:\/\/gist.github.com\/263158.js?file=filter_daemon.py\"><\/script>  \r\n  \r\nIn this script I define a class, _FilterRedis_ which I use to abstract some methods that will\r\nbe used by both *filter_daemon.py* and later by the web app itself.  \r\n  \r\nThe important part of this class is the _push_ method, which will push *data* onto the tail of a Redis\r\nlist. It also keeps a count of items and when it goes over the threshold of 100 items,\r\nit will trim starting from the head and the first 20th elements (or the oldest tweets).\r\n\r\nThe *schema* for the tweet data that gets pushed into the Redis list is a dictionary \r\nof values that gets jsonified (we can probably use then new Redis hash type);\r\n  \r\n> { 'id':\"the tweet id\",\r\n>   'text':\"text of the tweet\",\r\n>   'username':\",\r\n>   'userid':\"userid\",\r\n>   'name': \"name of the twitter user\",\r\n>   'profile_image_url': \"url to profile image\",\r\n>   'received_at':time.time() }  \r\n  \r\n'received_at' is important because we will be using that to find *new* tweets to \r\ndisplay in the web app.\r\n  \r\n## Web App     \r\n   \r\nI picked CherryPy to write the web application, because I wanted to learn it for the future\r\nwhen I need to write a small web frontends that dont need an ORM. Also, CherryPy has a built-in\r\nHTTP server that is *sufficient* for websites with small loads, which I initially used to run \r\n[queshuns.com](http:\/\/queshuns.com) it is now being run with mod_python. For templating, I used Jinja2 because its similair \r\nin syntax to the Django templating language that I am familiar with.   \r\n  \r\nThe following is the code for *questions_app.py* which is the CherryPy application.\r\n  \r\n<script src=\"http:\/\/gist.github.com\/263167.js?file=questions_app.py\"><\/script>  \r\n  \r\nThe _index_ (method) of the web app will get the all the tweets from Redis. The other exposed  \r\nfunction is _latest_ which accepts an argument *since* which is used to get\r\ntweets that are newer (_since_ is the latest tweets received_at value). *nt* is\r\nused to create a different URL each time so that IE doesn't cache it. This method returns \r\nJSON at. \r\n\r\nThe templates are located in a directory called _templates_ :) \r\n  \r\nHere is the template for the root\/index of the site; index.jinja  \r\n  \r\n<script src=\"http:\/\/gist.github.com\/263172.js?file=gistfile1.htm\"><\/script>  \r\n  \r\nThis template will be used to render a list of tweets and also assign the first\r\ntweets *recieved_at* value to a variable on the *window* object. This is used by \r\nthe *refreshTweets* function which will pass it on to \/latest in a GET parameter. \r\n*refreshTweets* will try to get new tweets and prepend it to the *content* div\r\nand then slide the *latest* tweets. This is the template used to render the HTML\r\nfor the latest tweets;  \r\n  \r\n<script src=\"http:\/\/gist.github.com\/263175.js?file=gistfile1.htm\"><\/script>  \r\n\r\nI explicitly set the the *latest* div to \"display: none\" so that I can animate it.\r\n\r\nNow we should be able to run questions_daemon.py to start retrieving tweets then start\r\nquestions_app.py to look at the web app. On your browser go to http:\/\/localhost:8080\/ \r\nand if everything went correctly you should see a list of tweets that update every 10 seconds.\r\n\r\nThats it. Hope this was helpful.", 
+      "slug": "building_twitter_filter_cherrypy_redis_tweetstream"
+    }
+  }, 
+  {
+    "pk": 122, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<p><object width=\"425\" height=\"344\"><param name=\"movie\" value=\"http:\/\/www.youtube.com\/v\/Wbx4e1XpCMQ&hl=en_US&fs=1&\"><\/param><param name=\"allowFullScreen\" value=\"true\"><\/param><param name=\"allowscriptaccess\" value=\"always\"><\/param><embed src=\"http:\/\/www.youtube.com\/v\/Wbx4e1XpCMQ&hl=en_US&fs=1&\" type=\"application\/x-shockwave-flash\" allowscriptaccess=\"always\" allowfullscreen=\"true\" width=\"425\" height=\"344\"><\/embed><\/object>\n<\/p>", 
+      "category": 2, 
+      "updated": "2010-02-09 09:05:44", 
+      "tags": "ney muhayyer", 
+      "title": "Muhayyer Taksim & Tekke Semaisi", 
+      "body_override": 0, 
+      "date_published": "2010-02-08 09:04:47", 
+      "draft": 1, 
+      "body_markdown": "<object width=\"425\" height=\"344\"><param name=\"movie\" value=\"http:\/\/www.youtube.com\/v\/Wbx4e1XpCMQ&hl=en_US&fs=1&\"><\/param><param name=\"allowFullScreen\" value=\"true\"><\/param><param name=\"allowscriptaccess\" value=\"always\"><\/param><embed src=\"http:\/\/www.youtube.com\/v\/Wbx4e1XpCMQ&hl=en_US&fs=1&\" type=\"application\/x-shockwave-flash\" allowscriptaccess=\"always\" allowfullscreen=\"true\" width=\"425\" height=\"344\"><\/embed><\/object>", 
+      "slug": "muhayyer_taksim_tekke_semai"
+    }
+  }, 
+  {
+    "pk": 121, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<p><object width=\"425\" height=\"344\"><param name=\"movie\" value=\"http:\/\/www.youtube.com\/v\/p97qTE9i6bA&hl=en_US&fs=1&\"><\/param><param name=\"allowFullScreen\" value=\"true\"><\/param><param name=\"allowscriptaccess\" value=\"always\"><\/param><embed src=\"http:\/\/www.youtube.com\/v\/p97qTE9i6bA&hl=en_US&fs=1&\" type=\"application\/x-shockwave-flash\" allowscriptaccess=\"always\" allowfullscreen=\"true\" width=\"425\" height=\"344\"><\/embed><\/object>\n<\/p>", 
+      "category": 2, 
+      "updated": "2009-12-18 22:44:08", 
+      "tags": "taksim", 
+      "title": "Ba\u015f Taks\u0131m - Bulkan Evcimen - (736 \u015eeb-i Arus - Avusturalya) ", 
+      "body_override": 0, 
+      "date_published": "2009-12-18 22:43:54", 
+      "draft": 0, 
+      "body_markdown": "<object width=\"425\" height=\"344\"><param name=\"movie\" value=\"http:\/\/www.youtube.com\/v\/p97qTE9i6bA&hl=en_US&fs=1&\"><\/param><param name=\"allowFullScreen\" value=\"true\"><\/param><param name=\"allowscriptaccess\" value=\"always\"><\/param><embed src=\"http:\/\/www.youtube.com\/v\/p97qTE9i6bA&hl=en_US&fs=1&\" type=\"application\/x-shockwave-flash\" allowscriptaccess=\"always\" allowfullscreen=\"true\" width=\"425\" height=\"344\"><\/embed><\/object>", 
+      "slug": "bas_taksim_bulkan_evcimen_736_sebi_arus"
+    }
+  }, 
+  {
+    "pk": 120, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<p>I've been recently playing around with jQuery and some AJAXy stuff using jquery.get to request a piece of HTML. Like any sane web developer I use Firefox and Firebug and everything worked as expected. But then I decided to try Internet Explorer 7 (yeah i'm crazy like that). Well the AJAX call didn't work. Actuallyjquery.get was executed but the callback function didn't get <em>ehh<\/em> called. I spent quite a few hours googling I didn't find anything directly to solve my problem.<br \/>\n<a href=\"http:\/\/groups.google.com\/group\/jquery-en\/browse_thread\/thread\/a020397793239c51\/01c74f0b75dd3f49?lnk=gst&amp;q=get+ie7+callback#01c74f0b75dd3f49\">This Google Group post<\/a> kind of helped. \n<\/p>\n<p>I read on the <a href=\"http:\/\/docs.jquery.com\/Ajax\/jQuery.get#urldatacallbacktype\">jQuery docs<\/a> that the callback to get will only execute if data is loaded. Don't know why data wasn't being loaded when IE7 issued the get (maybe because of <a href=\"http:\/\/groups.google.com\/group\/jquery-en\/browse_thread\/thread\/a40b6fb572232e3b\/662932a169dd4e14?lnk=gst&amp;q=%24.ajax%28%29+firefox+ie7#662932a169dd4e14\">caching<\/a> ). So I decided to change the back end code to return JSON instead and use jquery.getJSON. With this change IE7 getJSON successfully got data back from the server. \n<\/p>", 
+      "category": 1, 
+      "updated": "2009-12-15 22:13:55", 
+      "tags": "jquery ie7", 
+      "title": "jQuery.get and IE7", 
+      "body_override": 0, 
+      "date_published": "2009-12-15 21:10:38", 
+      "draft": 0, 
+      "body_markdown": "I've been recently playing around with jQuery and some AJAXy stuff using jquery.get to request a piece of HTML. Like any sane web developer I use Firefox and Firebug and everything worked as expected. But then I decided to try Internet Explorer 7 (yeah i'm crazy like that). Well the AJAX call didn't work. Actuallyjquery.get was executed but the callback function didn't get *ehh* called. I spent quite a few hours googling I didn't find anything directly to solve my problem.  [This Google Group post](http:\/\/groups.google.com\/group\/jquery-en\/browse_thread\/thread\/a020397793239c51\/01c74f0b75dd3f49?lnk=gst&q=get+ie7+callback#01c74f0b75dd3f49) kind of helped. \r\n\r\nI read on the [jQuery docs](http:\/\/docs.jquery.com\/Ajax\/jQuery.get#urldatacallbacktype) that the callback to get will only execute if data is loaded. Don't know why data wasn't being loaded when IE7 issued the get (maybe because of [caching](http:\/\/groups.google.com\/group\/jquery-en\/browse_thread\/thread\/a40b6fb572232e3b\/662932a169dd4e14?lnk=gst&q=%24.ajax%28%29+firefox+ie7#662932a169dd4e14) ). So I decided to change the back end code to return JSON instead and use jquery.getJSON. With this change IE7 getJSON successfully got data back from the server. \r\n\r\n\r\n", 
+      "slug": "jquery_get_ie7"
+    }
+  }, 
+  {
+    "pk": 115, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<p>Install Shield has this nifty feature of being able to install packages in silent mode. This means that you can run <em>setup.exe<\/em> from the command prompt and it will install in the background with no user interaction. This is very useful if you want to test your installation. If you use some sort of continuous integration system (and you should if you don't) then you could download the latest installer do a silent install and run some tests against the program that is installed, then silent uninstall it all automat(g)ically.\n<\/p>\n<p>To be able to do silent installs\/un-installs you first need to record a response file that contains all the choices for the install shield dialogs.\n<\/p>\n<p>To record the response file;\n<\/p>\n<blockquote><p>setup.exe -r\n<\/p>\n<\/blockquote><p>This will be like a normal install done manually. Follow it through like you would in any normal installation. After the installer exits, the response file should be at <code>C:\\Windows\\setup.iss<\/code>\n<\/p>\n<p>Next time around you can do a silent install by running\n<\/p>\n<blockquote><p>setup.exe -s -f1<path to setup.iss>\n<\/p>\n<\/blockquote><p>I'm paranoid so I use the absolute path to the response file. There is no space between \"-f1\" and the path to setup.iss. Note that, when you run the \n   above command to silent install, the command will seem to exit immediately but if you check Task Manager you should see setup.exe (possibly 2 of them) running. \n<\/p>\n<p>Silent un-installation is pretty much the same. You need to create a response file first. To do this run the following;\n<\/p>\n<blockquote><p>setup.exe -r -uninst -removeonly\n<\/p>\n<\/blockquote><p>This will again create a <em>setup.iss<\/em> file in <code>C:\\Windows<\/code> I usually rename the uninstall response file as <em>uninst.iss<\/em>. Now you can do silent uninstallation by\n   running;\n<\/p>\n<blockquote><p>setup.exe -s -uninst -removeonly -f1<path to response file>\n<\/p>\n<\/blockquote><p>Some installers might install the program under different GUID's each time you install it. If this is the case I have found that the above command for uninstallation doesn't work,\n   as Install Shield doesn't know <em>what<\/em> to uninstall. The solution is to work out the <em>UninstallString<\/em> from the Registry (which is what Windows uses to uninstall the program via Add\/Remove Software).\n<\/p>\n<p>Here is a python script that uses the registry module (http:\/\/pypi.python.org\/pypi\/registry\/) to find out the full UninstallString. You first need to manually find this string \n   in your registry by looking under <code>HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall<\/code> so that you can pass into this function a unique\n   string that is present in the UninstallString of your program\n<\/p>\n<p>EDIT: the following script is quite ugly actually. I have a new version in which I use regobj it makes things easier.\n<\/p>\n<p><script src=\"http:\/\/gist.github.com\/245264.js?file=uninstall.py\"><\/script>\n<\/p>", 
+      "category": 1, 
+      "updated": "2010-02-09 09:14:46", 
+      "tags": "installshield", 
+      "title": "Install Shield Silent Installs", 
+      "body_override": 0, 
+      "date_published": "2009-11-30 17:30:44", 
+      "draft": 0, 
+      "body_markdown": "Install Shield has this nifty feature of being able to install packages in silent mode. This means that you can run _setup.exe_ from the command prompt and it will install in the background with no user interaction. This is very useful if you want to test your installation. If you use some sort of continuous integration system (and you should if you don't) then you could download the latest installer do a silent install and run some tests against the program that is installed, then silent uninstall it all automat(g)ically.\r\n\r\nTo be able to do silent installs\/un-installs you first need to record a response file that contains all the choices for the install shield dialogs.\r\n\r\nTo record the response file;\r\n\r\n> setup.exe -r\r\n\r\nThis will be like a normal install done manually. Follow it through like you would in any normal installation. After the installer exits, the response file should be at `C:\\Windows\\setup.iss`\r\n\r\nNext time around you can do a silent install by running\r\n\r\n> setup.exe -s -f1<path to setup.iss>\r\n\r\nI'm paranoid so I use the absolute path to the response file. There is no space between \"-f1\" and the path to setup.iss. Note that, when you run the \r\nabove command to silent install, the command will seem to exit immediately but if you check Task Manager you should see setup.exe (possibly 2 of them) running. \r\n\r\nSilent un-installation is pretty much the same. You need to create a response file first. To do this run the following;\r\n\r\n> setup.exe -r -uninst -removeonly\r\n\r\nThis will again create a _setup.iss_ file in `C:\\Windows` I usually rename the uninstall response file as _uninst.iss_. Now you can do silent uninstallation by\r\nrunning;\r\n\r\n> setup.exe -s -uninst -removeonly -f1<path to response file>\r\n\r\nSome installers might install the program under different GUID's each time you install it. If this is the case I have found that the above command for uninstallation doesn't work,\r\nas Install Shield doesn't know _what_ to uninstall. The solution is to work out the _UninstallString_ from the Registry (which is what Windows uses to uninstall the program via Add\/Remove Software).\r\n\r\nHere is a python script that uses the registry module (http:\/\/pypi.python.org\/pypi\/registry\/) to find out the full UninstallString. You first need to manually find this string \r\nin your registry by looking under `HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall` so that you can pass into this function a unique\r\nstring that is present in the UninstallString of your program\r\n\r\nEDIT: the following script is quite ugly actually. I have a new version in which I use regobj it makes things easier.\r\n\r\n<script src=\"http:\/\/gist.github.com\/245264.js?file=uninstall.py\"><\/script>", 
+      "slug": "installshield_silent_installs"
+    }
+  }, 
+  {
+    "pk": 118, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<p><object width=\"320\" height=\"240\" ><param name=\"allowfullscreen\" value=\"true\" \/><param name=\"allowscriptaccess\" value=\"always\" \/><param name=\"movie\" value=\"http:\/\/www.facebook.com\/v\/202801218416\" \/><embed src=\"http:\/\/www.facebook.com\/v\/202801218416\" type=\"application\/x-shockwave-flash\" allowscriptaccess=\"always\" allowfullscreen=\"true\" width=\"320\" height=\"240\"><\/embed><\/object>\n<\/p>", 
+      "category": 2, 
+      "updated": "2009-12-01 20:17:09", 
+      "tags": "ney hicaz", 
+      "title": " Hicaz Pe\u015frev (Salim Bey), Son Y\u00fcr\u00fck Semai ve Taksim", 
+      "body_override": 0, 
+      "date_published": "2009-11-09 00:17:32", 
+      "draft": 0, 
+      "body_markdown": "<object width=\"320\" height=\"240\" ><param name=\"allowfullscreen\" value=\"true\" \/><param name=\"allowscriptaccess\" value=\"always\" \/><param name=\"movie\" value=\"http:\/\/www.facebook.com\/v\/202801218416\" \/><embed src=\"http:\/\/www.facebook.com\/v\/202801218416\" type=\"application\/x-shockwave-flash\" allowscriptaccess=\"always\" allowfullscreen=\"true\" width=\"320\" height=\"240\"><\/embed><\/object>", 
+      "slug": "hicaz_pesrev_son_yuruk_taksim"
+    }
+  }, 
+  {
+    "pk": 117, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<p>QTP provides an interface called the <strong>automation object model<\/strong>. This <strong>model<\/strong> is essentially a COM interface providing a bunch of objects that can be used to automate QTP. The full object list is available in the <strong>QuickTest Professional Automation<\/strong> documentation.\n<\/p>\n<p>Running QTP tests from the command line is useful for doing scheduled automatic testing. If you use a continuous integration system to do automatic builds of your software, you can run your QTP tests on the latest build. \n<\/p>\n<p>The following is a Python script that is able to run a test and print out <em>Passed<\/em> or <em>Failed<\/em>.  It is a direct port of example code in the documentation written in VBScript\n<\/p>\n<p><script src=\"http:\/\/gist.github.com\/188917.js\"><\/script>\n<\/p>", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "qtp python com testing", 
+      "title": "Running QTP tests using Python", 
+      "body_override": 0, 
+      "date_published": "2009-09-18 16:37:50", 
+      "draft": 0, 
+      "body_markdown": "QTP provides an interface called the **automation object model**. This **model** is essentially a COM interface providing a bunch of objects that can be used to automate QTP. The full object list is available in the **QuickTest Professional Automation** documentation.\r\n\r\nRunning QTP tests from the command line is useful for doing scheduled automatic testing. If you use a continuous integration system to do automatic builds of your software, you can run your QTP tests on the latest build. \r\n\r\nThe following is a Python script that is able to run a test and print out *Passed* or *Failed*.  It is a direct port of example code in the documentation written in VBScript\r\n\r\n<script src=\"http:\/\/gist.github.com\/188917.js\"><\/script>", 
+      "slug": "running_qtp_test_using_python"
+    }
+  }, 
+  {
+    "pk": 116, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<p><object width=\"425\" height=\"344\"><param name=\"movie\" value=\"http:\/\/www.youtube.com\/v\/V0DZ-rcSn5M&hl=en&fs=1&color1=0x234900&color2=0x4e9e00\"><\/param><param name=\"allowFullScreen\" value=\"true\"><\/param><param name=\"allowscriptaccess\" value=\"always\"><\/param><embed src=\"http:\/\/www.youtube.com\/v\/V0DZ-rcSn5M&hl=en&fs=1&color1=0x234900&color2=0x4e9e00\" type=\"application\/x-shockwave-flash\" allowscriptaccess=\"always\" allowfullscreen=\"true\" width=\"425\" height=\"344\"><\/embed><\/object>\n<\/p>", 
+      "category": 2, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "ney", 
+      "title": "Hicaz Taksim", 
+      "body_override": 0, 
+      "date_published": "2009-09-13 23:25:01", 
+      "draft": 0, 
+      "body_markdown": "<object width=\"425\" height=\"344\"><param name=\"movie\" value=\"http:\/\/www.youtube.com\/v\/V0DZ-rcSn5M&hl=en&fs=1&color1=0x234900&color2=0x4e9e00\"><\/param><param name=\"allowFullScreen\" value=\"true\"><\/param><param name=\"allowscriptaccess\" value=\"always\"><\/param><embed src=\"http:\/\/www.youtube.com\/v\/V0DZ-rcSn5M&hl=en&fs=1&color1=0x234900&color2=0x4e9e00\" type=\"application\/x-shockwave-flash\" allowscriptaccess=\"always\" allowfullscreen=\"true\" width=\"425\" height=\"344\"><\/embed><\/object>", 
+      "slug": "hicaz_taksim"
+    }
+  }, 
+  {
+    "pk": 114, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<p><object width=\"320\" height=\"240\" ><param name=\"allowfullscreen\" value=\"true\" \/><param name=\"allowscriptaccess\" value=\"always\" \/><param name=\"movie\" value=\"http:\/\/www.facebook.com\/v\/156833758416\" \/><embed src=\"http:\/\/www.facebook.com\/v\/156833758416\" type=\"application\/x-shockwave-flash\" allowscriptaccess=\"always\" allowfullscreen=\"true\" width=\"320\" height=\"240\"><\/embed><\/object>\n<\/p>", 
+      "category": 2, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "ney ", 
+      "title": "Evcara Saz Semai - Dilhayat Kalfa", 
+      "body_override": 0, 
+      "date_published": "2009-09-06 22:25:40", 
+      "draft": 0, 
+      "body_markdown": "<object width=\"320\" height=\"240\" ><param name=\"allowfullscreen\" value=\"true\" \/><param name=\"allowscriptaccess\" value=\"always\" \/><param name=\"movie\" value=\"http:\/\/www.facebook.com\/v\/156833758416\" \/><embed src=\"http:\/\/www.facebook.com\/v\/156833758416\" type=\"application\/x-shockwave-flash\" allowscriptaccess=\"always\" allowfullscreen=\"true\" width=\"320\" height=\"240\"><\/embed><\/object>", 
+      "slug": "evcara_ss_dilhayat_kalfa"
+    }
+  }, 
+  {
+    "pk": 112, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<p><a href=\"http:\/\/mail.python.org\/pipermail\/python-win32\/2007-May\/005832.html\">http:\/\/mail.python.org\/pipermail\/python-win32\/2007-May\/005832.html<\/a>\n<\/p>\n<p><script src=\"http:\/\/gist.github.com\/146732.js\"><\/script>\n<\/p>", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "", 
+      "title": "HP Quality Center and Python", 
+      "body_override": 0, 
+      "date_published": "2009-07-13 09:25:53", 
+      "draft": 1, 
+      "body_markdown": "[http:\/\/mail.python.org\/pipermail\/python-win32\/2007-May\/005832.html](http:\/\/mail.python.org\/pipermail\/python-win32\/2007-May\/005832.html)\r\n\r\n<script src=\"http:\/\/gist.github.com\/146732.js\"><\/script>", 
+      "slug": "hp_quality_center_python"
+    }
+  }, 
+  {
+    "pk": 111, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<object width=\"320\" height=\"240\" ><param name=\"allowfullscreen\" value=\"true\" \/><param name=\"allowscriptaccess\" value=\"always\" \/><param name=\"movie\" value=\"http:\/\/www.facebook.com\/v\/127628728416\" \/><embed src=\"http:\/\/www.facebook.com\/v\/127628728416\" type=\"application\/x-shockwave-flash\" allowscriptaccess=\"always\" allowfullscreen=\"true\" width=\"320\" height=\"240\"><\/embed><\/object>", 
+      "category": 2, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "ney", 
+      "title": "A\u015fk-Efza Saz Eseri - Sadettin Arel", 
+      "body_override": 1, 
+      "date_published": "2009-07-12 09:23:43", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "ask_efza_ss_sadettin_arel"
+    }
+  }, 
+  {
+    "pk": 110, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<object width=\"320\" height=\"240\" ><param name=\"allowfullscreen\" value=\"true\" \/><param name=\"allowscriptaccess\" value=\"always\" \/><param name=\"movie\" value=\"http:\/\/www.facebook.com\/v\/118998418416\" \/><embed src=\"http:\/\/www.facebook.com\/v\/118998418416\" type=\"application\/x-shockwave-flash\" allowscriptaccess=\"always\" allowfullscreen=\"true\" width=\"320\" height=\"240\"><\/embed><\/object>", 
+      "category": 2, 
+      "updated": "2009-12-01 14:11:10", 
+      "tags": "", 
+      "title": "U\u015f\u015fak Taksim  ve Saz Semaisi (Neyzen Aziz Dede) ", 
+      "body_override": 1, 
+      "date_published": "2009-06-22 00:07:52", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "ussak_taksim_saz_semai"
+    }
+  }, 
+  {
+    "pk": 109, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<h2>On your slice;<\/h2>\n<pre><code>\n<\/code><\/pre><ol>\n <li><p>Install git.\n<\/p>\n<blockquote><p>sudo apt-get install git-core\n<\/p>\n<\/blockquote>\n <\/li>\n\n <li><p>Create an empty directory for your repository\n<\/p>\n<blockquote><p>mkdir myrepo.git &amp;&amp; cd myrepo.git\n<\/p>\n<\/blockquote>\n <\/li>\n\n <li><p>Initialize git\n<\/p>\n<blockquote><p>git init \n<\/p>\n<\/blockquote>\n <\/li>\n<\/ol>\n\n<h2>On your local machine<\/h2>\n<pre><code>\n<\/code><\/pre><ol>\n <li><p>Create an empty directory for your repository\n<\/p>\n<p> &gt; mkdir myrepo.git &amp;&amp; cd myrepo.git\n<\/p>\n\n <\/li>\n\n <li><p>Initialize git\n<\/p>\n<blockquote><p>git init\n<\/p>\n<\/blockquote>\n <\/li>\n\n <li><p>Add the remote repository as the origin\n<\/p>\n<blockquote><p>git remote add origin ssh:\/\/server-domain\/repo \n<\/p>\n<\/blockquote><p>for my server the above command is\n<\/p>\n<blockquote><p>git remote add origin ssh:\/\/bulkan-evcimen.com\/home\/bulkan\/src\/repo.git\n<\/p>\n<\/blockquote>\n <\/li>\n\n <li><p>Create a ignore file for the first push\n<\/p>\n<blockquote><p>touch .gitignore\n<\/p>\n<\/blockquote>\n <\/li>\n\n <li><p>Add, commit\n<\/p>\n<blockquote><p>git add .gitignore\n<\/p>\n<p>git commit -m \"initial git commit\"\n<\/p>\n<\/blockquote>\n <\/li>\n\n <li><p>Push your repo to the origin on slicehost\n<\/p>\n<blockquote><p>git push origin master\n<\/p>\n<\/blockquote>\n <\/li>\n<\/ol>\n<p>That's it. Happy gitting. \n<\/p>", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "slicehost git", 
+      "title": "Setting up a git repository on Slicehost", 
+      "body_override": 0, 
+      "date_published": "2008-12-28 22:22:10", 
+      "draft": 0, 
+      "body_markdown": "On your slice;\r\n----------------\r\n     \r\n1.  Install git.\r\n     \r\n    > sudo apt-get install git-core\r\n\r\n2. Create an empty directory for your repository\r\n\r\n    > mkdir myrepo.git && cd myrepo.git\r\n\r\n3. Initialize git\r\n\r\n    > git init \r\n\r\n   \r\nOn your local machine\r\n-------------------------\r\n     \r\n1. Create an empty directory for your repository\r\n    \r\n     > mkdir myrepo.git && cd myrepo.git\r\n\r\n2. Initialize git\r\n\r\n    > git init\r\n\r\n3.  Add the remote repository as the origin\r\n\r\n    > git remote add origin ssh:\/\/server-domain\/repo \r\n    \r\n    for my server the above command is\r\n    \r\n    > git remote add origin ssh:\/\/bulkan-evcimen.com\/home\/bulkan\/src\/repo.git\r\n\r\n4. Create a ignore file for the first push\r\n\r\n    > touch .gitignore\r\n    \r\n5.  Add, commit\r\n     \r\n    > git add .gitignore\r\n        \r\n    > git commit -m \"initial git commit\"\r\n\r\n6. Push your repo to the origin on slicehost\r\n\r\n    > git push origin master\r\n\r\nThat's it. Happy gitting. \r\n\r\n\r\n", 
+      "slug": "setting_up_git_repository_on_slicehost"
+    }
+  }, 
+  {
+    "pk": 108, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<h2>Sand at the beach<\/h2>\n<pre><code>\n<\/code><\/pre><p>There is one thing plenty of in this \"web 2.0\" buzz word ridden internet, Web Frameworks. From any language of your choice there is a web framework. \n<\/p>\n<p><a href=\"http:\/\/en.wikipedia.org\/wiki\/List_of_web_application_frameworks\">http:\/\/en.wikipedia.org\/wiki\/List_of_web_application_frameworks<\/a>\n<\/p>\n<p>See what i mean !\n<\/p>\n\n<h2>\"Hypothetical\"<\/h2>\n<pre><code>\n<\/code><\/pre><p>Here is a hypothetical situation;\n<\/p>\n<p>You get hired by a company that you applied to as a web developer and you learn that this company has a working web application with around 10,000+ users written in framework X. But for possible future user growth, the power(s) that be <em>have already<\/em>  decided to <em>re-write<\/em> from <em>scratch<\/em> the current web app in a completely new  <em>scalable<\/em> web framework. \n<\/p>\n<p>To cut the time required in developing this new framework, a requirements or even a design document is not written. That being said, the existing web app and it's functionality is considered as the <em>requirements<\/em> both for the new web framework and the porting of the existing web app to this new framework. \n<\/p>\n<p>So how would you approach a situation like this ? And you can choose any of the following options :D\n<\/p>\n<p><img src=\"http:\/\/farm4.static.flickr.com\/3279\/3062622888_336f2a69c5.jpg\" alt=\"framework\"\/>\n<\/p>\n\n<h2>Design &amp; Prototype....Rinse &amp; Repeat<\/h2>\n<pre><code>\n<\/code><\/pre><p>If I was ever in a situation like this and I <em>had the power<\/em> then this is how I would approach it.\n<\/p>\n<p>First writing a web framework from scratch in this day is just crazy talk IMHO.  So I would choose the second option above.\n<\/p>\n<p>Second I think we need to \"design\" the most crucial part of this web framework that we need. Which is scalability. But I hear you say,  \"how can you design scalability ?\" well there are numerous paradigms that can be used that <em>might<\/em> work, for example a distributed model. Then implement the design as a prototype and determine if our design goals were met which is being scalabile. But what is \"scalability\" ? Well this is what Wikipedia has to say about it;\n<\/p>\n<blockquote><p>scalability is a desirable property of a system, a network, or a process, which indicates its ability to either \n   handle growing amounts of work in a graceful manner, or to be readily enlarged\n<\/p>\n<\/blockquote><p>So in a situation like this you need to determine what needs to be scalable. Let's say we want to be able to support at least 10,000 users and their data which is the maximum amount of users the current web app is able to support. This is our initial design goal, the new framework <em>must<\/em> support 10,000 users. The prototype we build  <em>must<\/em> support 10,000+ users to prove that it is a <em>feasible<\/em> design, without diving head first into development. Now that we know our initial design goal we can either design something using a design pattern or research into web frameworks that <em>exists<\/em>  that might satisfy our goal.  Our research into frameworks should also try to find live sites that are using these frameworks and possibly learn their user support and how they scale up.\n<\/p>\n<p>With this data, we can rank some or all of the frameworks we researched into, then prototype a site with \"users\", using the framework with the highest rank. Then test to to see if our prototype meets the initial design goal. We need to then work out the plan for scalability. What happens when we hit the current bottleneck ? Do we just add more hardware ? After this plan we can then move on to the full implementation of porting the current web app to the new framework.\n<\/p>\n<p>We probably saved 6 months of development time because we did not write a new framework that is <em>usable<\/em> from scratch and even determined that our framework of choice is scalable.\n<\/p>\n\n<h2>Conclusion<\/h2>\n<pre><code>\n<\/code><\/pre><p>Building a web framework or <em>any<\/em> framework is not easy, especially when you have a <em>deadline<\/em> to reach, which includes the porting of features of an existing application to a new framework that your other developers know nothing about. \n<\/p>\n<p>So here is some simple steps if you are in a situation like this;\n<\/p>\n<ol>\n <li><p>Don't write your own framework as you will waste time and effort when a plethora of Open Source frameworks exist that have been battle hardened \n<\/p>\n\n <\/li>\n\n <li><p>Design you're web application and choose a framework that <em>might<\/em> suit your needs\n<\/p>\n\n <\/li>\n\n <li><p>Develop a prototype to prove that you will be able to meet your most import design goal\n<\/p>\n\n <\/li>\n<\/ol>", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "", 
+      "title": "draft", 
+      "body_override": 0, 
+      "date_published": "2008-12-18 17:28:31", 
+      "draft": 1, 
+      "body_markdown": "Sand at the beach\r\n---------------\r\n     \r\nThere is one thing plenty of in this \"web 2.0\" buzz word ridden internet, Web Frameworks. From any language of your choice there is a web framework. \r\n  \r\n<http:\/\/en.wikipedia.org\/wiki\/List_of_web_application_frameworks>\r\n\r\nSee what i mean !\r\n    \r\n\"Hypothetical\"\r\n------------\r\n       \r\nHere is a hypothetical situation;\r\n    \r\nYou get hired by a company that you applied to as a web developer and you learn that this company has a working web application with around 10,000+ users written in framework X. But for possible future user growth, the power(s) that be *have already*  decided to _re-write_ from _scratch_ the current web app in a completely new  _scalable_ web framework. \r\n\r\nTo cut the time required in developing this new framework, a requirements or even a design document is not written. That being said, the existing web app and it's functionality is considered as the _requirements_ both for the new web framework and the porting of the existing web app to this new framework. \r\n    \r\nSo how would you approach a situation like this ? And you can choose any of the following options :D\r\n\r\n![framework](http:\/\/farm4.static.flickr.com\/3279\/3062622888_336f2a69c5.jpg)\r\n\r\nDesign & Prototype....Rinse & Repeat\r\n-------------------------------\r\n    \r\nIf I was ever in a situation like this and I _had the power_ then this is how I would approach it.\r\n\r\nFirst writing a web framework from scratch in this day is just crazy talk IMHO.  So I would choose the second option above.\r\n    \r\nSecond I think we need to \"design\" the most crucial part of this web framework that we need. Which is scalability. But I hear you say,  \"how can you design scalability ?\" well there are numerous paradigms that can be used that _might_ work, for example a distributed model. Then implement the design as a prototype and determine if our design goals were met which is being scalabile. But what is \"scalability\" ? Well this is what Wikipedia has to say about it;\r\n\r\n> scalability is a desirable property of a system, a network, or a process, which indicates its ability to either \r\n> handle growing amounts of work in a graceful manner, or to be readily enlarged\r\n\r\nSo in a situation like this you need to determine what needs to be scalable. Let's say we want to be able to support at least 10,000 users and their data which is the maximum amount of users the current web app is able to support. This is our initial design goal, the new framework _must_ support 10,000 users. The prototype we build  _must_ support 10,000+ users to prove that it is a _feasible_ design, without diving head first into development. Now that we know our initial design goal we can either design something using a design pattern or research into web frameworks that _exists_  that might satisfy our goal.  Our research into frameworks should also try to find live sites that are using these frameworks and possibly learn their user support and how they scale up.\r\n    \r\nWith this data, we can rank some or all of the frameworks we researched into, then prototype a site with \"users\", using the framework with the highest rank. Then test to to see if our prototype meets the initial design goal. We need to then work out the plan for scalability. What happens when we hit the current bottleneck ? Do we just add more hardware ? After this plan we can then move on to the full implementation of porting the current web app to the new framework.\r\n\r\nWe probably saved 6 months of development time because we did not write a new framework that is _usable_ from scratch and even determined that our framework of choice is scalable.\r\n\r\nConclusion\r\n---------\r\n    \r\nBuilding a web framework or _any_ framework is not easy, especially when you have a _deadline_ to reach, which includes the porting of features of an existing application to a new framework that your other developers know nothing about. \r\n\r\nSo here is some simple steps if you are in a situation like this;\r\n\r\n1. Don't write your own framework as you will waste time and effort when a plethora of Open Source frameworks exist that have been battle hardened \r\n\r\n2. Design you're web application and choose a framework that _might_ suit your needs\r\n\r\n3. Develop a prototype to prove that you will be able to meet your most import design goal\r\n", 
+      "slug": "draft"
+    }
+  }, 
+  {
+    "pk": 107, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<h2>Sand at the beach<\/h2>\n<p>EDIT: I've put this post back up, because it's my own opinion. Hey, Free Speech !!! \n<\/p>\n<p>There is one thing plenty of in this \"web 2.0\" buzz word ridden internet, Web Frameworks. From any language of your choice there is a web framework. \n<\/p>\n<p><a href=\"http:\/\/en.wikipedia.org\/wiki\/List_of_web_application_frameworks\">http:\/\/en.wikipedia.org\/wiki\/List_of_web_application_frameworks<\/a>\n<\/p>\n<p>See what i mean !\n<\/p>\n\n<h2>\"Hypothetical\"<\/h2>\n<pre><code>\n<\/code><\/pre><p>Here is a hypothetical situation;\n<\/p>\n<p>You get hired by a company that you applied to as a web developer and you learn that this company has a working web application with around 1,000+ users written in framework X. But for possible future user growth, the power(s) that be <em>have already<\/em>  decided to <em>re-write<\/em> from <em>scratch<\/em> the current web app in a completely new  <em>scalable<\/em> web framework. \n<\/p>\n<p>To cut the time required in developing this new framework, a requirements or even a design document is not written. That being said, the existing web app and it's functionality is considered as the <em>requirements<\/em> both for the new web framework and the porting of the existing web app to this new framework. \n<\/p>\n<p>So how would you approach a situation like this ? And you can choose any of the following options :D\n<\/p>\n<p><img src=\"http:\/\/farm4.static.flickr.com\/3279\/3062622888_336f2a69c5.jpg\" alt=\"framework\"\/>\n<\/p>\n\n<h2>Design &amp; Prototype....Rinse &amp; Repeat<\/h2>\n<pre><code>\n<\/code><\/pre><p>If I was ever in a situation like this and I <em>had the power<\/em> then this is how I would approach it.\n<\/p>\n<p>First writing a web framework from scratch in this day is just crazy talk IMHO.  So I would choose the second option above.\n<\/p>\n<p>Second I think we need to \"design\" the most crucial part of this web framework that we need. Which is scalability. But I hear you say,  \"how can you design scalability ?\" well there are numerous paradigms that can be used that <em>might<\/em> work, for example a distributed model. Then implement the design as a prototype and determine if our design goals were met which is being scalabile. But what is \"scalability\" ? Well this is what Wikipedia has to say about it;\n<\/p>\n<blockquote><p>scalability is a desirable property of a system, a network, or a process, which indicates its ability to either \n   handle growing amounts of work in a graceful manner, or to be readily enlarged\n<\/p>\n<\/blockquote><p>So in a situation like this you need to determine what needs to be scalable. Let's say we want to be able to support at least 1,000 users and their data which is the maximum amount of users the current web app is able to support. This is our initial design goal, the new framework <em>must<\/em> support 10,000 users. The prototype we build  <em>must<\/em> support 1,000+ users to prove that it is a <em>feasible<\/em> design, without diving head first into development. Now that we know our initial design goal we can either design something using a design pattern or research into web frameworks that <em>exists<\/em>  that might satisfy our goal.  Our research into frameworks should also try to find live sites that are using these frameworks and possibly learn their user support and how they scale up.\n<\/p>\n<p>With this data, we can rank some or all of the frameworks we researched into, then prototype a site with \"users\", using the framework with the highest rank. Then test to to see if our prototype meets the initial design goal. We need to then work out the plan for scalability. What happens when we hit the current bottleneck ? Do we just add more hardware ? After this plan we can then move on to the full implementation of porting the current web app to the new framework.\n<\/p>\n<p>We probably saved 4 months of development time because we did not write a new framework that is <em>usable<\/em> from scratch and even determined that our framework of choice is scalable.\n<\/p>\n\n<h2>Conclusion<\/h2>\n<pre><code>\n<\/code><\/pre><p>Building a web framework or <em>any<\/em> framework is not easy, especially when you have a <em>deadline<\/em> to reach, which includes the porting of features of an existing application to a new framework that your other developers know nothing about. \n<\/p>\n<p>So here is some simple steps if you are in a situation like this;\n<\/p>\n<ol>\n <li><p>Don't write your own framework as you will waste time and effort when a plethora of Open Source frameworks exist that have been battle hardened \n<\/p>\n\n <\/li>\n\n <li><p>Design you're web application and choose a framework that <em>might<\/em> suit your needs\n<\/p>\n\n <\/li>\n\n <li><p>Develop a prototype to prove that you will be able to meet your most import design goal\n<\/p>\n\n <\/li>\n<\/ol>", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "python, web framework", 
+      "title": "Let's build a Web Framework, or how to waste development time", 
+      "body_override": 0, 
+      "date_published": "2008-11-25 23:36:16", 
+      "draft": 1, 
+      "body_markdown": "Sand at the beach\r\n---------------\r\n\r\nEDIT: I've put this post back up, because it's my own opinion. Hey, Free Speech !!! \r\n     \r\nThere is one thing plenty of in this \"web 2.0\" buzz word ridden internet, Web Frameworks. From any language of your choice there is a web framework. \r\n  \r\n<http:\/\/en.wikipedia.org\/wiki\/List_of_web_application_frameworks>\r\n\r\nSee what i mean !\r\n    \r\n\"Hypothetical\"\r\n------------\r\n       \r\nHere is a hypothetical situation;\r\n    \r\nYou get hired by a company that you applied to as a web developer and you learn that this company has a working web application with around 1,000+ users written in framework X. But for possible future user growth, the power(s) that be *have already*  decided to _re-write_ from _scratch_ the current web app in a completely new  _scalable_ web framework. \r\n\r\nTo cut the time required in developing this new framework, a requirements or even a design document is not written. That being said, the existing web app and it's functionality is considered as the _requirements_ both for the new web framework and the porting of the existing web app to this new framework. \r\n    \r\nSo how would you approach a situation like this ? And you can choose any of the following options :D\r\n\r\n![framework](http:\/\/farm4.static.flickr.com\/3279\/3062622888_336f2a69c5.jpg)\r\n\r\nDesign & Prototype....Rinse & Repeat\r\n-------------------------------\r\n    \r\nIf I was ever in a situation like this and I _had the power_ then this is how I would approach it.\r\n\r\nFirst writing a web framework from scratch in this day is just crazy talk IMHO.  So I would choose the second option above.\r\n    \r\nSecond I think we need to \"design\" the most crucial part of this web framework that we need. Which is scalability. But I hear you say,  \"how can you design scalability ?\" well there are numerous paradigms that can be used that _might_ work, for example a distributed model. Then implement the design as a prototype and determine if our design goals were met which is being scalabile. But what is \"scalability\" ? Well this is what Wikipedia has to say about it;\r\n\r\n> scalability is a desirable property of a system, a network, or a process, which indicates its ability to either \r\n> handle growing amounts of work in a graceful manner, or to be readily enlarged\r\n\r\nSo in a situation like this you need to determine what needs to be scalable. Let's say we want to be able to support at least 1,000 users and their data which is the maximum amount of users the current web app is able to support. This is our initial design goal, the new framework _must_ support 10,000 users. The prototype we build  _must_ support 1,000+ users to prove that it is a _feasible_ design, without diving head first into development. Now that we know our initial design goal we can either design something using a design pattern or research into web frameworks that _exists_  that might satisfy our goal.  Our research into frameworks should also try to find live sites that are using these frameworks and possibly learn their user support and how they scale up.\r\n    \r\nWith this data, we can rank some or all of the frameworks we researched into, then prototype a site with \"users\", using the framework with the highest rank. Then test to to see if our prototype meets the initial design goal. We need to then work out the plan for scalability. What happens when we hit the current bottleneck ? Do we just add more hardware ? After this plan we can then move on to the full implementation of porting the current web app to the new framework.\r\n\r\nWe probably saved 4 months of development time because we did not write a new framework that is _usable_ from scratch and even determined that our framework of choice is scalable.\r\n\r\nConclusion\r\n---------\r\n    \r\nBuilding a web framework or _any_ framework is not easy, especially when you have a _deadline_ to reach, which includes the porting of features of an existing application to a new framework that your other developers know nothing about. \r\n\r\nSo here is some simple steps if you are in a situation like this;\r\n\r\n1. Don't write your own framework as you will waste time and effort when a plethora of Open Source frameworks exist that have been battle hardened \r\n\r\n2. Design you're web application and choose a framework that _might_ suit your needs\r\n\r\n3. Develop a prototype to prove that you will be able to meet your most import design goal\r\n", 
+      "slug": "lets_build_our_own_web_framework"
+    }
+  }, 
+  {
+    "pk": 105, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<p>Here are the audio recordings i've made with my\n<\/p>\n<p>Burda yaptigim bazi kayitlari bulabilirsiniz;\n<\/p>", 
+      "category": 2, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "ney, recordings", 
+      "title": "Recordings", 
+      "body_override": 0, 
+      "date_published": "2008-10-19 23:38:12", 
+      "draft": 1, 
+      "body_markdown": "Here are the audio recordings i've made with my\r\n\r\nBurda yaptigim bazi kayitlari bulabilirsiniz;\r\n", 
+      "slug": "recordings"
+    }
+  }, 
+  {
+    "pk": 104, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<p><em>Coming Soon<\/em>\n<\/p>", 
+      "category": 2, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "ney", 
+      "title": "What is the Ney ?", 
+      "body_override": 0, 
+      "date_published": "2008-10-19 23:35:52", 
+      "draft": 1, 
+      "body_markdown": "*Coming Soon*", 
+      "slug": "what_is_the_ney"
+    }
+  }, 
+  {
+    "pk": 103, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<p>This awesome blog that i have created uses Markdown syntax for writing the text and converting it into \n<\/p>", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "markup language", 
+      "title": "Markdown vs reStructuredText", 
+      "body_override": 0, 
+      "date_published": "2008-08-07 15:50:15", 
+      "draft": 1, 
+      "body_markdown": "This awesome blog that i have created uses Markdown syntax for writing the text and converting it into ", 
+      "slug": "markdown-vs-restructuredtext"
+    }
+  }, 
+  {
+    "pk": 99, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<p>The title might suggest that i might be a Python fanboy, the truth is i may be bordering very close to actually being one (See the Python tag count to the right). But Python is <em>awesome<\/em> and here is one reason why i think so.\n<\/p>\n<p>The other day i was playing around with <a href=\"http:\/\/code.google.com\/p\/pydigg\/\">pydigg<\/a> the Python bindings for accessing the Digg API. Well i was actually looking for a particular story that i had dugg.\n<\/p>\n<pre><code> from digg import *\n d=Digg(APPKEY)\n diggs = d.getUserDiggs('user')\n<\/code><\/pre><p><br>\n   The thing with pydigg is that each time you run;\n<\/p>\n<pre><code>diggs = d.getUserDiggs('user')\n<\/code><\/pre><p><br>\n   it would re-retrieve the data in XML from digg again and this was slowing me down. So i thought, well you know what you can cache the results for each request. Instead of hacking in a new cache system i just searched on Python Cheeseshop for  <em>cache<\/em>.  The second hit on the result page was <em>GenericCache<\/em>. After downloading and installing it (which i could have probably easy_installed) i just added the following to <em>digg.py<\/em>\n<\/p>\n<p><b>to the top of the file<\/b>\n<\/p>\n<pre><code>from GenericCache.GenericCache import GenericCache\nfrom GenericCache.decorators import cached\ncache = GenericCache(expiry=30)\n<\/code><\/pre><p><br>\n   <\/b>and decorated _get with<\/b>\n<\/p>\n<pre><code>@cached(cache)\ndef _get(self, endpoint, **params):\n<\/code><\/pre><p><br>\n   Now each and every request will be cached for 30 seconds (because _get is the internal <em>private<\/em> method that handles the digg IO). So for the following<br \/>\n\n<\/p>\n<pre><code> diggs = d.getUserDiggs('userA')\n diggs = d.getUserDiggs('userB')\n<\/code><\/pre><p><br>\n   GenericCache will create two entries based on the parameters.\n   <br>\n   So how does this show why Python is awesome?  Well it took me no more than 10 minutes to add caching.\n<\/p>", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "python", 
+      "title": "Why i love Python", 
+      "body_override": 0, 
+      "date_published": "2008-07-03 16:44:03", 
+      "draft": 1, 
+      "body_markdown": "The title might suggest that i might be a Python fanboy, the truth is i may be bordering very close to actually being one (See the Python tag count to the right). But Python is *awesome* and here is one reason why i think so.\r\n\r\n\r\nThe other day i was playing around with <a href=\"http:\/\/code.google.com\/p\/pydigg\/\">pydigg<\/a> the Python bindings for accessing the Digg API. Well i was actually looking for a particular story that i had dugg.\r\n\r\n     from digg import *\r\n     d=Digg(APPKEY)\r\n     diggs = d.getUserDiggs('user')\r\n<br>\r\nThe thing with pydigg is that each time you run;\r\n\r\n\r\n    diggs = d.getUserDiggs('user')\r\n<br>\r\nit would re-retrieve the data in XML from digg again and this was slowing me down. So i thought, well you know what you can cache the results for each request. Instead of hacking in a new cache system i just searched on Python Cheeseshop for  *cache*.  The second hit on the result page was *GenericCache*. After downloading and installing it (which i could have probably easy_installed) i just added the following to *digg.py*\r\n\r\n\r\n<b>to the top of the file<\/b>\r\n\r\n\r\n    from GenericCache.GenericCache import GenericCache\r\n    from GenericCache.decorators import cached\r\n    cache = GenericCache(expiry=30)\r\n<br>\r\n<\/b>and decorated _get with<\/b>\r\n\r\n\r\n    @cached(cache)\r\n    def _get(self, endpoint, **params):\r\n<br>\r\nNow each and every request will be cached for 30 seconds (because _get is the internal *private* method that handles the digg IO). So for the following  \r\n     \r\n\r\n     diggs = d.getUserDiggs('userA')\r\n     diggs = d.getUserDiggs('userB')\r\n     \r\n<br>\r\nGenericCache will create two entries based on the parameters.\r\n<br>\r\nSo how does this show why Python is awesome?  Well it took me no more than 10 minutes to add caching.", 
+      "slug": "why-i-love-python"
+    }
+  }, 
+  {
+    "pk": 97, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<p>So, this is my new blog written by me using Django and a free template from Rambling Soul. The other day i went <em>live<\/em> by changing DNS settings by pointing http:\/\/blog.bulkan-evcimen.com to the IP address of my VPS. Two days later some posts had comment spam! Im working on adding a new field to comment  form to find out if you are human or not.\n<\/p>\n<p><em>EDIT<\/em>: So no more comment spam. how did i fix it ? Easy, i just removed the code inside of the individual Post handling view function which checked for POST requests and the comment form fields and then created a new comment.\n<\/p>", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "spam", 
+      "title": "Comment Spam", 
+      "body_override": 0, 
+      "date_published": "2008-07-01 14:46:33", 
+      "draft": 0, 
+      "body_markdown": "So, this is my new blog written by me using Django and a free template from Rambling Soul. The other day i went *live* by changing DNS settings by pointing http:\/\/blog.bulkan-evcimen.com to the IP address of my VPS. Two days later some posts had comment spam! Im working on adding a new field to comment  form to find out if you are human or not.\r\n\r\n*EDIT*: So no more comment spam. how did i fix it ? Easy, i just removed the code inside of the individual Post handling view function which checked for POST requests and the comment form fields and then created a new comment.\r\n\r\n", 
+      "slug": "comment-spam"
+    }
+  }, 
+  {
+    "pk": 98, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<p>As my new blog gets subjected spam ive been on the prowl for finding a filtering solition. Here is what i found that can be used with python\n<\/p>\n\n<h1>Akismet<\/h1>\n\n<h1>PyRazor<\/h1>\n\n<h1>Reverend<\/h1>", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "spam python django", 
+      "title": "Solving spam", 
+      "body_override": 0, 
+      "date_published": "2008-06-17 14:42:19", 
+      "draft": 1, 
+      "body_markdown": "As my new blog gets subjected spam ive been on the prowl for finding a filtering solition. Here is what i found that can be used with python\r\n\r\n#Akismet\r\n#PyRazor\r\n#Reverend\r\n\r\n", 
+      "slug": "solving-spam"
+    }
+  }, 
+  {
+    "pk": 61, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "I had volunteered long time ago to give a talk at <a href=\"http:\/\/www.melbournecocoaheads.com\/melbourne-cocoaheads-april-meeting\/\">Melbourne CocoaHeads<\/a> as i was talking to Gareth about when the next meeting was going to happen he told me that someone (<a href=\"http:\/\/redartisan.com\/\">Marcus Crafter<\/a>) was going to give a talk on RubyCocoa, so jokingly i suggested, well i can do a talk on PyObjC (even though my knowledge is near zero) then it became serious and i said i can give a talk on py2app. So im giving a talk on py2app. <br \/><br \/>I should start creating my slides and organizing my code.", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "mac", 
+      "title": "Melbourne CocoaHeads Talk", 
+      "body_override": 1, 
+      "date_published": "2008-03-31 21:55:00", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "melbourne-cocoaheads-talk"
+    }
+  }, 
+  {
+    "pk": 62, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<span style=\"font-weight:bold;\">Kevin Rose<br \/><br \/>You're a hippie<br \/><br \/>profit?<\/span><br \/><br \/><a href=\"http:\/\/digg.com\/apple\/Kevin_Rose_Eats_Funny_Red_Pills_Again_Predicts_iPhone_3G\"><\/a>", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "digg", 
+      "title": "Kevin Rose", 
+      "body_override": 1, 
+      "date_published": "2008-03-25 11:50:00", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "kevin-rose"
+    }
+  }, 
+  {
+    "pk": 63, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "I have plans to move to using a Django blog that i can customize myself. I don't know if i should go down the route of implementing my own or using one that exist. <a href=\"http:\/\/blog.michaeltrier.com\/2007\/12\/30\/django-blogging-apps\">Here<\/a> is a list of Blogging applications written in Django. What i need is something<br \/><br \/><ul><li>easily <i>skinable<\/i> allowing me to change the look-and-feel to the way i want it, something green and minimalistic<\/li><li>someway of transferring all the posts here to that app<\/li><li>Tagging<\/li><li>Allowing comments on posts<br \/><\/li><\/ul>Seems like <a href=\"http:\/\/coderseye.com\/2007\/banjo-blog-nearing-01-release.html\">Banjo<\/a> has all the things i want.<br \/><br \/>Maybe <a href=\"http:\/\/code.google.com\/p\/blogmaker\">Blogmaker<\/a> aswell. Even though Byteflow has Threaded comments it restricts comments to only registered users which i don't want.<br \/><br \/>And i may look into <a href=\"http:\/\/code.google.com\/p\/django-diario\/\">django-diario<\/a><br \/><br \/>But i will just play with Banjo now.<br \/><br \/><span style=\"font-weight: bold;\">EDIT: <\/span>To play with Django i need to install 5 other packages. I'm adding a new requirement to the blog application i need, easily configurable, download change <span style=\"font-style: italic;\">settings.py <\/span>with correct paths, create database, run <span style=\"font-style: italic;\">syncdb<\/span> and start server (built in server), start Blogging. I don't want to go hunting for more packages.<br \/><br \/<a href=\"http:\/\/technorati.com\/tag\/django\" rel=\"tag\"><img style=\"border:0;vertical-align:middle;margin-left:.4em\" src=\"http:\/\/static.technorati.com\/static\/img\/pub\/icon-utag-16x13.png?tag=django\" alt=\" \" \/>django<\/a><a href=\"http:\/\/technorati.com\/tag\/python\" rel=\"tag\"><img style=\"border:0;vertical-align:middle;margin-left:.4em\" src=\"http:\/\/static.technorati.com\/static\/img\/pub\/icon-utag-16x13.png?tag=python\" alt=\" \" \/>python<\/a>", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "django python", 
+      "title": "My Own Django Blog", 
+      "body_override": 1, 
+      "date_published": "2008-01-17 21:36:00", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "my-own-django-blog"
+    }
+  }, 
+  {
+    "pk": 64, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<span>I like Python because of the explicitness of the syntax<\/span><br \/><br \/><div class=\"highlight\"><pre><span class=\"k\">def<\/span> <span class=\"nf\">add<\/span><span class=\"p\">(<\/span><span class=\"n\">a<\/span><span class=\"p\">,<\/span><span class=\"n\">b<\/span><span class=\"p\">):<\/span><br \/>    <span class=\"k\">return<\/span> <span class=\"n\">a<\/span> <span class=\"o\">+<\/span> <span class=\"n\">b<\/span><br \/><\/pre><\/div><br \/><br \/><span>explicitness is good as it really leads to code that is understandable at one glance, but quick, tell me two types that the above function will work on ? <br \/><br><b> int's and strings <\/b> <\/span><br \/><br \/><div class=\"highlight\"><br \/><pre><br \/> >>> add(1,2)<br \/> 3<br \/> >>> add('hello ','world')<br \/> hello world<br \/><\/pre><br \/><\/div><br \/><br \/><span>the above function works on both integers and strings only because both provide the special method <b>__add__<\/b> which gets called for the <b>+<\/b> operator. <br \/><br \/>So does this lead to implicitness ? Not really, because you should know (from programming) that you can add integers together and concatenate strings together, Python just makes this <i> general <\/i> across types. <br \/><br \/>If you wanted to say, restrict the types of the arguments to our add function above, you could do something like the following <\/span><br \/><br \/><div class=\"highlight\"><pre><span class=\"k\">def<\/span> <span class=\"nf\">add<\/span><span class=\"p\">(<\/span><span class=\"n\">a<\/span><span class=\"p\">,<\/span><span class=\"n\">b<\/span><span class=\"p\">):<\/span><br \/>    <span class=\"k\">if<\/span> <span class=\"nb\">type<\/span><span class=\"p\">(<\/span><span class=\"n\">a<\/span><span class=\"p\">)<\/span><span class=\"o\">==<\/span><span class=\"nb\">type<\/span><span class=\"p\">(<\/span><span class=\"nb\">str<\/span><span class=\"p\">)<\/span> <span class=\"ow\">and<\/span> <span class=\"nb\">type<\/span><span class=\"p\">(<\/span><span class=\"n\">b<\/span><span class=\"p\">)<\/span><span class=\"o\">==<\/span><span class=\"nb\">type<\/span><span class=\"p\">(<\/span><span class=\"nb\">str<\/span><span class=\"p\">):<\/span><br \/>        <span class=\"k\">return<\/span> <span class=\"n\">a<\/span> <span class=\"o\">+<\/span> <span class=\"n\">b<\/span><br \/><\/pre><\/div><br \/><br \/>Type checking is kind of ambiguous to me in a dynamic language. If i want to restrict the the ability of a function to only work with certain types or i don't know the types of the object im passing to a function then i have design issues (or no design at all). <br \/><br \/>You could rewrite the above function to do the type checking using a decorator.<br \/><br \/>EDIT: i didn't know if the following decorator was written by the original creators or not, but as i was pointed out it wasn't here is the original link <br \/><br \/><a href='http:\/\/aspn.activestate.com\/ASPN\/Cookbook\/Python\/Recipe\/454322'>Python Cookbook Recipe<\/a><br \/><br \/><div class=\"highlight\"><pre><span class=\"k\">def<\/span> <span class=\"nf\">require<\/span><span class=\"p\">(<\/span><span class=\"n\">arg_name<\/span><span class=\"p\">,<\/span> <span class=\"o\">*<\/span><span class=\"n\">allowed_types<\/span><span class=\"p\">):<\/span><br \/>    <span class=\"k\">def<\/span> <span class=\"nf\">make_wrapper<\/span><span class=\"p\">(<\/span><span class=\"n\">f<\/span><span class=\"p\">):<\/span><br \/>        <span class=\"k\">if<\/span> <span class=\"nb\">hasattr<<br \/\/span><span class=\"p\">(<\/span><span class=\"n\">f<\/span><span class=\"p\">,<\/span> <span class=\"s\">&quot;wrapped_args&quot;<\/span><span class=\"p\">):<\/span><br \/>            <span class=\"n\">wrapped_args<\/span> <span class=\"o\">=<\/span> <span class=\"nb\">getattr<\/span><span class=\"p\">(<\/span><span class=\"n\">f<\/span><span class=\"p\">,<\/span> <span class=\"s\">&quot;wrapped_args&quot;<\/span><span class=\"p\">)<\/span><br \/>        <span class=\"k\">else<\/span><span class=\"p\">:<\/span><br \/>            <span class=\"n\">code<\/span> <span class=\"o\">=<\/span> <span class=\"n\">f<\/span><span class=\"o\">.<\/span><span class=\"n\">func_code<\/span><br \/>            <span class=\"n\">wrapped_args<\/span> <span class=\"o\">=<\/span> <span class=\"nb\">list<\/span><span class=\"p\">(<\/span><span class=\"n\">code<\/span><span class=\"o\">.<\/span><span class=\"n\">co_varnames<\/span><br \/>                    <span class=\"p\">[:<\/span><span class=\"n\">code<\/span><span class=\"o\">.<\/span><span class=\"n\">co_argcount<\/span><span class=\"p\">])<\/span><br \/><br \/>        <span class=\"k\">try<\/span><span class=\"p\">:<\/span><br \/>            <span class=\"n\">arg_index<\/span> <span class=\"o\">=<\/span> <span class=\"n\">wrapped_args<\/span><span class=\"o\">.<\/span><span class=\"n\">index<\/span><span class=\"p\">(<\/span><span class=\"n\">arg_name<\/span><span class=\"p\">)<\/span><br \/>        <span class=\"k\">except<\/span> <span class=\"ne\">ValueError<\/span><span class=\"p\">:<\/span><br \/>            <span class=\"k\">raise<\/span> <span class=\"ne\">NameError<\/span><span class=\"p\">,<\/span> <span class=\"n\">arg_name<\/span><br \/><br \/>        <span class=\"k\">def<\/span> <span class=\"nf\">wrapper<\/span><span class=\"p\">(<\/span><span class=\"o\">*<\/span><span class=\"n\">args<\/span><span class=\"p\">,<\/span> <span class=\"o\">**<\/span><span class=\"n\">kwargs<\/span><span class=\"p\">):<\/span><br \/>            <span class=\"k\">if<\/span> <span class=\"nb\">len<\/span><span class=\"p\">(<\/span><span class=\"n\">args<\/span><span class=\"p\">)<\/span> <span class=\"o\">&gt;<\/span> <span class=\"n\">arg_index<\/span><span class=\"p\">:<\/span><br \/>                <span class=\"n\">arg<\/span> <span class=\"o\">=<\/span> <span class=\"n\">args<\/span><span class=\"p\">[<\/span><span class=\"n\">arg_index<\/span><span class=\"p\">]<\/span><br \/>            <span class=\"k\">else<\/span><span class=\"p\">:<\/span><br \/>                <span class=\"n\">arg<\/span> <span class=\"o\">=<\/span> <span class=\"n\">kwargs<\/span><span class=\"p\">[<\/span><span class=\"n\">arg_name<\/span><span class=\"p\">]<\/span><br \/><br \/>            <span class=\"k\">if<\/span> <span class=\"ow\">not<\/span> <span class=\"nb\">isinstance<\/span><span class=\"p\">(<\/span><span class=\"n\">arg<\/span><span class=\"p\">,<\/span> <span class=\"n\">allowed_types<\/span><span class=\"p\">):<\/span><br \/>                <span class=\"n\">type_list<\/span> <span class=\"o\">=<\/span> <span class=\"s\">&quot; or &quot;<\/span><span class=\"o\">.<\/span><span class=\"n\">join<\/span><span class=\"p\">(<\/span><span class=\"s\">&quot;&#39;&quot;<\/span> <br \/>                        <span class=\"o\">+<\/span> <span class=\"nb\">str<\/span><span class=\"p\">(<\/span><span class=\"n\">allowed_type<\/span><span class=\"o\">.<\/span><span class=\"n\">__name__<\/span><span class=\"p\">)<\/span> <span class=\"o\">+<\/span> <br \/>                        <span class=\"s\">&quot;&#39;&quot;<\/span> <span class=\"k\">for<\/span> <span class=\"n\">allowed_type<\/span> <span class=\"ow\">in<\/span> <span class=\"n\">allowed_types<\/span><span class=\"p\">)<\/span><br \/>                <span class=\"k\">raise<\/span> <span class=\"ne\">TypeError<\/span><span class=\"p\">,<\/span> <span class=\"s\">&quot;Expected argument &#39;<\/span><span class=\"si\">%s<\/span><span class=\"s\">&#39; <\/span><span class=\"se\">\\<\/span><br \/><span class=\"s\">                   to be of type <\/span><span class=\"si\">%s<\/span><span class=\"s\"> but it was of type &#39;<\/span><span class=\"si\">%s<\/span><span class=\"s\">&#39;.&quot;<\/span> \\<br \/>                   <span class=\"o\">%<\/span> <span class=\"p\">(<\/span><span class=\"n\">arg_name<\/span><span class=\"p\">,<\/span> <span class=\"n\">type_list<\/span><span class=\"p\">,<\/span><br \/>                      <span class=\"n\">arg<\/span><span class=\"o\">.<\/span><span class=\"n\">__class__<\/span><span class=\"o\">.<\/span><span class=\"n\">__name__<\/span><span class=\"p\">)<\/span><br \/><br \/>            <span class=\"k\">return<\/span> <span class=\"n\">f<\/span><span class=\"p\">(<\/span><span class=\"o\">*<\/span><span class=\"n\">args<\/span><span class=\"p\">,<\/span> <span class=\"o\">**<\/span><span class=\"n\">kwargs<\/span><span class=\"p\">)<\/span><br \/><br \/>        <span class=\"n\">wrapper<\/span><span class=\"o\">.<\/span><span class=\"n\">wrapped_args<\/span> <span class=\"o\">=<\/span> <span class=\"n\">wrapped_args<\/span><br \/>        <span class=\"k\">return<\/span> <span class=\"n\">wrapper<\/span><br \/><br \/>    <span class=\"k\">return<\/span> <span class=\"n\">make_wrapper<\/span><br \/><br \/><span class=\"nd\">@require<\/span><span class=\"p\">(<\/span><span class=\"s\">&#39;a&#39;<\/span><span class=\"p\">,<\/span><span class=\"nb\">str<\/span><span class=\"p\">)<\/span><br \/><span class=\"nd\">@require<\/span><span class=\"p\">(<\/span><span class=\"s\">&#39;b&#39;<\/span><span class=\"p\">,<\/span><span class=\"nb\">str<\/span><span class=\"p\">)<\/span><br \/><span class=\"k\">def<\/span> <span class=\"nf\">add<\/span><span class=\"p\">(<\/span><span class=\"n\">a<\/span><span class=\"p\">,<\/span><span class=\"n\">b<\/span><span class=\"p\">):<\/span><br \/>    <span class=\"k\">return<\/span> <span class=\"n\">a<\/span><span class=\"o\">+<\/span><span class=\"n\">b<\/span><br \/><\/pre><\/div><br \/><br \/><div><br \/><pre><br \/>>>>add('hello ','world')<br \/>hello world<br \/>>>>add('hello',1)<br \/>Traceback (most recent call last):<br \/>  File \"snippet3.py\", line 38, in <module><br \/>    print add('hello',2)<br \/>  File \"snippet3.py\", line 24, in wrapper<br \/>    return f(*args, **kwargs)<br \/>  File \"snippet3.py\", line 22, in wrapper<br \/>    raise TypeError, \"Expected argument '%s' to be of type %s <br \/>      but it was of type '%s'.\" % (arg_name,<br \/>      type_list, arg.__class__.__name__)<br \/>TypeError: Expected argument 'b' to be of type <br \/>           'str' but it was of type 'int'.<br \/><\/pre><br \/><\/div><br \/><br \/><span>above is code that does type checking on input arguments. I may be wrong and there may be use cases where you need to check the type of an object but the point is you should design your program so that you know all the involved types or use a language that has compile time type-checking.<br \/><br \/>Note: The above type checking is in a Django application that is live and it has users and i didn't write that decorator.<\/span><br \/><br \/><br \/><a href=\"http:\/\/technorati.com\/tag\/django\" rel=\"tag\"><img style=\"border:0;vertical-align:middle;margin-left:.4em\" src=\"http:\/\/static.technorati.com\/static\/img\/pub\/icon-utag-16x13.png?tag=django\" alt=\" \" \/>django<\/a><a href=\"http:\/\/technorati.com\/tag\/python\" rel=\"tag\"><img style=\"border:0;vertical-align:middle;margin-left:.4em\" src=\"http:\/\/static.technorati.com\/static\/img\/pub\/icon-utag-16x13.png?tag=python\" alt=\" \" \/>python<\/a>", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "python", 
+      "title": "(Ugly) Python type checking", 
+      "body_override": 1, 
+      "date_published": "2008-01-15 21:46:00", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "ugly-python-type-checking"
+    }
+  }, 
+  {
+    "pk": 65, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<p>So we all know about tuples (immutable sequences)\n<\/p>\n<pre><code>emtpyTuple = (,) \nnames = ('bob','jane') \nprint names[0]\n<\/code><\/pre><p>Lists (mutable sequences)\n<\/p>\n<pre><code>emtpyTuple = []\nnames = ['bob','jane']\nprint names[0]\n<\/code><\/pre><p>and Dictionaries (mutable mapping)\n<\/p>\n<pre><code>emptyDict = {} \nnumbers = { 'one':1, 'two':2, 'three':3}\nprint numbers['two']`\n<\/code><\/pre><p>But how many of you know of (and used) Sets ?\n   Sets were available in Python 2.3 from the set module but are now a built-in type since 2.4.\n<\/p>\n<p>There are two types of sets;\n<\/p>\n<ol>\n <li><p>set (mutable, unordered collection of immutable values)\n<\/p>\n\n <\/li>\n\n <li><p>frozenset (immutable, unordered collection of immutable values)\n<\/p>\n\n <\/li>\n<\/ol>\n<p>Sets can hold any data type as long as they're hashable (sets are implemented using hash tables)\n<\/p>\n<p><a href=\"http:\/\/docs.python.org\/lib\/types-set.html\">Python Docs for Set Types<\/a><br \/><br \/><br \/><br><br \/><a href=\"http:\/\/technorati.com\/tag\/python\" rel=\"tag\"><img style=\"border:0;vertical-align:middle;margin-left:.4em\" src=\"http:\/\/static.technorati.com\/static\/img\/pub\/icon-utag-16x13.png?tag=python\" alt=\" \" \/>python<\/a>\n<\/p>", 
+      "category": 1, 
+      "updated": "2009-12-03 23:25:28", 
+      "tags": "", 
+      "title": "Tuples, Lists, Dictionaries and .... ? (sets)", 
+      "body_override": 0, 
+      "date_published": "2008-01-02 21:57:00", 
+      "draft": 1, 
+      "body_markdown": "So we all know about tuples (immutable sequences)\r\n \r\n    emtpyTuple = (,) \r\n    names = ('bob','jane') \r\n    print names[0] \r\n\r\n\r\nLists (mutable sequences)\r\n\r\n    emtpyTuple = []\r\n    names = ['bob','jane']\r\n    print names[0]\r\n\r\n\r\nand Dictionaries (mutable mapping)\r\n\r\n    emptyDict = {} \r\n    numbers = { 'one':1, 'two':2, 'three':3}\r\n    print numbers['two']`\r\n\r\n\r\n\r\nBut how many of you know of (and used) Sets ?\r\nSets were available in Python 2.3 from the set module but are now a built-in type since 2.4.\r\n\r\nThere are two types of sets;\r\n\r\n\r\n   1. set (mutable, unordered collection of immutable values)\r\n\r\n   2. frozenset (immutable, unordered collection of immutable values)\r\n\r\nSets can hold any data type as long as they're hashable (sets are implemented using hash tables)\r\n\r\n\r\n<a href=\"http:\/\/docs.python.org\/lib\/types-set.html\">Python Docs for Set Types<\/a><br \/><br \/><br \/><br><br \/><a href=\"http:\/\/technorati.com\/tag\/python\" rel=\"tag\"><img style=\"border:0;vertical-align:middle;margin-left:.4em\" src=\"http:\/\/static.technorati.com\/static\/img\/pub\/icon-utag-16x13.png?tag=python\" alt=\" \" \/>python<\/a>", 
+      "slug": "Tuples_Lists_Dictionaries_sets"
+    }
+  }, 
+  {
+    "pk": 66, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<div style=\"text-align: left;\"><font style=\"color: rgb(0, 153, 0);\" size=\"4\">Description<\/font><br \/><\/div><font size=\"4\"><br \/><\/font><div style=\"text-align: left;\"><font size=\"4\"><font size=\"2\">So far i haven't found any documentation for what really pysysmon is other then the comment on its CheeseShop  page which is  '<\/font><\/font><font size=\"2\">A curses-based system monitor'.<br \/><br \/><font style=\"color: rgb(0, 153, 0);\" size=\"4\">How-To:<\/font><br \/><br \/>Well i downloaded the source code and there is a file called main.py. I did and i get the followingl<br \/><br \/><span style=\"color: rgb(255, 0, 0);\">ImportError: No module named gobject<\/span><br \/><br \/>gobject is the GTK+ wrapper for Python and im using a Mac.<br \/><br \/><br \/><\/font><\/div><br \/><font size=\"4\"><br \/><br \/><\/font>", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "", 
+      "title": "Review 01: pysysmon", 
+      "body_override": 1, 
+      "date_published": "2007-12-27 21:49:00", 
+      "draft": 1, 
+      "body_markdown": "", 
+      "slug": "Review-01:-pysysmon"
+    }
+  }, 
+  {
+    "pk": 67, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "Here is what i will try to do; each week i will try to review one Python module that appears in my feed to the CheeseShop recent updates. I will try to write a mini how-to on the chosen module, rate it based on documentation available, usefulness and alternatives. The first module that i will do the review is for pysysmon 0.0.25<br \/><br \/>Why...because i can.<br \/><br \/>EDIT:<br \/><br \/><span style=\"font-size:85%;\">Well i downloaded the source code for pysysmon which as a file called main.py. I did and i get the following:<br \/><br \/><\/span><div style=\"text-align: center;\"><span style=\"font-size:85%;\"> <span style=\"color: rgb(255, 0, 0);\">ImportError: No module named gobject<\/span><\/span><br \/><\/div><span style=\"font-size:85%;\"><br \/>gobject is the GTK+ wrapper for Python and im using a Mac. So either i can try this using Ubuntu (via Parallels) or only write reviews for modules that are OS independent or Mac only. I will try to play around with pysysmon on Ubuntu because it looks interesting.<br \/><br \/>Recommendation for pysysmon creator, <span style=\"font-weight: bold;\">\"please update your Cheese Shop page to describe what platforms it runs, what other packages it is dependent on\"<\/span>. It is really not <\/span><span style=\"font-weight: bold;font-size:130%;\" ><span style=\"font-size:85%;\">  '<\/span><\/span><span style=\"font-size:85%;\"><span style=\"font-weight: bold;\">A curses-based system monitor'<\/span> but more like<span style=\"font-weight: bold;\"> <\/span><\/span><span style=\"font-weight: bold;font-size:130%;\" ><span style=\"font-size:85%;\">  '<\/span><\/span><span style=\"font-size:85%;\"><span style=\"font-weight: bold;\">A curses\/GTK based system monitor'<\/span>.<br \/><\/span>", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "python", 
+      "title": "Python Module Review's", 
+      "body_override": 1, 
+      "date_published": "2007-12-26 21:38:00", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "python-module-reviews"
+    }
+  }, 
+  {
+    "pk": 68, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<object width=\"425\" height=\"355\"><param name=\"movie\" value=\"http:\/\/www.youtube.com\/v\/epv27R-4dqU&rel=1\"><\/param><param name=\"wmode\" value=\"transparent\"><\/param><embed src=\"http:\/\/www.youtube.com\/v\/epv27R-4dqU&rel=1\" type=\"application\/x-shockwave-flash\" wmode=\"transparent\" width=\"425\" height=\"355\"><\/embed><\/object>", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "", 
+      "title": "Recieving My Degree", 
+      "body_override": 1, 
+      "date_published": "2007-12-24 21:56:00", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "recieving-my-degree"
+    }
+  }, 
+  {
+    "pk": 69, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<h4> Not another Top 10 List <\/h4> <br \/><br \/><b> IPython: <\/b><br \/><br \/>It is said that the best way to be good in drawing and maths is to practice, practice, practice and more.  This goes same with programming, not just theory only but actual writing of programs\/scripts. Practicing Python is done best via the use of the interactive Python console. For new Python users the default console can be a bit tedious. While learning a new language most of the time is spent looking up documentation, this is where i think iPython really makes learning Python easy. With the normal Python shell to look up the attributes on an object you usually use the dir() function, but like i said it's tedious typing dir(object). In iPython it's just <br \/><br \/>object.<tab><br \/><br \/>which then gives you a nice output of all the attributes of <b>object<\/b><br \/><br \/>But does one learn more from manual labour such as mistyping an attribute (i.e list.apend('hello') ). That is open to question and people's views.<br \/><br \/>I recommend iPython to all new Python users.", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "", 
+      "title": "Usefull Python modules\/tools", 
+      "body_override": 1, 
+      "date_published": "2007-12-16 23:56:00", 
+      "draft": 1, 
+      "body_markdown": "", 
+      "slug": "Usefull-Python-modules\/tools"
+    }
+  }, 
+  {
+    "pk": 70, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<i>Never store passwords as clear text<\/i>, that is the general rule with any application that has a database backend that is used for authentication into the system. Why? <br \/><br \/>Basic authentication with a database usually works by comparing username and password combination  that the user entered to values in the database table containing user details such as login name, password etc...It might be possible for a user with correct credentials to be able to inject SQL queries to the application, something like;<br \/><br \/><b>SELECT * FROM USERS;<\/b> <br \/><br \/><font size='1'><i>assuming the user can guess or knows the table containing user data.<\/i><\/font> <br \/><br \/>If passwords are in clear text then lo and behold the users now has access to all other users login name and passwords. Anyway this post is not about security of database backed applications but a post about how i overcame different versions of Python and py-bcrypt's support.<br \/><br \/>As i've posted before i've been working at a web development company as a Python programmer. It's a Zope 'shop' in the sense that there main application, developed in house a shopping cart system is developed using Zope. Anyway i just developed 'External Scripts' to do specialized stuff for customers. But recently i've been working on a 'time\/job tracking' web application using web.py. I've mentioned this in a previous post. So here is the versions of Python,web.py and py-bcrypt that i used to develop the tracker;<br \/><br \/><ul><br \/>    <li> Python 2.5.1 <\/li><br \/>    <li> py-bcrypt-0.1 (Python 2.4 or higher) <\/li><br \/>    <li> MySQL-5 <\/li><br \/><\/ul><br \/><br \/>Anyway, this past week the application was put on a live <b>production server<\/b>. That has;<br \/><br \/><ul><br \/>    <li> Python2.3 <\/li><br \/>    <li> Postgres <\/li><br \/><\/ul><br \/><br \/>I've also used decorators to 'decorate' functions to restrict access to certain URL paths. Take a guess in which version decorators was introduced into Python? You guessed right Python 2.4 got blessed with decorators. Guess what the lead\/senior developer did ? He re-wrote most of the code to just use plain function calls instead of decorators...he re-wrote...instead of the simpler solution of installing Python >=2.4. (Converted the decorator to a plain function which is called in all other functions that was decorated with it). <br \/><br \/>I mentioned above that py-bcrypt requires Python >= 2.4 because it needs the function os.urandom which was introduced into Python 2.4. Oh slap! i've got Python 2.3 so we can't generate hashes...the solution that was suggested to me was....\"write\/copy urandom\" i think that was one of the moments in my not so long professional career that i thought that someone more senior and with more was wrong. I would have instead installed Python 2.5 on the server, which seemed to be the 'path of least resistance'.<br \/><br \/>It seemed a daunting task. The first step i took was looking at py-bcrypt module. It contains two files;<br \/><br \/><ul><br \/>   <li> __init__.py <\/li><br \/>   <li> _bcrytp.so <\/li><br \/><\/ul><br \/><br \/>You can't edit _bcrytp.so file as it a library file. So i looked at __init__.py, which imports the os module and defines the <b>gensalt<\/b> function. From my the Python 2.5 installation on my Mac i copied the urandom implementation into __init__.py just above the line where <b> import os <\/b>. urandom is not that complex , it just tries to open \/dev\/urandom and reads in <b> n <\/b> number of bytes and return it. So here is what __init__.py looks like after the changes, its a hack. <br \/><br \/><font color=\"#fcf305\">25 <\/font><font color=\"#cd5c5c\">from<\/font>&nbsp;os <font color=\"#cd5c5c\">import<\/font>&nbsp;O_RDONLY,read<br \/><font color=\"#fcf305\">26 <\/font><br \/><font color=\"#fcf305\">27 <\/font><font color=\"#f0e68c\"><b>def<\/b><\/font>&nbsp;<font color=\"#98fb98\">urandom<\/font>(n):<br \/><font color=\"#fcf305\">28 <\/font>&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"background-color: #333333\"><font color=\"#ffffff\">&quot;&quot;&quot;<\/font><\/span><font color=\"#ffa0a0\">urandom(n) -&gt; str<\/font><br \/><font color=\"#fcf305\">29 <\/font><br \/><font color=\"#fcf305\">30 <\/font><font color=\"#ffa0a0\">&nbsp;&nbsp;&nbsp;&nbsp;Return a string of n random bytes suitable for cryptographic use.<\/font><br \/><font color=\"#fcf305\">31 <\/font><br \/><font color=\"#fcf305\">32 <\/font><font color=\"#ffa0a0\">&nbsp;&nbsp;&nbsp;&nbsp;<\/font><span style=\"background-color: #333333\"><font color=\"#ffffff\">&quot;&quot;&quot;<\/font><\/span><br \/><font color=\"#fcf305\">33 <\/font>&nbsp;&nbsp;&nbsp;&nbsp;<font color=\"#f0e68c\"><b>try<\/b><\/font>:<br \/><font color=\"#fcf305\">34 <\/font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_urandomfd = open(<span style=\"background-color: #333333\"><font color=\"#ffffff\">&quot;<\/font><\/span><font color=\"#ffa0a0\">\/dev\/urandom<\/font><span style=\"background-color: #333333\"><font color=\"#ffffff\">&quot;<\/font><\/span>,<span style=\"background-color: #333333\"><font color=\"#ffffff\">'<\/font><\/span><font color=\"#ffa0a0\">r<\/font><span style=\"background-color: #333333\"><font color=\"#ffffff\">'<\/font><\/span>&nbsp;)<br \/><font color=\"#fcf305\">35 <\/font>&nbsp;&nbsp;&nbsp;&nbsp;<font color=\"#f0e68c\"><b>except<\/b><\/font>&nbsp;(OSError, IOError):<br \/><font color=\"#fcf305\">36 <\/font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color=\"#f0e68c\"><b>raise<\/b><\/font>&nbsp;Exception(<span style=\"background-color: #333333\"><font color=\"#ffffff\">&quot;<\/font><\/span><font color=\"#ffa0a0\">\/dev\/urandom (or equivalent) not found<\/font><span style=\"background-color: #333333\"><font color=\"#ffffff\">&quot;<\/font><\/span>)<br \/><font color=\"#fcf305\">37 <\/font>&nbsp;&nbsp;&nbsp;&nbsp;bytes = <span style=\"background-color: #333333\"><font color=\"#ffffff\">&quot;&quot;<\/font><\/span><br \/><font color=\"#fcf305\">38 <\/font><br \/><font color=\"#fcf305\">39 <\/font>&nbsp;&nbsp;&nbsp;&nbsp;<font color=\"#f0e68c\"><b>while<\/b><\/font>&nbsp;len(bytes) &lt; n:<br \/><font color=\"#fcf305\">40 <\/font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bytes += _urandomfd.read(n-len(bytes))<br \/><font color=\"#fcf305\">41 <\/font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color=\"#87ceeb\">#bytes += read(_urandomfd, n - len(bytes))<\/font><br \/><font color=\"#fcf305\">42 <\/font><br \/><font color=\"#fcf305\">43 <\/font>&nbsp;&nbsp;&nbsp;&nbsp;_urandomfd.close()<br><br \/><font color=\"#fcf305\">44 <\/font>&nbsp;&nbsp;&nbsp;&nbsp;<font color=\"#f0e68c\"><b>return<\/b><\/font>&nbsp;bytes<br><br \/><font color=\"#fcf305\">45 <\/font><br \/><font color=\"#fcf305\">46 <\/font><font color=\"#cd5c5c\">import<\/font>&nbsp;os<br><br \/><font color=\"#fcf305\">47 <\/font>os.urandom = urandom<br \/><font color=\"#fcf305\">48 <\/font><font color=\"#cd5c5c\">from<\/font>&nbsp;_bcrypt <font color=\"#cd5c5c\">import<\/font>&nbsp;<br \/><br \/><br \/>Now py-bcrypt works and passwords are hashable. <br \/><br \/>The thing that troubles me and is a question on my mind, is it worth the risk to install Python >= 2.4 on a server that contains 'live shops' ? The risk being totally blowing up the default Python installation (2.3) and bringing down the shops ? I would have probably installed a new version of Python and sandboxed it. The irony is that the senior developer was the one who chose py-crypt and told me to <i>come up with a decorator for methods which need to be password protected<\/i>. I would have thought that with his experience he would have guessed that the request for the app to go online would have come. Also if you are scared to blow the default installation of Python on the production server, WHY PUT AN IN HOUSE APPLICATION THERE?<br \/><br \/><a href=\"http:\/\/technorati.com\/tag\/python\" rel=\"tag\"><img style=\"border:0;vertical-align:middle;margin-left:.4em\" src=\"http:\/\/static.technorati.com\/static\/img\/pub\/icon-utag-16x13.png?tag=python\" alt=\" \" \/>python<\/a>", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "python", 
+      "title": "Never store passwords as clear text", 
+      "body_override": 1, 
+      "date_published": "2007-12-13 23:07:00", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "never-store-passwords-as-clear-text"
+    }
+  }, 
+  {
+    "pk": 71, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "I wanted to look at the current issues for vim-cocoa but i couldn't find the address in my browser history so i went to Google Code hosting and searched for '<a href=\"http:\/\/code.google.com\/hosting\/search?q=vim+cocoa&amp;projectsearch=Search+Projects\">vim-cocoa<\/a>'. Two results turned up, vim-cocoa and MacVim. What's this MacVim? Wow. Where have i been without it? vim-cocoa was good but it just felt awkward. MacVim is what i've been looking for. Actual tabs! :tabedit is now more awesome. Anyway check it out at <a href=\"http:\/\/code.google.com\/p\/macvim\/\">MacVim<\/a>. Ohh and i was reading some post about using the Scripting Bridge (i.e PyObjC) and <a href=\"http:\/\/groups.google.com\/group\/vim_mac\/browse_thread\/thread\/0e57964813ca3642\">creating plugins<\/a>, like running a script that displays a window of all the buffers in vim. Awesome!", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "", 
+      "title": "MacVim...ahh where have i been?", 
+      "body_override": 1, 
+      "date_published": "2007-12-09 21:56:00", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "macvimahh-where-have-i-been"
+    }
+  }, 
+  {
+    "pk": 72, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "One of those days again today, a headache so bad that walking the effort of putting one step in front of other brings waves of throbbing that you can feel in the veins in your brain. <br \/><br \/>Anyway, new job (part-time at the moment), Django developer, so im learning Django (i've got three weeks!) and it looks very <i>clean<\/i>. <b>M<\/b>odel-<b>T<\/b>emplate-<b>V<\/b>iew paradigm is understandable and i agree that its up to everyone's own interpretation (of MVC too). Anyway i still need to learn.<br \/><br \/>With Django installed on my MacBook Pro, that makes four web-frameworks, Rails,Turbogear, web.py and now Django. My headache is coming back....nooooo.<br \/><br \/><a href=\"http:\/\/technorati.com\/tag\/django\" rel=\"tag\"><img style=\"border:0;vertical-align:middle;margin-left:.4em\" src=\"http:\/\/static.technorati.com\/static\/img\/pub\/icon-utag-16x13.png?tag=django\" alt=\" \" \/>django<\/a><a href=\"http:\/\/technorati.com\/tag\/python\" rel=\"tag\"><img style=\"border:0;vertical-align:middle;margin-left:.4em\" src=\"http:\/\/static.technorati.com\/static\/img\/pub\/icon-utag-16x13.png?tag=python\" alt=\" \" \/>python<\/a>", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "django", 
+      "title": "Splitting Headache and Django", 
+      "body_override": 1, 
+      "date_published": "2007-12-06 21:29:00", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "splitting-headache-and-django"
+    }
+  }, 
+  {
+    "pk": 73, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "This is how you export a csv file and get the browser to recognize that its a csv file and popups the download window with web.py.  Lets say we have a database with a table called users and you want to create a csv file that contains all the users with their names and id's here is how you do it.<br \/><br \/><div><br \/><span style=\"color: rgb(252, 243, 5);\"> 1 <\/span><span style=\"color: rgb(255, 255, 96);\"><b>class<\/b><\/span> <span style=\"color: rgb(64, 255, 255);\">export<\/span>:<br \/><span style=\"color: rgb(252, 243, 5);\"> 2     <\/span>    <span style=\"color: rgb(255, 255, 96);\">&nbsp;&nbsp;&nbsp;&nbsp;<b>def<\/b><\/span> <span style=\"color: rgb(64, 255, 255);\">GET<\/span>(self):<br \/><span style=\"color: rgb(252, 243, 5);\"> 3 <\/span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i = web.input()<br \/><span style=\"color: rgb(252, 243, 5);\"> 4 <\/span><br \/><span style=\"color: rgb(252, 243, 5);\"> 5 <\/span><br \/><span style=\"color: rgb(252, 243, 5);\"> 6 <\/span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;users = web.select('<span style=\"color: rgb(255, 160, 160);\">users<\/span>', vars=locals())<br \/><span style=\"color: rgb(252, 243, 5);\"> 7 <\/span><br \/><span style=\"color: rgb(252, 243, 5);\"> 8           <\/span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;csv = []<br \/><span style=\"color: rgb(252, 243, 5);\"> 9 <\/span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;csv.append(\"<span style=\"color: rgb(255, 160, 160);\">id,name<\/span><span style=\"color: rgb(252, 128, 0);\">\\n<\/span>\")<br \/><span style=\"color: rgb(252, 243, 5);\">10 <\/span>        <span style=\"color: rgb(255, 255, 96);\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>for<\/b><\/span> user <span style=\"color: rgb(255, 255, 96);\"><b>in<\/b><\/span> users:<br \/><span style=\"color: rgb(252, 243, 5);\">11 <\/span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;row = []<br \/><span style=\"color: rgb(252, 243, 5);\">12 <\/span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;row.append(user.id)<br \/><span style=\"color: rgb(252, 243, 5);\">13 <\/span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;row.append(user.name)<br \/><span style=\"color: rgb(252, 243, 5);\">14 <\/span><br \/><span style=\"color: rgb(252, 243, 5);\">15 <\/span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;csv.append(\"<span style=\"color: rgb(255, 160, 160);\">,<\/span>\".join(row))<br \/><span style=\"color: rgb(252, 243, 5);\">16 <\/span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: rgb(128, 160, 255);\">#writer.writerow(row)<\/span><br \/><span style=\"color: rgb(252, 243, 5);\">17 <\/span>     <br \/><span style=\"color: rgb(252, 243, 5);\">18 <\/span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style=\"color: rgb(128, 160, 255);\">#f.close()<\/span><br \/><span style=\"color: rgb(252, 243, 5);\">19 <\/span><br \/><span style=\"color: rgb(252, 243, 5);\">20 <\/span>&nbsp;&nbsp;&nbsp;&nbsp;web.header('<span style=\"color: rgb(255, 160, 160);\">Content-Type<\/span>','<span style=\"color: rgb(255, 160, 160);\">text\/csv<\/span>')<br \/><span style=\"color: rgb(252, 243, 5);\">21 <\/span>&nbsp;&nbsp;&nbsp;&nbsp;web.header('<span style=\"color: rgb(255, 160, 160);\">Content-disposition<\/span>', '<span style=\"color: rgb(255, 160,160);\">attachment; filename=export.csv<\/span>')<br \/><span style=\"color: rgb(252, 243, 5);\">22 <\/span>        <span style=\"color: rgb(255, 255, 96);\">&nbsp;&nbsp;&nbsp;&nbsp;<b>print<\/b><\/span> \"\".join(csv)<br \/><span style=\"color: rgb(252, 243, 5);\">23 <\/span>        <span style=\"color: rgb(255, 255, 96);\">&nbsp;&nbsp;&nbsp;&nbsp;<b>return<\/b><\/span><br \/><br \/><\/div><br \/><br \/><br \/>I export the csv file  in a GET method of a class called export which i map in the urls list to '\/export','export'<br \/><br \/>A quick breakdown, do a database query and iterate over the IterBetter object create a row and appending a comma seperated string to the csv list. Then at the end you send the appropirate HTTP headers , the first telling the type of the file and the second setting the filename and extension.<br \/><br \/>Anyway you can download this code from <a href=\"http:\/\/bulkanix.pastebin.com\/f1f567ea0\">http:\/\/bulkanix.pastebin.com\/f1f567ea0<\/a>", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "python web.py", 
+      "title": "Exporting a csv file with web.py", 
+      "body_override": 1, 
+      "date_published": "2007-11-25 01:52:00", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "exporting-csv-file-with-webpy"
+    }
+  }, 
+  {
+    "pk": 74, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "Yep i just got my very own domain bulkan-evcimen.com, very original aren't I ? Now you can access this blog via http:\/\/blog.bulkan-evcimen.com", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "", 
+      "title": "New Domain", 
+      "body_override": 1, 
+      "date_published": "2007-11-24 00:21:00", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "new-domain"
+    }
+  }, 
+  {
+    "pk": 75, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "At work i created this script that changes permissions on our application BizarShop so that it works with the new Dashboard Widget to control the starting and stopping of of the Zope server. The permissions need to change because the controller that comes with BizarShop starts the Zope server as root, which creates the lock file (Data.fs file if it doesn't exist) with root ownership. The widget on the other hand tries to control the server via normal user permissions, but the server wont start because all the files belong to root and cannot be overwritten. For example the file Z2.pid needs to be writable, so you need to change the ownership to that of the user.<br \/><br \/>So i created a python script that recursively goes through all directories under \/Applications\/Bizar Shop and changes all of the file\/folder ownership to that of the owner current user. As you probably know to run a python script you either need to run explicitly via;<br \/><br \/>python scriptname.py<br \/><br \/>or by including a hash-bang at the start of the file to tell where python is located and then make the script executable. I thought that the user could just double click on an executable python script to run it but i was wrong.  I didn't want the user to open Terminal.app and execute it manually, this is just not user friendly. I then remembered py2app.  From the README file of py2app<br \/><br \/><pre><span style=\";font-family:arial;font-size:85%;\"  >py2app is a Python setuptools command which will allow<br \/>you to make standalone Mac OS X application bundles<br \/>and plugins from Python scripts.<br \/><br \/>py2app is similar in purpose and design to py2exe for<br \/>Windows.<\/span><br \/><\/pre>So using py2app i created this installer, that also includes the widget and embryo.py, oh and embryo.py is also a nice little module, from its Google Code description;<br \/><br \/><span style=\";font-family:arial;font-size:85%;\"  >embryo is a tiny Mac\/Windows\/Linux GUI toolkit for Python. It can be used to \"boot-strap\" the user into downloading a larger GUI toolkit such as PyGTK, PyGame, pyglet, PyOpenGL, etc.<\/span><br \/><br \/>What i used it for is, my script checks if the folder \/Applications\/Bizar Shop exists and if it doesn't then it assumes that BizarShop is not installed and then shows a  message box saying BizarShop is not installed do you want to download.  But if it does find it displays a message box letting the user now know that the Widget is about to be installed and Dashboard opens up  a the install widget dialog box.<br \/><br \/>What is so cool is that py2app is very easy to use  and it works! Combining this with embryo you can easily create a quick installation program for literally anything.<br \/><br \/>Oh, did i mention that embryo is created by Alex Holkner  the same guy  who is working on pyglet? Well now i did. Here are the links to these modules.<br \/><br \/><a href=\"http:\/\/code.google.com\/p\/pyglet\/\">http:\/\/code.google.com\/p\/pyglet\/<\/a><br \/><a href=\"http:\/\/code.google.com\/p\/pyembryo\/\">http:\/\/code.google.com\/p\/pyembryo\/<\/a><br \/><a href=\"http:\/\/svn.pythonmac.org\/py2app\/py2app\/trunk\/doc\/index.html\">http:\/\/svn.pythonmac.org\/py2app\/py2app\/trunk\/doc\/index.html<\/a>\r\n<br \/><br \/><a href=\"http:\/\/technorati.com\/tag\/py2app\" rel=\"tag\"><img style=\"border: 0pt none ; vertical-align: middle; margin-left: 0.4em;\" src=\"http:\/\/static.technorati.com\/static\/img\/pub\/icon-utag-16x13.png?tag=py2app\" alt=\" \" \/>py2app<\/a><a href=\"http:\/\/technorati.com\/tag\/python\" rel=\"tag\"><img style=\"border: 0pt none ; vertical-align: middle; margin-left: 0.4em;\" src=\"http:\/\/static.technorati.com\/static\/img\/pub\/icon-utag-16x13.png?tag=python\" alt=\" \" \/>python<\/a>", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "python py2app", 
+      "title": "embryo.py and py2app awesomeness", 
+      "body_override": 1, 
+      "date_published": "2007-11-05 19:33:00", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "embryopy-and-py2app-awesomeness"
+    }
+  }, 
+  {
+    "pk": 76, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "So how do you redirect everything written to stdout and store it somewhere but also print it out to stdout? This was asked on #python and i answered it.<br \/><br \/>To access the stdout file object you need to import the sys module. Redirecting stdout to a StringIO object works because all functions that write to stdout expect the write() method of a file-like object, which StringIO has (along with read, seek etc). So here is the code;\r\n\r\n\r\n<script src=\"http:\/\/gist.github.com\/24771.js\"><\/script>\r\n\r\n<\/font><br \/><br \/>So here is a quick breakdown line by line:<br \/><br \/><ul><br \/><li>Lines 1 and 2 are used to import the required modules.<\/li><br \/><li>Then we subclass StringIO and create an attribute to hold the reference to stdout.<\/li><br \/><li>In Line 9 we overwrite the write method of the StringIO baseclass which does only one additional thing of writing back out to the original stdout, then it calls the baseclasses write method to store the string again.<\/li><br \/><li>Then also overwrite the read method that does one additional thing of seeking to the start of the StringIO object and then writing it all out back to stdout.<\/li><br \/><\/ul><br \/><br \/><br \/><a href=\"http:\/\/technorati.com\/tag\/python\" rel=\"tag\"><img style=\"border:0;vertical-align:middle;margin-left:.4em\" src=\"http:\/\/static.technorati.com\/static\/img\/pub\/icon-utag-16x13.png?tag=python\" alt=\" \" \/>python<\/a><br><br \/><br \/><\/span>", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "python", 
+      "title": "Redirecting stdout to StringIO object", 
+      "body_override": 1, 
+      "date_published": "2007-11-04 22:11:00", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "redirecting-stdout-to-stringio-object"
+    }
+  }, 
+  {
+    "pk": 77, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "On Facebook there is a stupid chain message going on using the Super Wall application.  Here is a couple of screenshots of the message;<br \/><br \/><a onblur=\"try {parent.deselectBloggerImageGracefully();} catch(e) {}\" href=\"http:\/\/bp0.blogger.com\/_RRoV4TGmzls\/Ry2k7NM1xUI\/AAAAAAAAABI\/sWVu590_QwY\/s1600-h\/Picture+6.png\"><img style=\"margin: 0pt 10px 10px 0pt; float: left; cursor: pointer; width: 293px; height: 141px;\" src=\"http:\/\/bp0.blogger.com\/_RRoV4TGmzls\/Ry2k7NM1xUI\/AAAAAAAAABI\/sWVu590_QwY\/s320\/Picture+6.png\" alt=\"\" id=\"BLOGGER_PHOTO_ID_5128936887707616578\" border=\"0\" \/><\/a><a onblur=\"try {parent.deselectBloggerImageGracefully();} catch(e) {}\" href=\"http:\/\/bp1.blogger.com\/_RRoV4TGmzls\/Ry2lGdM1xVI\/AAAAAAAAABQ\/O6-b5eQkk2g\/s1600-h\/Picture+4.png\"><img style=\"margin: 0pt 0pt 10px 10px; float: right; cursor: pointer; width: 308px; height: 48px;\" src=\"http:\/\/bp1.blogger.com\/_RRoV4TGmzls\/Ry2lGdM1xVI\/AAAAAAAAABQ\/O6-b5eQkk2g\/s320\/Picture+4.png\" alt=\"\" id=\"BLOGGER_PHOTO_ID_5128937080981144914\" border=\"0\" \/><\/a><br \/><br \/><br \/><br \/><br \/><br \/><br \/><br \/><br \/><br \/><br \/>There is no bloody hacker with a stupid email address bm_toon7@hotmail.com and if there is then its a script kiddie! This type of message is some sort of stupid test that someone is trying to see how many idiots actually forward it to others.<br \/><br \/>\"If he hacks their email, he hacks yours\" haha when did this become possible, while i slept last night someone found a way to hack a gmail account from a hotmail account?<br \/><br \/>So here i will invite him to be my friend, let him hack me!<br \/><br \/><div style=\"text-align: center;\"><a onblur=\"try {parent.deselectBloggerImageGracefully();} catch(e) {}\" href=\"http:\/\/bp0.blogger.com\/_RRoV4TGmzls\/Ry2mYNM1xWI\/AAAAAAAAABY\/a9C9zbZVTJw\/s1600-h\/Picture+2.png\"><img style=\"margin: 0pt 10px 10px 0pt; cursor: pointer;\" src=\"http:\/\/bp0.blogger.com\/_RRoV4TGmzls\/Ry2mYNM1xWI\/AAAAAAAAABY\/a9C9zbZVTJw\/s320\/Picture+2.png\" alt=\"\" id=\"BLOGGER_PHOTO_ID_5128938485435450722\" border=\"0\" \/><\/a><\/div>", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "", 
+      "title": "Facebook chain letter", 
+      "body_override": 1, 
+      "date_published": "2007-11-04 21:27:00", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "facebook-chain-letter"
+    }
+  }, 
+  {
+    "pk": 78, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<div style=\"text-align: center;\"><br \/><\/div><div><br \/><\/div><div style=\"text-align: left;\"><div style=\"text-align: center;\"><img src=\"http:\/\/img57.imageshack.us\/img57\/1209\/picture2hy0.th.png\" alt=\"Free Image Hosting at www.ImageShack.us\" border=\"0\" \/> <span class=\"Apple-style-span\"  style=\"font-size:x-large;\">This an exam question from 2003 for Scripting Programming Language<\/span><span class=\"Apple-style-span\"  style=\"font-size:x-large;\">s. The first quest<\/span><span class=\"Apple-style-span\"  style=\"font-size:x-large;\">ion from the Perl section. There is one bug in the code that is given, find it and you win <\/span><del><span class=\"Apple-style-span\"  style=\"font-size:x-large;\">nothing<\/span><\/del><span class=\"Apple-style-span\"  style=\"font-size:x-large;\"> other than proving that someone forget to test the code and see if it works.<br \/><br \/><\/span><\/div> <a href=\"http:\/\/technorati.com\/tag\/perl\" rel=\"tag\"><img style=\"border: 0pt none ; vertical-align: middle; margin-left: 0.4em;\" src=\"http:\/\/static.technorati.com\/static\/img\/pub\/icon-utag-16x13.png?tag=perl\" alt=\" \" \/>perl<\/a><br \/><br \/><br \/><\/div>", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "", 
+      "title": "Spot the syntax error\/bug", 
+      "body_override": 1, 
+      "date_published": "2007-11-01 23:04:00", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "spot-syntax-errorbug"
+    }
+  }, 
+  {
+    "pk": 79, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "All i have is one more exam! One more exam and no more for ever! But studying for a half-Perl exam is so excruciatingly painful and confusing when the other half of the exam is Python, the ugliness versus the neatness.<br \/><br \/>Explicit versus implicit.<br \/><br \/>I always claim that if a programming\/scripting language wasn't designed as a Object Oriented language then adding the OO functionality later doesn't work. For example Tcl. Or even Perl. We were told to that you can class using perl modules and some weird ass perl references to modules. It doesn't work because syntactically the language wasn't designed to be OO. It just doesn't feel right, it's my personal view.<br \/><br \/>Get back to some Python and Zope goodness (don't get me started on frameworks!)<br \/><br \/><a href=\"http:\/\/technorati.com\/tag\/perl\" rel=\"tag\"><img style=\"border:0;vertical-align:middle;margin-left:.4em\" src=\"http:\/\/static.technorati.com\/static\/img\/pub\/icon-utag-16x13.png?tag=perl\" alt=\" \" \/>perl<\/a>", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "perl", 
+      "title": "Studying Perl", 
+      "body_override": 1, 
+      "date_published": "2007-10-31 12:37:00", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "studying-perl"
+    }
+  }, 
+  {
+    "pk": 80, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "Yes it's that time of the fucking semester again, exam time! I've had one on Software Testing yesterday it wasn't that bad couple of those questions that you know you read the answer but can't remember it. Anyway i'll pass.<br \/><br \/>Next one is on Scripting Programming Languages. Perl and Python, thats next week. Need to study Perl and fucking <span style=\"font-style: italic;\">Linked List<\/span> implementations in Perl (the lecturer is a researcher hence why we learnt Linked Lists in\u00a0 Perl).<br \/><br \/>P.S: This post is brought to you by Blogger Widget<br \/><br \/><a href=\"http:\/\/technorati.com\/tag\/perl\" rel=\"tag\"><img style=\"border:0;vertical-align:middle;margin-left:.4em\" src=\"http:\/\/static.technorati.com\/static\/img\/pub\/icon-utag-16x13.png?tag=perl\" alt=\" \" \/>perl<\/a>", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "", 
+      "title": "Exams", 
+      "body_override": 1, 
+      "date_published": "2007-10-27 23:15:00", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "exams"
+    }
+  }, 
+  {
+    "pk": 81, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "I've been very busy since last semester got a new job as a Python (Zope) Developer. Then quitting from my previous job which i was still considered an intern. Now im in my  second and last semester of university and I graduate at then end of this year!<br \/><br \/>Even though i haven't had free time to actually write a post i've had some of those times were you need to do work but <a href=\"http:\/\/www.urbandictionary.com\/define.php?term=cbf\">cbf<\/a> so you end up doing totally random stuff? Well i've had those times a plenty in which i experimented with couple of Python frameworks and modules.<br \/><br \/>First one i tried was Turbogears. Remember that major project i have were we are using Rails well that's what spurned me on to actually try a Python web application development framework. Oh and also the Python411 Podcast. Well installing Turbogears on a Mac is very easy by following this <a href=\"http:\/\/docs.turbogears.org\/1.0\/InstallMac\">guide<\/a><br \/><br \/><ul><li>I had Python2.5 already installed and the default version to run when python is run, so i skipped that step.<\/li><li>I had to install the easy_install using ez_setup.py<\/li><li>Then i downloaded tgsetup.py and ran it which downloads and install everything for you, except for the database wrapper.<\/li><li>The database i have installed on my Mac is MySQL 5.0 and the driver for that is <a href=\"http:\/\/sourceforge.net\/projects\/mysql-python\">MySQLdb<\/a>. This was the tricky part of the whole installation process of Turbogears. So i downloaded MySQLdb and tried running sudo python setup.py install, but it failed. The solution to this failure was tricky but after a bit of Googling the problem was that<span style=\"color: rgb(51, 204, 0);\"> setup_posix.py <\/span>had the wrong path to <span style=\"color: rgb(51, 204, 0);\">mysql_config<\/span> file which is located at <span style=\"color: rgb(51, 204, 0);\">\/usr\/local\/mysql\/bin\/mysql_config <\/span>on my Mac. Changing the path and running setup.py again worked. Then i tested it by trying to import MySQLdb from Python again and that seemed to work aswell (no Exceptions). <\/li><li>Then to actually test to see if Turbogears was correctly installed i ran this command tg-admin quickstart and entered a name for the project and package name (in this case it was wiki, creating wiki's with web application development frameworks seems to be the Hello World program of languages). Then started the built-in webserver by running the script <span style=\"color: rgb(0, 153, 0);\">start-wiki.py<\/span> and accessed it via <span style=\"color: rgb(0, 153, 0);\">http:\/\/localhost:8080\/ <\/span>and i got the \"Welcome to TurboGears\" page. <\/li><li>I haven't done anything else with Turbogears as i was interested in the installation process.<\/li><\/ul>", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "python mysqldb", 
+      "title": "Experimenting with Python frameworks and modules", 
+      "body_override": 1, 
+      "date_published": "2007-09-14 16:35:00", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "experimenting-with-python-frameworks"
+    }
+  }, 
+  {
+    "pk": 82, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "Last year during my internship as PQA Test Engineer which was just writing Test Plan Documentation and implementing the automated tests into regression scripts using", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "", 
+      "title": "PyPSP my pet project that taught me Python", 
+      "body_override": 1, 
+      "date_published": "2007-09-11 22:59:00", 
+      "draft": 1, 
+      "body_markdown": "", 
+      "slug": "PyPSP-my-pet-project-that-taught-me-Python"
+    }
+  }, 
+  {
+    "pk": 83, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "I got bored today!<br \/><br \/>So i installed QUICKSILVER and WOW<br \/><br \/>one thing its faster than Spotlight for running\/finding applications, so im hooked!<br \/><br \/><br \/><a href=\"http:\/\/technorati.com\/tag\/quicksilver\" rel=\"tag\"><img style=\"border:0;vertical-align:middle;margin-left:.4em\" src=\"http:\/\/static.technorati.com\/static\/img\/pub\/icon-utag-16x13.png?tag=quicksilver\" alt=\" \" \/>quicksilver<\/a>", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "mac", 
+      "title": "Quicksilver", 
+      "body_override": 1, 
+      "date_published": "2007-07-12 22:16:00", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "quicksilver"
+    }
+  }, 
+  {
+    "pk": 84, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "So exams have been over since 3 weeks ago now, which should have meant \"post post post\" ala \"developers developers developers\"-steve ballmer. But no i haven't had time, been working full-time for two weeks which we can safely blame my decision in buying a Mac Book Pro!<br \/><br \/>Anyway, i've also been looking for a Graduate job for next year. I haven't been successful yet. See initially i wanted to work for Google (assuming that they would hire me) but Google is in Sydney and my trip up there for the AUC Workshop made me realize that Sydney CBD stinks (literally) and i wouldn't really want to live there. I didn't even submit an application with Google. I've come to realize now that i don't really want to work at a big company, as i think that i will get lost in all of the office bureaucracy bullshit that goes on in big organizations. So i've been looking for small development companies (that use Python) that i could make a difference. Difference in the sense that i will <span style=\"font-style:italic;\">be part of<\/span> the company, difference in the sense that i my technical knowledge will be a keystone in helping said company to grow its business.<br \/><br \/>Cya for now, i need to find said company!", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "", 
+      "title": "Exams over...no post? wtf?", 
+      "body_override": 1, 
+      "date_published": "2007-07-04 22:20:00", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "exams-overno-post-wtf"
+    }
+  }, 
+  {
+    "pk": 85, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "So i haven't blogged for a long time now. Time at the moment for me is only measured by , when is the next assignment due, when is the next exam, how many days --hours-- do i have. For this reason i haven't posted anything here.<br \/><br \/>Well all assignments have been completed (two weeks ago), had two exams so far;<br \/><br \/>EDIT: The web.config xml didn't display<br \/><br \/>see i had to memorize this web.config file tags for Web Development Technologies subject on ASP.NET, when a Google search in real life can find the answer (from msdn) so why the fuck did we memorize this shit? And he didn't even ask these questions.<br \/><br \/>Grrr.<br \/><br \/>One more exam to go next Friday, Systems Architecture, i need to study (more like memorize shit, like what is a Component or an IT system)<br \/><br \/>And i've got Bronchitis for the past week.<br \/><br \/>Bye for now.", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "", 
+      "title": "Assignments, Exams and Bronchitis(i think)", 
+      "body_override": 1, 
+      "date_published": "2007-06-12 22:20:00", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "assignments-exams-and-bronchitisi-think"
+    }
+  }, 
+  {
+    "pk": 86, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "Just one thing, Google Maps API has really good documentation!  And very easy to use;<br \/><br \/><ul><li>Source the Google Maps API JavaScript file and use your key<\/li><li>Create a <div id=\"map\"><\/div><\/li><li>Create a GMap2 object passing in the div element<\/li><li><br \/><\/li><\/ul><a href=\"http:\/\/technorati.com\/tag\/google+maps+api\" rel=\"tag\"><img style=\"border: 0pt none ; vertical-align: middle; margin-left: 0.4em;\" src=\"http:\/\/static.technorati.com\/static\/img\/pub\/icon-utag-16x13.png?tag=google+maps+api\" alt=\" \" \/>google maps api<\/a>", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "", 
+      "title": "Google Maps API", 
+      "body_override": 1, 
+      "date_published": "2007-05-17 21:04:00", 
+      "draft": 1, 
+      "body_markdown": "", 
+      "slug": "Google-Maps-API"
+    }
+  }, 
+  {
+    "pk": 87, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<span style=\"color: rgb(0, 0, 153);\">var myArray = new Array();<\/span><br \/><span style=\"color: rgb(0, 0, 153);\">myArray[0] = \"hello\";<\/span><br \/><span style=\"color: rgb(0, 0, 153);\">myArray[1] = \"merhaba\";<\/span><br \/><span style=\"color: rgb(0, 0, 153);\">myArray[2] = \"ciao\";<\/span><br \/><br \/><span style=\"color: rgb(0, 0, 153);\">for (var i=0;i<myarray.length;i++)><\/myarray.length;i++)><\/span><br \/><span style=\"color: rgb(0, 0, 153);\">     alert(myArray[i]);<\/span><br \/><br \/><span style=\"color: rgb(0, 0, 153);\">var myOtherArray = [];<\/span><br \/><span style=\"color: rgb(0, 0, 153);\">myOtherArray[0] = \"hello\";<\/span><br \/><span style=\"color: rgb(0, 0, 153);\"> myOtherArray[1] = \"merhaba\";<\/span><br \/><span style=\"color: rgb(0, 0, 153);\"> myOtherArray[2] = \"ciao\";<\/span><br \/><br \/><span style=\"color: rgb(0, 0, 153);\"> for (var i=0;i<myotherarray.length;i++)><\/myotherarray.length;i++)><\/span><br \/><span style=\"color: rgb(0, 0, 153);\">      alert(myOtherArray[i]);<\/span><br \/><br \/><br \/><span style=\"font-style: italic;\">Can someone tell me the difference in these Vectors....i mean Arrays that are dynamic in size but you can't delete a single element at index X.<br \/><br \/><\/span><span>EDIT:<br \/><br \/>After all this pain and Googling, i found how to remove elements from an array in javascript.<br \/>A big fvcking round of applause for the splice method.<br \/><br \/><span style=\"color: rgb(0, 0, 153);\">splice(index,length):<\/span> starting from index remove elements until length.<br \/><\/span><br \/><a href=\"http:\/\/technorati.com\/tag\/javascript\" rel=\"tag\"><img style=\"border: 0pt none ; vertical-align: middle; margin-left: 0.4em;\" src=\"http:\/\/static.technorati.com\/static\/img\/pub\/icon-utag-16x13.png?tag=javascript\" alt=\" \" \/>javascript<\/a>", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "javascript", 
+      "title": "Javascript....", 
+      "body_override": 1, 
+      "date_published": "2007-05-16 20:05:00", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "javascript"
+    }
+  }, 
+  {
+    "pk": 88, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "Here is URL for a search on seek.com.au for Analyst\/Programmer in Melbourne.<br \/><br \/>removed<br \/>Top three development positions are as of today (Tuesday 15th) are<br \/><br \/>    \u2022    Senior Java - J2EE Developers<br \/>    \u2022    Senior Analyst Programmer - .NET<br \/>    \u2022    PHP Web Developer<br \/><br \/>So the question is why doesn't universities, well RMIT,  change its teaching style. Instead of starting off with Java for two semesters, introduction then advanced topics like Linked Lists etc. Then second year two semesters of C, again basics, pointers and then next semester with advanced topics, Splay Trees, Red-Black trees.<br \/><br \/>Any PHP developers out there implement a Splay Tree for a web app? No?<br \/>Any Firmware\/Embedded programmers out there implement a Patricia Trie? Yes?<br \/><br \/>Look at the results again, i don't see any Embedded programmer....<br \/><br \/>Follow the industry trends, i understand that change is a bit hard it takes long, so much beurocracy, blah blah blah. We all graduate and don't have the knowledge the industry wants. Software Engineering undergrads are even more disadvantaged, we have only four (?) electives. So what can i choose? .NET ?", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "", 
+      "title": "C, Low Level Development", 
+      "body_override": 1, 
+      "date_published": "2007-05-15 20:16:00", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "c-low-level-development"
+    }
+  }, 
+  {
+    "pk": 89, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<span style=\"font-weight: bold;\">Statement:<\/span> Perl is a awful language to write CGI scripts.<br \/><br \/><span style=\"font-weight: bold;\">Experience: <\/span><br \/>At work i needed to \"fix\" this Perl CGI script that is used for \"automatic\" Merge Request submission to the build team (Actually its not a team anymore, it's just the one person aka buildmeister).<br \/><br \/>So this \"tool\" was written in Perl and the creator for it left last year. Recently it stopped working and i was asked to have a look at it. As i can only do one day a week instead of two (because uni takes priority), this was something that i could come back the next week and still know where i left. Also it was something i wanted to do. (web-programming the future?)<br \/><br \/>Anyway, i spent two days on it (two weeks) and found the problem.  The source code\/document control program used here is ClearCase. So when you submit a merge request you tell if you want to submit from a Label and or a Branch. Then the tool uses the label you submitted to check if it exists via  <br \/><br \/><span style=\"color: rgb(51, 51, 255);\">$res = `cleartool lstype -short lbtype:$BLName\\@$PathToView\\\\$vob`;<\/span><br \/><br \/><br \/>The problem was that the view on the server wasn't running.   Here is a snippet of a script printing out html;<br \/><br \/>my $count = 0;<br \/>foreach (keys %AllTestings) {<br \/> if ($count == 3) {<br \/>   print \"         <br \/>\\n\";<br \/>   $count=0;<br \/> }<br \/> if ($Testing =~ m\/$_\/) {<br \/>   if ($_ eq \"Compile\/Build\") {<br \/>     print \"         <input name=\"\\&quot;$_\\&quot;\" checked=\"\\&quot;true\\&quot;\" onmouseover=\"\\&quot;show2('myLayer2')\\&quot;\" onmouseout=\"\\&quot;hide('myLayer2')\\&quot;\" type=\"\\&quot;checkbox\\&quot;\">$_\\n\";<br \/>     print_tooltip(\"myLayer2\", \"Message 1\");<br \/>   } else {<br \/>     print \"         <input name=\"\\&quot;$_\\&quot;\" checked=\"\\&quot;true\\&quot;\" type=\"\\&quot;checkbox\\&quot;\">$_\\n\";<br \/>   }<br \/> } else {<br \/>   if ($_ eq \"Compile\/Build\") {<br \/>     print \"         <input name=\"\\&quot;$_\\&quot;\" onmouseover=\"\\&quot;show2('myLayer2')\\&quot;\" onmouseout=\"\\&quot;hide('myLayer2')\\&quot;\" type=\"\\&quot;checkbox\\&quot;\">$_\\n\";<br \/>     print_tooltip(\"myLayer2\", \"Message 1\");<br \/>   } else {<br \/>     print \"         <input name=\"\\&quot;$_\\&quot;\" type=\"\\&quot;checkbox\\&quot;\">$_\\n\";<br \/>   }<br \/> }<br \/> $count++;<br \/>}<br \/><br \/>Perl is just confusing. Perl printing out HTML is really confusing. If i understand correctly that code snipper outputs HTML form check boxes for different tests that are done on the code that is being requested to be merged. If you look closer there is also javascript too for the mouseover and mouseout events.<br \/><br \/>So please, don't write CGI scripts with Perl, it is hard to maintain...use Python\/Ruby and some sort of framework, like CherryPy for even \"simple\" office web-applications.<br \/><br \/><a href=\"http:\/\/technorati.com\/tag\/perl\" rel=\"tag\"><img style=\"border:0;vertical-align:middle;margin-left:.4em\" src=\"http:\/\/static.technorati.com\/static\/img\/pub\/icon-utag-16x13.png?tag=perl\" alt=\" \" \/>perl<\/a>", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "", 
+      "title": "Don't use Perl for CGI scripts...Please...", 
+      "body_override": 1, 
+      "date_published": "2007-05-14 20:43:00", 
+      "draft": 1, 
+      "body_markdown": "", 
+      "slug": "dont-use-perl-for-cgi-scriptsplease"
+    }
+  }, 
+  {
+    "pk": 90, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "Just wondering if the same motto for Open Source software works with Blogs?<br \/><br \/>Post Early, Post Often? Just don't worry about quality (bugs?) of the material?", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "", 
+      "title": "Release Early, Release Often?", 
+      "body_override": 1, 
+      "date_published": "2007-05-13 19:32:00", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "release-early-release-often"
+    }
+  }, 
+  {
+    "pk": 91, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "<a onblur=\"try {parent.deselectBloggerImageGracefully();} catch(e) {}\" href=\"http:\/\/bp0.blogger.com\/_RRoV4TGmzls\/RkRqYhUUTiI\/AAAAAAAAAAM\/rToi3nlqQPA\/s1600-h\/04052007194.jpg\"><img style=\"margin: 0pt 0pt 10px 10px; float: right; cursor: pointer;\" src=\"http:\/\/bp0.blogger.com\/_RRoV4TGmzls\/RkRqYhUUTiI\/AAAAAAAAAAM\/rToi3nlqQPA\/s320\/04052007194.jpg\" alt=\"\" id=\"BLOGGER_PHOTO_ID_5063288850564271650\" border=\"0\" \/><\/a><br \/><span style=\"font-weight: bold;\">Thursday - Day 1;  <\/span><br \/><br \/>It was 29C today, very nice weather.  I arrived in Sydney yesterday.  The plane trip was good, compared to the fact that i kept on thinking it would be a 45 minute ride on a Mad Mouse, but it wasn't.  Other than two or three \"major\" air pockets or turbulence, it was a good flight. Maybe watching Heroes also helped. (I did it!)<br \/><br \/>Yesterday, i just came down to my hotel checked-in left my bag and then went scouting for Cliftons Training Centre. It wasn't that hard to find, a train ride to Circular Quay Station, just a couple of minutes of walking down George St to the left side. I did this because if i was going to get lost i would have done that yesterday instead of today. I didn't get lost.  The cool thing is that the centre is close to Sydney Harbor Bridge and the Opera House. So i walked a bit and took some photos with my N73. Then went back to my hotel.<br \/><br \/><br \/><a onblur=\"try {parent.deselectBloggerImageGracefully();} catch(e) {}\" href=\"http:\/\/bp0.blogger.com\/_RRoV4TGmzls\/RkRqyhUUTjI\/AAAAAAAAAAU\/QG9Uso0_RiM\/s1600-h\/P2040006.JPG\"><img style=\"margin: 0pt 10px 10px 0pt; float: left; cursor: pointer;\" src=\"http:\/\/bp0.blogger.com\/_RRoV4TGmzls\/RkRqyhUUTjI\/AAAAAAAAAAU\/QG9Uso0_RiM\/s320\/P2040006.JPG\" alt=\"\" id=\"BLOGGER_PHOTO_ID_5063289297240870450\" border=\"0\" \/><\/a><br \/>The next day (today,May 3rd)  I  woke up at 7:30am. After i got ready i went out to Central Station. I left early as i didn't have any wireless connection in my hotel. I went out looking for a cafe where they had wireless next to the training centre. Chance had it i found Starbucks only to realise that to access the internet you need a prepaid card or a credit card and i had neither. By the time i drank my Iced Cafe Latte and it was time for me to head to the centre.<br \/><br \/>Walking into the centre going up the lift (i hate the things by the way) asking for the direction to the room. Then stepping into the room. Our tutor is James Bekkama a PhD student at CSU.  After all the six students arrived it started.<br \/><br \/>The usual introduction started, with everyone saying where they are from and experience with Python and\/or Objective C. Me and another student were the only two with experience, but me being the only one who was new to the Mac scene. After the introduction we where asked to install Xcode if we haven't already. I had already installed Xcode and even PyObjC.  After all of us was up and running (except for one person who did some weird thing with his Mac moving \/etc somewhere and aliasing it, Xcode not liking, he had to re-install Mac OS X!).<br \/><br \/>The first day was all Python. Starting off with the basics of the language, such as it being dependent on indentation for code blocks which is always a let down for people who are coming from C\/C++, Java etc. Using the interactive shell, variable assignment, retrieving input from the user. Then we moved on to using Xcode for Python development. This was needed as PyObjC includes templates for Xcode which eases the development process. Setting up Xcode for Python had some steps to follow but not hard to do but easy to forget.  After setting up Xcode we moved on to general language syntax. After this we started writing up a Address Book script. Starting off we a basic function based script then converting it into a more cleaner Object Oriented script.<br \/><br \/>Before i forget to mention we had morning tea during lunchtime, and lunchtime during afternoon tea. It was good fun. After lunch we started on a CGI script to create a web interface for adding entries into the Address Book. This was interesting because i couldn't get Python CGI scripts to run under Apache that is pre-installed on my MacBook. I was trying to get mod_python installed instead of just using the magic hash bang thing!<br \/><br \/>If i admit it, the first day was a bore, except for the CGI part. James does know his quite a bit about CGI (Python,Objective C in general as well) scripting, but i was more interested in the Objective C bridge. To learn to develop applications that look like \"real\" Mac applications but programmed with Python with no need to learn Objective-C.<br \/><br \/><span style=\"font-weight: bold;\">Friday - Day 2;<\/span><br \/><br \/>Second day i didn't wake up that early as there is trains more or less every 2-8 minutes that goes around the City Loop in Sydney. So i arrived at the training centre ten minutes earlier for a quick email and Digg.com check (10 minutes isn't enough for a Digg ;) ) .<br \/><br \/>We started by configuring a new PyObjC project on Xcode. Again there were some steps we needed to follow. Then the fun began, with a simple example.<br \/><br \/>>>> import AppKit<br \/>>>> AppKit.NSBeep()<br \/><br \/>You can guess that all this does is a \"beep\" sound, very useful just like the classic \"Hello World\" example.  No seriously, it is an easy way of checking if PyObjC is correctly installed.<br \/><br \/>Keep in mind that i've had no previous experience with Objective-C. When i got my MacBook i said to myself \"might as well learn the native development framework and language. So i looked at some tutorials on Objective-C and some screen cast on YouTube about Objective-C development. When i saw NSObject or NS* i was like \"what is NS\", then NIB files. It was just too many things to learn and again university was like \"here more work for you, we don't really want you to have a social life\". So i abandoned my sojourn into Cocoa.<br \/><br \/>Now thanks to this workshop i now know what NS and NIB are. Next Step and Next Interface Builder respectively. Once everyone confirmed that PyObjC was installed and working we then started looking at the syntax mapping between Objective-C and Python. What i mean by syntax mapping is this. The way to call a method of an object in Objective-C is done like the following;<br \/><br \/>[aObject doThis:art1 withThis:arg2];<br \/><br \/>and in PyObjC this would be translated to<br \/><br \/>aObject.doThis_withThis_(arg1,arg2)<br \/><br \/>i like this better. No square brackets or anything, except the underscores, which are needed to represent the colon's in Objective-C. (Colon's in Python are used to denote the beginning of a block).<br \/><br \/>So converting any Objective-C API call to PyObjC is easy, whenever you see a colon you replace it with an underscore in Python. Here is another example of creating NSString objects in PyObjC<br \/><br \/>myString = NSString.stringWithString_(u\"Hello World\")<br \/><br \/>instead of a very ugly looking Objective-C version<br \/><br \/>myString = NSString.alloc().initWithString_(u\"Hello World\")<br \/><br \/>After this we had morning tea. Once back we started working on a Aqua interface for the Address Book we created yesterday. I must admit the Interface Builder is a very handy tool. You add your buttons and then create outlets and connect them VISUALLY (holding down ctrl?). We worked on this until lunch then we came back to more fun stuff, Bluetooth.<br \/><br \/>PyObjC can directly control Bluetooth via the NSBluetoothIO (if i remember correctly Xcode is crashing for some reason) but we just used a framework, lightblue.  To do a device scan of bluetooth devices all you need to do is this,<br \/><br \/>>>> import lightblue<br \/>>>> lightblue.finddevices()<br \/><br \/>making sure Bluetooth is switched on. This call returns a list containing all devices with Bluetooth switched on and in Discoverable mode, with their MAC addresses. Using this information it is very easy to create some sort of Bluetooth proximity detector, which James did, continuously search for devices, and see if the device your looking for is in range, meaning that it was detected.<br \/><br \/>Then it was all over and time to head back. Everyone said their goodbye's and nice to \"meet you\". I made some good connections into the Mac development world.<br \/><br \/><a href=\"http:\/\/technorati.com\/tag\/pyobjc\" rel=\"tag\"><img style=\"border:0;vertical-align:middle;margin-left:.4em\" src=\"http:\/\/static.technorati.com\/static\/img\/pub\/icon-utag-16x13.png?tag=pyobjc\" alt=\" \" \/>pyobjc<\/a><br \/><br \/><a href=\"http:\/\/technorati.com\/tag\/python\" rel=\"tag\"><img style=\"border:0;vertical-align:middle;margin-left:.4em\" src=\"http:\/\/static.technorati.com\/static\/img\/pub\/icon-utag-16x13.png?tag=python\" alt=\" \" \/>python<\/a>", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "auc python mac", 
+      "title": "AUC Python Objective C Workshop", 
+      "body_override": 1, 
+      "date_published": "2007-05-11 22:46:00", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "auc-python-objective-c-workshop"
+    }
+  }, 
+  {
+    "pk": 92, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "I'm back in Melbourne from Sydney. I will write about my learnings on PyObjC very shortly.<br \/><br \/>EDIT:<br \/><br \/>Sorry to anyone who is actually reading this blog i've been busy with university assignments. Going away for four days didn't really help, i've fallen behind and trying to catch up. I've written what happened on the first day and working on the second day (right now...) i should get something up tonight...Then back to Systems Architecture, ASP.NET and Ruby on Rails....oh and Perl and Java for my two jobs....", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "", 
+      "title": "Back in Melbourne", 
+      "body_override": 1, 
+      "date_published": "2007-05-06 19:29:00", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "back-in-melbourne"
+    }
+  }, 
+  {
+    "pk": 93, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "This should have been my first post...meh.<br \/><br \/><span style=\"color: rgb(0, 102, 0); font-weight: bold;\">bulkanix<\/span> is a name coined by my friend, <span style=\"font-style: italic;\">dbp<\/span>. Bulkan + Linux fascination = bulkanix<br \/><br \/>he keeps on asking me to create my own Linux distro called <span style=\"font-weight: bold; color: rgb(0, 102, 0);\">bulkanix<\/span>, very original idea...", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "", 
+      "title": "bulkanix? what the...", 
+      "body_override": 1, 
+      "date_published": "2007-05-01 21:35:00", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "bulkanix-what"
+    }
+  }, 
+  {
+    "pk": 94, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "I have this major project at uni, to develop a software following the whole SDLC, in a group of six. We (well the team leader) decided that we should use Ruby on Rails. Me being the \"Python junkie\",  i wasn't interested in Ruby. As i have had no experience in using  Django or Turbogears i couldn't suggest these, whereas the team leader has had some experience with Rails but to what extent i do not know.<br \/><br \/>Anyway, ive been looking into Ruby and its just seems like Python. Hash's and Dictionaries. But Rails as a framework is great, to the extent that i understand so far. Which is not much. I just watched the first <a href=\"http:\/\/media.rubyonrails.org\/video\/rails_take2_with_sound.mov\">screencast<\/a> and each time something worked the screencaster says \"oops\" as if it something didn't work.  Ruby...well reading <a href=\"http:\/\/poignantguide.net\/ruby\/\">Why's (Poignant) Guide To Ruby<\/a>, is, i admit fun\/different and who can resist Cartoon Foxes with who ramble on about Chunky Bacon, what else can i say?<br \/><br \/>More to come.", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "", 
+      "title": "Ruby (and Rails)", 
+      "body_override": 1, 
+      "date_published": "2007-04-29 20:58:00", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "ruby-and-rails"
+    }
+  }, 
+  {
+    "pk": 95, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "I will be going to this workshop next week as i have been given the scholarship from Apple University Consortium (AUC) for my university. The reason behind me attending this workshop is as follows; i've been learning Python for the past one and half year as a hobby. I haven't taken any courses on Python, i just decided one day at work during my Internship last year to learn it. Maybe the catalyst being the fact that Tcl is a awful language to write test scripts or maintain the existing ones. So this workshop will give me some professional training in Python even if its for one day only. The second day will see me learn the PyObjC bidirectional bridge between Python and Objective C. This will be a good opportunity for me to learn the development process on a Mac (as i recently switched) so i can then try converting PyPsp into a Mac application.", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "", 
+      "title": "AUC Python and Objective C Workshop", 
+      "body_override": 1, 
+      "date_published": "2007-04-28 15:42:00", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "auc-python-and-objective-c-workshop"
+    }
+  }, 
+  {
+    "pk": 96, 
+    "model": "blog.post", 
+    "fields": {
+      "body": "How hard can it be to find a Graduate job that i want? There are jobs out there but there mainly consulting stuff. I didn't go to uni for four years and then not practice what i learnt i.e programming. First post and im already complaining.", 
+      "category": 1, 
+      "updated": "2009-12-01 11:47:56", 
+      "tags": "", 
+      "title": "Graduate jobs?", 
+      "body_override": 1, 
+      "date_published": "2007-04-28 15:16:00", 
+      "draft": 0, 
+      "body_markdown": "", 
+      "slug": "graduate-jobs"
+    }
+  }, 
+  {
+    "pk": 441, 
+    "model": "blog.comment", 
+    "fields": {
+      "website": "http:\/\/www.drgroverdentalclinic.com\/", 
+      "comment": "Nice coding and information shared about the python language. Thanks for sharing.", 
+      "name": "Dentist in Gurgaon", 
+      "submit_date": "2012-12-15 22:50:20", 
+      "post": 124, 
+      "email": "drgroverdentalclinic1@gmail.com"
+    }
+  }, 
+  {
+    "pk": 440, 
+    "model": "blog.comment", 
+    "fields": {
+      "website": "http:\/\/www.dreamlinecolonizer.com\/jaipur_real_estate.php", 
+      "comment": "This is the great python script.Actually I never understand the programming language ever.", 
+      "name": "Property sale in Jaipur", 
+      "submit_date": "2012-12-14 22:15:26", 
+      "post": 124, 
+      "email": "dreamlinecolonizer1@gmail.com"
+    }
+  }, 
+  {
+    "pk": 439, 
+    "model": "blog.comment", 
+    "fields": {
+      "website": "http:\/\/commoncode.com.au", 
+      "comment": "Does that mean the app won't work locally? I've gotten things running... but no tweets :(", 
+      "name": "Daryl Antony", 
+      "submit_date": "2012-12-14 14:34:30", 
+      "post": 119, 
+      "email": "daryl@commoncode.com.au"
+    }
+  }, 
+  {
+    "pk": 429, 
+    "model": "blog.comment", 
+    "fields": {
+      "website": "http:\/\/bulkan-evcimen.com\/building_twitter_filter_cherrypy_redis_tweetstream\/", 
+      "comment": "Hi, I got blacklisted because i didn't follow the exponential backoff when re-connecting to the streaming api.", 
+      "name": "Bulkan", 
+      "submit_date": "2012-08-21 11:37:16", 
+      "post": 119, 
+      "email": "bulkan@gmail.com"
+    }
+  }, 
+  {
+    "pk": 428, 
+    "model": "blog.comment", 
+    "fields": {
+      "website": "", 
+      "comment": "Thank you for tinkering and sharing this! Which bit on tweetstream documentation caused the blacklisting?", 
+      "name": "tre", 
+      "submit_date": "2012-08-18 10:26:09", 
+      "post": 119, 
+      "email": "tre.theresia@gmail.com"
+    }
+  }, 
+  {
+    "pk": 427, 
+    "model": "blog.comment", 
+    "fields": {
+      "website": "", 
+      "comment": "Great post! Are there any tips for silent install progress control? I found that log file created by InstallShield is not informative to figure out current installation status. I can definitely check destination folder's size to get to know if application was installed, but that's weird. So I am looking for some better solution now, with no luck", 
+      "name": "Roman", 
+      "submit_date": "2012-08-16 02:04:09", 
+      "post": 115, 
+      "email": "roman.luvr@gmail.com"
+    }
+  }, 
+  {
+    "pk": 415, 
+    "model": "blog.comment", 
+    "fields": {
+      "website": "http:\/\/none", 
+      "comment": "Have a question for you. can you do a full working example? why is the writer object commented out and the close? Do you have to open the file for reading and return the file? can you explain the code, not how to map the urls...", 
+      "name": "questioner", 
+      "submit_date": "2012-06-27 07:29:01", 
+      "post": 73, 
+      "email": "none@none.com"
+    }
+  }, 
+  {
+    "pk": 406, 
+    "model": "blog.comment", 
+    "fields": {
+      "website": "", 
+      "comment": "Nice article. Currently automating an uninstall of a 'ghost' application on a system returned from a client. We may use this as a standard safeguard, or we may tell the client not to wreck our systems and then say 'it failed'.", 
+      "name": "Simon", 
+      "submit_date": "2012-04-17 00:34:52", 
+      "post": 115, 
+      "email": "verucasaltuk@hotmail.co.uk"
+    }
+  }, 
+  {
+    "pk": 352, 
+    "model": "blog.comment", 
+    "fields": {
+      "website": "http:\/\/bulkan-evcimen.com", 
+      "comment": "Hi, It looks like the QTP COM object is not available. Are you running your script on a machine that has the QuickTest.Application COM object ?", 
+      "name": "Bulkan Evcimen", 
+      "submit_date": "2011-10-15 23:43:54", 
+      "post": 117, 
+      "email": "bulkan@gmail.com"
+    }
+  }, 
+  {
+    "pk": 351, 
+    "model": "blog.comment", 
+    "fields": {
+      "website": "", 
+      "comment": "Hi there, I have installed teh Quick Test Add-in. but still I get this error, >>> qtp = win32com.client.Dispatch(\"QuickTest.Application\") Traceback (most recent call last): File \"\", line 1, in File \"C:\\Python27\\lib\\site-packages\\win32com\\client\\__init__.py\", line 95, in Dispatch dispatch, userName = dynamic._GetGoodDispatchAndUserName(dispatch,userName,clsctx) File \"C:\\Python27\\lib\\site-packages\\win32com\\client\\dynamic.py\", line 104, in _GetGoodDispatchAndUserName return (_GetGoodDispatch(IDispatch, clsctx), userName) File \"C:\\Python27\\lib\\site-packages\\win32com\\client\\dynamic.py\", line 84, in _GetGoodDispatch IDispatch = pythoncom.CoCreateInstance(IDispatch, None, clsctx, pythoncom.IID_IDispatch) com_error: (-2147221005, 'Invalid class string', None, None) Any help?", 
+      "name": "Amit", 
+      "submit_date": "2011-10-14 11:35:10", 
+      "post": 117, 
+      "email": "abarik@aircell.com"
+    }
+  }, 
+  {
+    "pk": 340, 
+    "model": "blog.comment", 
+    "fields": {
+      "website": "", 
+      "comment": "Is it possible to add a test result into Mercury Quality Center using Python ?", 
+      "name": "Karan Fui", 
+      "submit_date": "2011-08-02 23:28:13", 
+      "post": 124, 
+      "email": "karan.fui@gmail.com"
+    }
+  }, 
+  {
+    "pk": 308, 
+    "model": "blog.comment", 
+    "fields": {
+      "website": "", 
+      "comment": "Great, really saved me some work, great way to heavy-list insertion of data into QC", 
+      "name": "Israel Fruchter", 
+      "submit_date": "2011-05-25 13:41:08", 
+      "post": 124, 
+      "email": "israel.fruchter@gmail.com"
+    }
+  }, 
+  {
+    "pk": 300, 
+    "model": "blog.comment", 
+    "fields": {
+      "website": "", 
+      "comment": "Good info. I could not get your script running though, so I wrote my own version. Maybe someone else will find it useful also .. so I'll leave it here: from _winreg import * def findUninstallStr(inname): try: openkey = OpenKey(HKEY_LOCAL_MACHINE, r'Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall', 0, KEY_READ) i = 0 while True: subkey = EnumKey(openkey, i) i = 1 try: opensubkey = OpenKey(openkey, subkey, 0, KEY_READ) name = QueryValueEx(opensubkey, \"DisplayName\") if name[0] == inname: uninst = QueryValueEx(opensubkey, \"UninstallString\") return uninst[0] except WindowsError as exc: pass except WindowsError as exc: pass", 
+      "name": "petke", 
+      "submit_date": "2011-05-13 03:59:18", 
+      "post": 115, 
+      "email": "petke@hotmail.com"
+    }
+  }, 
+  {
+    "pk": 149, 
+    "model": "blog.comment", 
+    "fields": {
+      "website": "", 
+      "comment": "You don't need to seek and read, you can simply: s.getvalue() at any time to get the value of the string buffer.", 
+      "name": "Matt Connolly", 
+      "submit_date": "2010-12-08 14:57:32", 
+      "post": 76, 
+      "email": "matt.connolly@thq.com"
+    }
+  }, 
+  {
+    "pk": 107, 
+    "model": "blog.comment", 
+    "fields": {
+      "website": "", 
+      "comment": "Thanks for the information!", 
+      "name": "thanks", 
+      "submit_date": "2010-06-18 05:05:01", 
+      "post": 115, 
+      "email": "lol@internet.com"
+    }
+  }, 
+  {
+    "pk": 105, 
+    "model": "blog.comment", 
+    "fields": {
+      "website": "http:\/\/bulkan-evcimen.com\/", 
+      "comment": "Hi Josh, This setup here uses git via ssh (port 22) to run on a different port you might need to use the git protocol. <a href='http:\/\/www.kernel.org\/pub\/software\/scm\/git\/docs\/git-daemon.html'>Have a look here it might help<\/a>", 
+      "name": "Bulkan Evcimen", 
+      "submit_date": "2009-11-24 09:29:58", 
+      "post": 109, 
+      "email": "bulkan@gmail.com"
+    }
+  }, 
+  {
+    "pk": 104, 
+    "model": "blog.comment", 
+    "fields": {
+      "website": "http:\/\/www.onlineaspect.com", 
+      "comment": "Thanks for posting this. Very helpful. How do you specify a custom port to use if you are not using the default?", 
+      "name": "Josh Fraser", 
+      "submit_date": "2009-11-23 08:35:39", 
+      "post": 109, 
+      "email": "josh@eventvue.com"
+    }
+  }, 
+  {
+    "pk": 100, 
+    "model": "blog.comment", 
+    "fields": {
+      "website": "", 
+      "comment": "Great post...", 
+      "name": "Stefan", 
+      "submit_date": "2008-11-27 23:13:41", 
+      "post": 75, 
+      "email": "janevski@gmail.com"
+    }
+  }, 
+  {
+    "pk": 96, 
+    "model": "blog.comment", 
+    "fields": {
+      "website": "http:\/\/bulkan-evcimen.com", 
+      "comment": "Hi Dan, I haven't posted new stuff in ages. Still working on the backend of this blog and...practicing the flute.", 
+      "name": "Bulkan Evcimen", 
+      "submit_date": "2008-09-05 09:56:13", 
+      "post": 97, 
+      "email": "bulkan@gmail.com"
+    }
+  }, 
+  {
+    "pk": 95, 
+    "model": "blog.comment", 
+    "fields": {
+      "website": "http:\/\/dailykibitz.blogspot.com", 
+      "comment": "Hi Bulkan Just found your blog", 
+      "name": "Dan Prager", 
+      "submit_date": "2008-09-04 10:34:31", 
+      "post": 97, 
+      "email": "danprager@optusnet.com.au"
+    }
+  }, 
+  {
+    "pk": 87, 
+    "model": "blog.comment", 
+    "fields": {
+      "website": "", 
+      "comment": "Hey! You have DEBUG=True in your settings.py file. I saw all your urls when accesing web.py. Change it to DEBUG=False. \r\n\r\nNice Blog!", 
+      "name": "Luis", 
+      "submit_date": "2008-08-11 14:19:24", 
+      "post": 75, 
+      "email": "luisrausseoa@gmail.com"
+    }
+  }, 
+  {
+    "pk": 85, 
+    "model": "blog.comment", 
+    "fields": {
+      "website": "", 
+      "comment": "splice(index,length) Nice!! I'll keep that in mind", 
+      "name": "James Wang", 
+      "submit_date": "2008-07-15 10:33:40", 
+      "post": 87, 
+      "email": "jameswang@intrepidtravel.com"
+    }
+  }, 
+  {
+    "pk": 50, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": "2011-11-03", 
+      "file": "mp3\/2011\/11\/03\/02_Track_02.m4a", 
+      "title": "Ney Taksim with Bendir"
+    }
+  }, 
+  {
+    "pk": 48, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": "2010-07-18", 
+      "file": "mp3\/2010\/07\/19\/dorduncu_selam_son_pesver.mp3", 
+      "title": "Ferahfeza D\u00f6rd\u00fcnc\u00fc Selam & Son Pe\u015frev"
+    }
+  }, 
+  {
+    "pk": 49, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": "2010-07-17", 
+      "file": "mp3\/2010\/07\/19\/ferahfeza_taksim.mp3", 
+      "title": "Ferahfeza Taksim"
+    }
+  }, 
+  {
+    "pk": 46, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": "2010-04-20", 
+      "file": "mp3\/2010\/04\/21\/rast_taksim_20042010.mp3", 
+      "title": "Rast Taksim 2"
+    }
+  }, 
+  {
+    "pk": 44, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": "2010-03-28", 
+      "file": "mp3\/2010\/03\/28\/rast_taksim_28032010.mp3", 
+      "title": "Rast Taksim"
+    }
+  }, 
+  {
+    "pk": 45, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": "2010-03-28", 
+      "file": "mp3\/2010\/03\/28\/pencgah_ss_kantemir_2803.mp3", 
+      "title": "Pen\u00e7g\u00e2h Saz Semai - Kantemiro\u011flu"
+    }
+  }, 
+  {
+    "pk": 43, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": "2010-03-21", 
+      "file": "mp3\/2010\/03\/21\/Saba_taksim_21032010.mp3", 
+      "title": "Saba Ney Taksim"
+    }
+  }, 
+  {
+    "pk": 41, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "mansur", 
+      "when": "2010-01-01", 
+      "file": "mp3\/2010\/01\/01\/huzzam_ss_gevheri_osmanoglu.mp3", 
+      "title": "H\u00fczzam Saz Semai - Gevheri Osmano\u011flu"
+    }
+  }, 
+  {
+    "pk": 42, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "mansur", 
+      "when": "2010-01-01", 
+      "file": "mp3\/2010\/01\/01\/huzzam_pesrev_seyfettin_osmanoglu.mp3", 
+      "title": "H\u00fczzam Pe\u015frev - Seyfettin Osmano\u011flu  "
+    }
+  }, 
+  {
+    "pk": 40, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": "2009-09-10", 
+      "file": "mp3\/2009\/09\/10\/buddhist_ilahi.mp3", 
+      "title": "Buddhist Iftar 2009"
+    }
+  }, 
+  {
+    "pk": 38, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": "2009-09-06", 
+      "file": "mp3\/2009\/09\/06\/Degdi_Saclarima_290809.mp3", 
+      "title": "Degdi Saclarima Bahar Gulleri"
+    }
+  }, 
+  {
+    "pk": 39, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": "2009-09-06", 
+      "file": "mp3\/2009\/09\/06\/Evcara_SS_060909.mp3", 
+      "title": "Evcara Saz Semai - Dilhayat Kalfa"
+    }
+  }, 
+  {
+    "pk": 33, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": "2009-08-07", 
+      "file": "mp3\/2009\/08\/08\/Ilk_Pesrev.mp3", 
+      "title": "Beyati Pesrev - Mevlevi Australia"
+    }
+  }, 
+  {
+    "pk": 34, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": "2009-08-07", 
+      "file": "mp3\/2009\/08\/08\/Birinci_Selam.mp3", 
+      "title": "Beyati Ayin Birinci Selam - Mevlevi Australia"
+    }
+  }, 
+  {
+    "pk": 35, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": "2009-08-07", 
+      "file": "mp3\/2009\/08\/08\/Ikinci_Selam.mp3", 
+      "title": "Beyati Ayin Ikinci Selam - Mevlevi Australia"
+    }
+  }, 
+  {
+    "pk": 36, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": "2009-08-07", 
+      "file": "mp3\/2009\/08\/08\/Ucuncu_Selam.mp3", 
+      "title": "Beyati Ayin Ucuncu Selam - Mevlevi Australia"
+    }
+  }, 
+  {
+    "pk": 37, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": "2009-08-07", 
+      "file": "mp3\/2009\/08\/08\/Dorduncu_Selam.mp3", 
+      "title": "Beyati Ayin Dorduncu Selam - Mevlevi Australia"
+    }
+  }, 
+  {
+    "pk": 32, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": "2009-08-02", 
+      "file": "mp3\/2009\/08\/03\/Acemasiran_Ayin_3selam.mp3", 
+      "title": "Acemasiran Mevlevi Ayini Ucuncu Selam kisim"
+    }
+  }, 
+  {
+    "pk": 27, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": "2009-07-12", 
+      "file": "mp3\/2009\/07\/12\/Ask_Efza_Saz_Eseri_Eseri_Sadettin_Arel_120709.mp3", 
+      "title": "Ask-Efza Saz Eseri Eseri - Sadettin Arel"
+    }
+  }, 
+  {
+    "pk": 28, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": "2009-07-12", 
+      "file": "mp3\/2009\/07\/12\/Ussak_Taksim_120709.mp3", 
+      "title": "Ussak Taksim"
+    }
+  }, 
+  {
+    "pk": 29, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": "2009-07-12", 
+      "file": "mp3\/2009\/07\/12\/Ussak_Medhal_Aleaddin_Yavasca_120709.mp3", 
+      "title": "Ussak Medhal - Aleaddin Yavasca"
+    }
+  }, 
+  {
+    "pk": 30, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": "2009-07-12", 
+      "file": "mp3\/2009\/07\/12\/Hicaz_Taksim_120709.mp3", 
+      "title": "Hicaz Taksim"
+    }
+  }, 
+  {
+    "pk": 31, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": "2009-07-12", 
+      "file": "mp3\/2009\/07\/12\/Hicaz_Sirto_Sultan_Abdul_Aziz_120709.mp3", 
+      "title": "Hicaz Sirto - Sultan Abdul-Aziz"
+    }
+  }, 
+  {
+    "pk": 24, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": "2009-06-21", 
+      "file": "mp3\/2009\/06\/21\/Ussak_ss_Aziz_Dede_k.mp3", 
+      "title": "Ussak Taksim ve Saz Semaisi (Neyzen Aziz Dede)"
+    }
+  }, 
+  {
+    "pk": 25, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": "2009-06-21", 
+      "file": "mp3\/2009\/06\/21\/Ussak_Pesrev_Neyzen.mp3", 
+      "title": "Ussak Pesrev - Neyzen Salih Dede"
+    }
+  }, 
+  {
+    "pk": 26, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": "2009-06-20", 
+      "file": "mp3\/2009\/06\/23\/Hicaz_Pesrev_Neyzen_.mp3", 
+      "title": "Hicaz Pesrev - Neyzen Salim Bey"
+    }
+  }, 
+  {
+    "pk": 23, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": "2009-06-02", 
+      "file": "mp3\/2009\/06\/02\/Isfahan_Ruyi_Neva_SS.mp3", 
+      "title": "Isfahan Ruyi Neva Saz Semai - Gazi Giray Han"
+    }
+  }, 
+  {
+    "pk": 22, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "supurde", 
+      "when": "2009-05-24", 
+      "file": "mp3\/2009\/05\/25\/Hicaz_Taksim_Supurde_230509.mp3", 
+      "title": "Hicaz Taksim"
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": "2009-04-26", 
+      "file": "mp3\/Beyati_Ayin_Birinci_Selam_Terennum.mp3\n", 
+      "title": "Beyati Ayin Birinci Selam Terennum"
+    }
+  }, 
+  {
+    "pk": 18, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": "2009-04-07", 
+      "file": "mp3\/Saba_Taksim2_07042009.mp3\n", 
+      "title": "Saba Taksim - 3"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "mansur", 
+      "when": "2009-03-24", 
+      "file": "mp3\/2009\/03\/24\/Saba_Taksim2_mansur.mp3", 
+      "title": "saba taksim"
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "mansur", 
+      "when": "2009-03-15", 
+      "file": "mp3\/ beyati_pesrev_mansur_15032009.mp3\n", 
+      "title": "Beyati Pesrev - Neyzen Emin Dede"
+    }
+  }, 
+  {
+    "pk": 13, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": "2009-03-07", 
+      "file": "mp3\/hicaz_taksim_kiz_07032009.mp3\n", 
+      "title": "Hicaz Taksim"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": null, 
+      "file": "mp3\/Acemasiran_Pesrev.mp3\n", 
+      "title": "Acemasiran Pesrev"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": null, 
+      "file": "mp3\/Acemasiran_Saz_Semaisi_Fulya_Akaydin.mp3\n", 
+      "title": "Acemasiran Saz Semai - Fulya Akaydin"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "mansur", 
+      "when": null, 
+      "file": "mp3\/ask_bezirgani_omrum_bitirmis.mp3\n", 
+      "title": "Hicaz Ilahiler"
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "mansur", 
+      "when": null, 
+      "file": "mp3\/Daglar_ile_Taslar_ile_Mansur.mp3\n", 
+      "title": "Daglar ile Taslar"
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": null, 
+      "file": "mp3\/EvcAra_Saz_Semaisi_Dilhayat_Kalfa.mp3\n", 
+      "title": "Evc-Ara Saz Semaisi - Dilhayat Kalfa"
+    }
+  }, 
+  {
+    "pk": 10, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": null, 
+      "file": "mp3\/Ferahfeza_Pesrev.mp3\n", 
+      "title": "Ferahfeza Pesrev - Tanburi Cemil Bey"
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": null, 
+      "file": "mp3\/Ferahfeza_Son_Pesrev.mp3\n", 
+      "title": "Ferahfeza Son Pesrev"
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": null, 
+      "file": "mp3\/Hicaz_Ayin_ikinci_Selam_bulkan.mp3\n", 
+      "title": "Hicaz Ayin Ikinci Selam"
+    }
+  }, 
+  {
+    "pk": 14, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "mansur", 
+      "when": null, 
+      "file": "mp3\/Hicaz_taksim_Mansur.mp3\n", 
+      "title": "Hicaz Taksim"
+    }
+  }, 
+  {
+    "pk": 15, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": null, 
+      "file": "mp3\/Hicaz_taksim.mp3\n", 
+      "title": "Hicaz Taksim"
+    }
+  }, 
+  {
+    "pk": 16, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": null, 
+      "file": "mp3\/Mahur_Pesrev.mp3\n", 
+      "title": "Mahur Pesrev"
+    }
+  }, 
+  {
+    "pk": 17, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "mansur", 
+      "when": null, 
+      "file": "mp3\/Saba_Taksim1_mansur.mp3\n", 
+      "title": "Saba Taksim - 1"
+    }
+  }, 
+  {
+    "pk": 19, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "mansur", 
+      "when": null, 
+      "file": "mp3\/Saba_Taksim2_mansur.mp3\n", 
+      "title": "Saba Taksim - 2"
+    }
+  }, 
+  {
+    "pk": 20, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": null, 
+      "file": "mp3\/SevkEfza_Saz_Semai.mp3\n", 
+      "title": "Sevk-Efza Saz Semai - Seyh Said Dede"
+    }
+  }, 
+  {
+    "pk": 21, 
+    "model": "blog.recording", 
+    "fields": {
+      "ney": "kiz", 
+      "when": null, 
+      "file": "mp3\/Sultaniyegah_Saz_Semaisi.mp3\n", 
+      "title": "Sultaniyegah Saz Semaisi - Nedim Aga"
+    }
+  }
+]
