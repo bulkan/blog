@@ -1,9 +1,10 @@
 Title: {{ title }}
-Status: {% if status %} draft {% endif %}
+Status:{% if status %}draft{% else %}published{% endif %}
 Date: {{ date }}
 Tags: {{ tags }}
 Category: {{ category }}
-Slug: {{ slux }}
+Slug: {{ slug }}
+lang: en
 Author: Bulkan Evcimen
 Summary: {{ summary }}
 
