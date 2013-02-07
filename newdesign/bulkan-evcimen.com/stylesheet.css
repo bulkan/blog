@@ -1,0 +1,121 @@
+body{
+	background-image: url(img/worn_dots.png);
+}
+
+/*--Sidebar--*/
+.name{
+	font-family: Pacifico, cursive;
+	font-size: 82px;
+	line-height: 49px;
+	color: #3EB3CA;
+	text-align: right;
+	padding-right:5px;
+}
+
+/*--Bulkan Envcimen--*/
+.image{
+	float: right;
+	padding-bottom: 25px;
+	padding-top: 15px;
+	padding-left: 25px;
+}
+
+/*--Github, Twiter, Rss--*/
+.social{
+	float: right;	
+	padding-top: 25px;
+}
+
+.social li {
+	list-style-type: none;
+	display: inline;
+	padding-left: 8px;
+}
+
+/*--Menu-Navigation--*/
+.navigation {
+    clear: right;
+	padding-top: 0px;
+}
+
+.navigation li{
+	list-style-type: none;
+	padding-bottom: 15px;
+}
+
+.navigation a{
+	font-family: Arial,sans-serif;
+	font-weight: bold;
+	font-size: 25px;
+	text-align: right;
+	color: #404041;
+	text-decoration: none;
+	display: block;
+}
+
+.navigation a:hover{
+	color: #3EB3CA;
+}
+
+/*--Page Content--*/
+.content{
+	padding-right:20px;
+}
+
+/*.title{
+	font-family: Pacifico, cursive;
+	font-size: 82px;
+	color: #3EB3CA;
+	text-align: left;
+	padding-top: 50px;
+} */
+
+.date-time{
+	font-family: Arial,sans-serif;
+	font-size: 18px;
+	color: #404041;
+	padding-top: 40px;
+	border-bottom: 1px solid #404041;
+	line-height: 5px;
+}
+
+.blog-title{
+	font-family:  Pacifico, cursive;
+	font-size: 40px;
+	color: #3EB3CA;
+	padding-top: 10px;
+	line-height: normal;
+
+}
+
+.blog-text{
+	font-family: Arial,sans-serif;
+	font-size: 18px;
+	color: #404041;
+	padding-top: 15px;
+	padding-right: 60px;
+	line-height: normal;	
+}
+
+.footer-box{
+	background-color: #3EB3CA;
+	color:#404041;
+	font-family: Arial,sans-serif;
+	font-size: 14px;
+	padding-left: 5px;
+	padding-top: 8px;
+	padding-bottom: 1px;
+}
+
+.footer-box a{
+	font-family: Arial,sans-serif;
+	font-size: 14px;
+	color: #FFF;	
+}
+
+.footer-box a:hover{
+	font-family: Arial,sans-serif;
+	font-size: 14px;
+	color: #404041;
+	text-decoration: none;	
+}
