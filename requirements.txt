@@ -10,3 +10,4 @@ lk==1.1
 pelican==3.1.1
 pytz==2012h
 wsgiref==0.1.2
+Markdown
