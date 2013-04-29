@@ -10,8 +10,6 @@ Summary:
 
 ## Background  
 
-_questions.com is currently down. My slicehost VPS has been blacklisted by Twitter because I misread the documentation for tweetstream_
-
 _all the code is available at https://github.com/bulkan/queshuns_
  
 Since reading [this post by Simon Willison](http://simonwillison.net/2009/Oct/22/redis/) 
