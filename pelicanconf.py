@@ -15,6 +15,10 @@ TIMEZONE = 'Australia/Melbourne'
 
 DEFAULT_LANG = u'en'
 
+TEMPLATE_PAGES = {'music.html': 'music.html'}
+
+THEME = 'cielo'
+
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
@@ -22,3 +26,4 @@ SOCIAL = (('You can add links in your config file', '#'),
 DEFAULT_PAGINATION = 5
 
 THEME = 'cielo/bulkan-evcimen.com'
+TWITTER_USERNAME = 'bulkanevcimen'
