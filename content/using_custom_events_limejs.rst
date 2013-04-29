@@ -21,6 +21,7 @@ Using Custom Events With  LimeJS
 .. _lime.Sprite: http://limejs.digitalfruit.ee/docs/symbols/lime.Sprite.html
 
 
+
 LimeJS_ is an open source JavaScript HTML5 game creation framework built using Google Closure. In this article I will show you how to create a new event type and dispatch it, which is more so a Closure feature than LimeJS. I am going to assume you have installed LimeJS if not read the instructions here_.
 
 We will create a simple *game* that will display a Sprite that will change color randomly when the user touches it. When the color chosen randomly is greater than 128 we will dispatch a custom event.
@@ -151,8 +152,7 @@ Let us now connect all of this together in :code:`events_tutorial.js` which will
 
     goog.exportSymbol('events_tutorial.start', events_tutorial.start);
 
-Most of the code above is boiler plate. We create instance of Director_, Scene_ and a Layer_. 
-What is important is that we also create an instance of our ColoredSprite class and add it to the Layer_ called *target*. We then listen to the custom event that is being dispatched on line 24.
+Most of the code above is boiler plate. We create instance of Director, Scene and a Layer.
+What is important is that we also create an instance of our ColoredSprite class and add it to the Layer called *target*. We then listen to the custom event that is being dispatched on line 24.
 
 Hope this helped.
-
