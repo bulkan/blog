@@ -9,15 +9,9 @@ CSS_FILE = 'stylesheet.css'
 
 TEMPLATE_PAGES = {'music.html': 'music.html'}
 
-TWITTER_USERNAME = 'bulkanevcimen'
-
 TIMEZONE = 'Australia/Melbourne'
 
 DEFAULT_LANG = u'en'
-
-TEMPLATE_PAGES = {'music.html': 'music.html'}
-
-THEME = 'cielo'
 
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),
