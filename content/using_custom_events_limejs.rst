@@ -2,7 +2,7 @@ Using Custom Events With  LimeJS
 ################################
 
 :tags: javascript, limejs
-:date: 2012-04-29 23:04:43
+:date: 2013-04-29 23:04:43
 :lang: en
 :slug: using_custom_events_with_limejs
 :status: published
