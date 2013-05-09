@@ -1,6 +1,6 @@
 Title: HTML5 Manifest File & Nginx
 Status: published
-Date: 2013-05-05 22:20:00
+Date: 2013-05-09 22:20:00
 Tags: html5, javascript, manifest file, nginx, limejs
 Category: 
 Slug: html5_manifest_file_nginx
