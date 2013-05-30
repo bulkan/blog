@@ -8,22 +8,50 @@ lang: en
 Author: Bulkan Evcimen
 Summary:
 
-In this article series I will briefly talk about Linked Lists then go about implementing one using [Go](http://golang.org). This is both a learning exercise for me to get comfortable using Go and to possibly help other developers transition into becoming a Go programmer. That being said please bare in mind I am still learning Go so excuse the code.
+In this article series I will briefly talk about Linked Lists then go about implementing one using [Go](http://golang.org). This is both a learning exercise for me to get comfortable using Go and to possibly help other developers transition into becoming a Go programmer. That being said please bear in mind I am still learning Go so excuse the code.
 
-As Go already has a [linked list](http://golang.org/pkg/container/list/) implemented so dont peak.
+Also, Go already has a [linked list](http://golang.org/pkg/container/list/) implemented so better use that in your production code.
 
-Lets begin with a quick refresher on linked lists. Have a look at the following diagram;
+Lets begin with a quick refresher on linked lists and for a more detailed analysis read this [PDF](http://cslibrary.stanford.edu/103/LinkedListBasics.pdf) by Stanford University.
+
+That being said have a look at the following diagram.
 
 <img src="http://i.imgur.com/gVLWlWn.jpg" width="50%" title="Drawn with a Faber-Castell Ambition in pearwood"/>
 
-A linked list is a simple data structure that is used as the basis for other complex data structures. Linked lists are made up of _nodes_ each containing some _data_ attribute and the reference to the next node. In the diagram above or nodes contain an integer as the data. With this information let us write out the code for a node.
+A linked list is a simple data structure that is used as the basis for other complex data structures. They are comprised of _nodes_ each containing some _data_ field and a reference field to the next node in the list. In the diagram above our nodes contain an integer field as the data. With this information let us write out the code for a node.
 
-If we were using a Object Oriented language like say Python, then we could just create a class to represent the node. But Go is a procedural language and it does not support classes. That being said it does have [struct type](http://golang.org/ref/spec#Struct_types) which we can use to encapsulate the fields of a node.
+If we were using an Object Oriented language like Python then we could just create a class to represent the node. But Go is a procedural language and it does not have classes. That being said it does have a something similar called [struct type](http://golang.org/ref/spec#Struct_types) which we can use to encapsulate the fields of a node.
 
-```C
+```
 type node struct {
     data int
     next *node
 }
 ```
 
+Here we define a new struct with a `data` field of type `int`. The `next` field has a type of a `pointer to a node`. Remember pointers store the memory address of the type it is pointing too.
+
+Next up we, need to write the functions to insert and remove nodes into the list. Like I wrote previously Go does not have classes hence you would assume that there wont be methods, but you would be surprisingly wrong. Go has a feature of being able to associate functions with structs [methods](https://gobyexample.com/methods).
+
+Here is what I mean.
+
+<script src="https://gist.github.com/bulkan/5677425.js"></script>
+
+We first create a new struct with a field that is the pointer to the beginning of the linked list. All linked lists need this first reference to able to do any operations on it.
+
+Then we create a method called `AddToHead` and associate it with the `LinkedList` struct. This method will create a `node` with the `data` that is passed in and then add this node to head of the list. What happens;
+
+* when the list is empty ?
+* when there is at least one node in the list (its not a empty list) ?
+
+We handle the first case by checking if the head of the list `ll.head` is `nil` which is the [zeroed](http://golang.org/doc/effective_go.html#allocation_new) value for a pointer in Go. If `ll.head` is `nil` we can just assign `ll.head` to our `tmp` node.
+
+If `ll.head` is not `nil` we have at least one node in the linked list so we cant just just assign `tmp` to `ll.head` as we would lose the references to the rest of the linked list and all of the data. First we have to set the `tmp` nodes `next` reference to `ll.head` to not lose this reference, then reassign `ll.head` to `tmp`.
+
+I hope this makes sense. I''ve pushed this code onto a repository on GitHub called [goll](https://github.com/bulkan/goll). Once you clone the repository run the following command to checkout the branch containing the code in this article.
+
+`git checkout -b part_one`
+
+Once this is branch is checked out look at the tests in `ll_test.go`
+
+In the next post we will look at removing nodes from our linked list and possibly adding another method to insert in sort order.
