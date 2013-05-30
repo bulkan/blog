@@ -48,7 +48,7 @@ We handle the first case by checking if the head of the list `ll.head` is `nil` 
 
 If `ll.head` is not `nil` we have at least one node in the linked list so we cant just just assign `tmp` to `ll.head` as we would lose the references to the rest of the linked list and all of the data. First we have to set the `tmp` nodes `next` reference to `ll.head` to not lose this reference, then reassign `ll.head` to `tmp`.
 
-I hope this makes sense. I''ve pushed this code onto a repository on GitHub called [goll](https://github.com/bulkan/goll). Once you clone the repository run the following command to checkout the branch containing the code in this article.
+I hope this makes sense. Ive pushed this code onto a repository on GitHub called [goll](https://github.com/bulkan/goll). Once you clone the repository run the following command to checkout the branch containing the code in this article.
 
 `git checkout -b part_one`
 
