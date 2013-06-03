@@ -35,6 +35,11 @@ Next up we, need to write the functions to insert and remove nodes into the list
 
 Here is what I mean.
 
+EDIT
+----
+
+As per the [feedback](http://www.reddit.com/r/golang/comments/1fdfud/im_learning_go_so_i_started_writing_a_linked_list/ca9ci1k) on reddit Ive simplified the `AddToHead` method
+
 <script src="https://gist.github.com/bulkan/5677425.js"></script>
 
 We first create a new struct with a field that is the pointer to the beginning of the linked list. All linked lists need this first reference to able to do any operations on it.
@@ -55,3 +60,4 @@ I hope this makes sense. Ive pushed this code onto a repository on GitHub called
 Once this is branch is checked out look at the tests in `ll_test.go`
 
 In the next post we will look at removing nodes from our linked list and possibly adding another method to insert in sort order.
+
