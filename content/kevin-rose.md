@@ -8,4 +8,4 @@ lang: en
 Author: Bulkan Evcimen
 Summary: 
 
-1
+<span style="font-weight:bold;">Kevin Rose<br /><br />You're a hippie<br /><br />profit?</span><br /><br /><a href="http://digg.com/apple/Kevin_Rose_Eats_Funny_Red_Pills_Again_Predicts_iPhone_3G"></a>
