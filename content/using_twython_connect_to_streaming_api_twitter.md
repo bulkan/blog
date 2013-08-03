@@ -38,4 +38,4 @@ streamer = TweetStreamer(consumer_key, consumer_secret,
 streamer.status.filter(track = 'python')
 ```
 
-The subclass `on_success` method on the class `TweetStreamer` will get called for each tweet we receive from the streaming api. The `statuses.filter` call will find tweets that contain the word _python_. Running this script will start printing tweets to the console.
+The method `on_success` on the class `TweetStreamer` will get called for each tweet we receive from the streaming api. The `statuses.filter` call, will find tweets that contain the word _python_. Running this script will start printing tweets to the console.
