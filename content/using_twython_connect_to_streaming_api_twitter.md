@@ -1,4 +1,4 @@
-Title: Using Twython To Connect to Twitter Streaming API via OAuth
+Title: Using Twython To Connect To The Twitter Streaming API via OAuth
 Status: published
 Date: 2013-08-03 21:00
 Tags: python, oauth, twitter
@@ -6,10 +6,10 @@ Category:
 Slug: using_twython_to_connect_to_twitter_streaming_api_via_oauth 
 lang: en
 Author: Bulkan Evcimen
-Summary: 
+Summary:
 
 
-Before you can connect to the Streaming API you need create a Twitter application. This will give you the necessary OAuth credentials. To do this, go to [dev.twitter.com/apps](http://dev.twitter.com/apps), login to your Twitter account then click the "Create a new application" button and follow the instructions.
+Before you can connect to the Streaming API you need create a Twitter application. This will give you the necessary OAuth credentials. To do this, go to [dev.twitter.com/apps](http://dev.twitter.com/apps), login to your Twitter account then click the _Create a new application_ button and follow the instructions.
 
 To connect to the Streaming using Twython, you need create a subclass of `TwythonStreamer`
 
