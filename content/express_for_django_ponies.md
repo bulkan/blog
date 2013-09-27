@@ -9,6 +9,4 @@ Author: Bulkan Evcimen
 Summary:
 
 
-## Express.js for Flask & Bottle 
-
-
+Express is the most popular _web_ framework in Node.js. It can be used in a way that can be similair very similar to Django. Hopefully in this article I will show you how to do this.
