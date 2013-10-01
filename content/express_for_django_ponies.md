@@ -42,4 +42,22 @@ Install `express` using the following command.
 
 `npm install express`
 
-Remember `virtualenv` in Python to keep package and Python versions seperate ? Node.js comes with `npm` that allows us to install packages locally per project.
+Here is the obligatory _Hello World_ web app.
+
+```
+var express = require('express')
+  , app = express();
+
+app.get('/', function(req, res){
+  res.send('Hello World');
+});
+
+app.listen(8080, function(){
+  console.log('started server on port 8080')';
+});
+```
+
+This will start a http server on port 8080. Go to [http://localhost:8008/](http://localhost:8080) and you sould see _Hello World_. 
+
+This usage of Express is more aligned with Flask or Bottle.
+
