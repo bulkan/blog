@@ -35,7 +35,6 @@ Once installed quickly test your installion via these commands.
 
 You should see version numbers for `node` & `npm`.
 
-
 Express yourself
 ----------------
 
@@ -43,4 +42,4 @@ Install `express` using the following command.
 
 `npm install express`
 
-Remember `virtualenv` in Python to keep package versions seperate.
+Remember `virtualenv` in Python to keep package and Python versions seperate ? Node.js comes with `npm` that allows us to install packages locally per project.
