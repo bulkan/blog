@@ -74,6 +74,8 @@ describe('User Profile', function(){
   it('can get user profile', function(done){
     getProfile('bulkan', function(err, result){
       if(err) return done(err);
+
+      // simple should.js assertion
       result.should.not.be.empty;
     });
   });
