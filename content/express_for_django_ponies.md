@@ -72,7 +72,7 @@ This usage of Express should remind you of Flask and Bottle.
 Views
 -----
 
-In Django a view is a function that gets called with a HttpRequest object and responsds with a HttpResponse (or subclass) object.
+In Django a view is a function that gets called with a HttpRequest object and returns a HttpResponse (or subclass) object.
 
 
 ORM
