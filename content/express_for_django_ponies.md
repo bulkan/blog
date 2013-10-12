@@ -78,7 +78,7 @@ In Django a view is a function that gets called with a HttpRequest object and re
 ORM
 ---
 
-For an ORM we will use `Mongoose` which is a Object Document Mapper for `MongoDB`.
+For an ORM we will use `Mongoose` which is a Object Document Mapper for `MongoDB`. It allows us to create a _model_ based on a schema.
 
 Read the Mongo installation guide to install it.
 
