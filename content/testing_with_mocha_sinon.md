@@ -77,6 +77,7 @@ describe('User Profile', function(){
 
       // simple should.js assertion
       result.should.not.be.empty;
+      done();
     });
   });
 });
@@ -103,10 +104,12 @@ describe('User Profile', function(){
     sinon
       .stub(request, 'get')
       .yields(null, null, JSON.stringify({login: "bulkan"}));
+    done();
   });
 
   after(function(done){
     request.get.restore();
+    done();
   });
 
   it('can get user profile', function(done){
@@ -114,12 +117,13 @@ describe('User Profile', function(){
       if(err) return done(err);
       request.get.called.should.be.equal(true);
       result.should.not.be.empty;
+      done();
     });
   });
 });
 ```
 
-We add a `before` call that [stubs](http://sinonjs.org/docs/#stubs) out `request.get`.   
+We add a `before` call that [stubs](http://sinonjs.org/docs/#stubs) out `request.get`.
 
 The `yields` allows us to simulate the call to the callback that is passed to `request.get`. In this case
 we return `null` for _err_, `null` for the _response_ and JSON string of a simple object.
