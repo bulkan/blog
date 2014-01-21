@@ -14,7 +14,6 @@ Im sure you know know how to install packages but here is the command for the sa
 
 `npm install sequelize async`
 
-
 ## The first migration
 
 First initilize the migrations structure
@@ -29,14 +28,15 @@ Create another migration
 
 `sequelize -c create-tables`
 
+## Dump the database
 
 Now dump your database without the data. With _mysqldump_
 
 `mysqldump -d --compact --compatible=mysql323 ${dbname}|egrep -v "(^SET|^/\*\!)"`.
 
-We need to remove the `SET 
+We need to remove the lines beginning or containing `SET`
 
-Save this dump to the **migrations** folder and name it **intial.sql**
+Save this dump to the **migrations** folder and name it **initial.sql**
 
 Edit the last migration that was created to look like;
 
@@ -86,7 +86,8 @@ Edit the last migration that was created to look like;
         });
       }
     }
-    
+
+## Please explain
     
 On the migrations `up` function we use `async.waterfall` to orchestrate a the async calls;
 
@@ -94,6 +95,10 @@ On the migrations `up` function we use `async.waterfall` to orchestrate a the as
 * need to split the `initial.sql` and retrieve each `CREATE TABLE` queries as `db.query` can execute on query at a time
 * using `async.each` run each of these queries
 
-
 On the migrations `down` function we just remove all tables that is not the `SequelizeMeta` table. For some reason `migration.dropAllTables()` remove this table and messes up the migrations. Not sure if this is the correct behavior.
+
+Hope this helps
+
+
+
 
