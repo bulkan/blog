@@ -60,8 +60,8 @@ Edit the last migration that was created to look like;
             // as db.query can execute on query at a time
             var tables = initialSchema.split(';');
 
-            function createTable(tableSql, doneInsert){
-              db.query(tableSql);
+            function createTable(tableSql, doneCreate){
+              db.query(tableSql).complete(doneCreate);
             }
 
             async.each(tables, createTable, cb);
@@ -78,8 +78,7 @@ Edit the last migration that was created to look like;
           });
 
           function dropTable(tableName, cb){
-            migration.dropTable(tableName);
-            cb();
+            migration.dropTable(tableName).complete(cb);
           }
 
           async.each(tables, dropTable, done);
