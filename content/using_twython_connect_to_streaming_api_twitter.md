@@ -14,7 +14,7 @@ Before you can connect to the Streaming API you need create a Twitter applicatio
 To connect to the Streaming using Twython, you need create a subclass of `TwythonStreamer`
 
 ```python
-from twython import TywthonStreamer
+from twython import TwythonStreamer
 
 class TweetStreamer(TwythonStreamer):
     def on_success(self, data):
