@@ -20,6 +20,10 @@ class TweetStreamer(TwythonStreamer):
     def on_success(self, data):
         if 'text' in data:
             print data['text'].encode('utf-8')
+    
+    def on_error(self, status_code, data):
+        print status_code
+        self.disconnect()
 ```
 
 Now we will instanstiate the `TweetStreamer` class and pass in the oauth details
@@ -35,7 +39,7 @@ access_token_secret = ''
 streamer = TweetStreamer(consumer_key, consumer_secret,
                          access_token, access_token_secret)
 
-streamer.status.filter(track = 'python')
+streamer.statuses.filter(track = 'python')
 ```
 
 The method `on_success` on the class `TweetStreamer` will get called for each tweet we receive from the streaming api. The `statuses.filter` call, will find tweets that contain the word _python_. Running this script will start printing tweets to the console.
