@@ -14,14 +14,11 @@ Popup windows are extremely annoying hence most modern browsers block them, agre
 That being said one use of popup windows is when doing OAuth. Showing the OAuth authorization dialog in a 
 popup window as not to confuse the user.
 
-In this blog post I will hopefully demonstrate my solution using express/passportjs to authenticate with GitHub.
+In this blog post I will hopefully demonstrate my solution using a simple express 4 app and a little AngularJS.
+
 If there is a better or different way please comment below.
 
-
-## Backend
-
-
-* write a simple express app using passport.js to oauth againts GitHub
+All the code can be found at [angular-popup](https://github.com/bulkan/angular-popup).
 
 ## Frontend
 
