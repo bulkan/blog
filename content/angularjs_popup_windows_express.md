@@ -78,4 +78,7 @@ The template above is simple enough. All it does is after two seconds assing to 
 the popup has done something _important_. The popup also assigns a value to `window.opener.$scope` which is the `$scope` that was assigned 
 in PopupCtrl.
 
+As we have used `ng-model` in the default routes [template](https://github.com/bulkan/angular-popup/blob/master/public/partials/popup.html)
+a we will see the text _teapot_ appear in the text input.
+
 Hope this makes sense.
