@@ -8,7 +8,7 @@ lang: en
 Author: Bulkan Evcimen
 Summary: 
 
-Ive been developing a HTML5 game using the LimeJS framework. As I am targetting iPhone and iPod Touches I asked my lovely [girlfriend](http://aurorachiarello.com) to design me an app icon and hopefully In the near future she will also have give startup images too.
+Ive been developing a HTML5 game using the LimeJS framework. As I am targetting iPhone and iPod Touches I asked my lovely <del>girlfriend</del> [fiance](http://aurorachiarello.com) to design me an app icon and hopefully In the near future she will also have give startup images too.
 
 As I dont want to load the icon and startup images via the __network__ every time the _app_ loads, I thought I would cache it "offline". To do this you need to create a manifest file which your web server needs to set a specific content-type header which is just `text/cache.manifest`.
 
