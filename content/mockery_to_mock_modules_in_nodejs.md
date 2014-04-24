@@ -10,7 +10,8 @@ Summary:
 
 
 In a [previous article](http://bulkan-evcimen.com/testing_with_mocha_sinon) I wrote about mocking methods on the [request module](https://github.com/mikeal/request).
-`request` supports another workflow;
+
+`request` also supports another workflow in which you directly call the imported module;
 
     var request = require('request');
 
@@ -26,10 +27,10 @@ In a [previous article](http://bulkan-evcimen.com/testing_with_mocha_sinon) I wr
     })
 
 
-It allows you to pass in an [options object](https://github.com/mikeal/request#requestoptions-callback) specifying the HTTP method
-and other properties such as `url`, `body` & `json`.
+You pass in an [options object](https://github.com/mikeal/request#requestoptions-callback) specifying properties like the HTTP method
+to use and other properties such as `url`, `body` & `json`.
 
-Here is the example from [previous article](http://bulkan-evcimen.com/testing_with_mocha_sinon) using `request(options)`;
+Here is the example from the [previous article](http://bulkan-evcimen.com/testing_with_mocha_sinon) using but updated to use `request(options)`;
 
 
     var request = require('request')
@@ -50,9 +51,12 @@ Here is the example from [previous article](http://bulkan-evcimen.com/testing_wi
 
     module.exports = getProfile;
 
+Its not that big of a change. To unit test the `getProfile` function we will need 
+to mock out `request` module that is being imported by the module that `getProfile` 
+is defined in.  This where [mockery](https://github.com/mfncooper/mockery) comes in. 
+It allows us to change what gets returned when a module is imported.
 
-To unit test the `getProfile` function we will need to mock out `request` that is being `require`d by the module that `getProfile` is defined in.
-To mock out  modules function we will use [mockery](https://github.com/mfncooper/mockery) here is the code assuming the above code is in a file named `gh.js`.
+Here is a mocha test case using mockery. This assumes that the above code is in a file named `gh.js`.
 
     var request = require('request')
       , sinon = require('sinon')
@@ -99,7 +103,10 @@ To mock out  modules function we will use [mockery](https://github.com/mfncooper
 `mockery` _hijacks_ the `require` function and replaces modules with our mocks. In the above code
 we register a `sinon` stub to be returned when `require('request')` is called. Then we configure 
 the mock in the test using the method `.yield` on the stub to a call the callback
-function passed with `null` for the _error_, an object for the `response` and 
+function passed to `request` with `null` for the _error_, an object for the `response` and another object
+for the `body`.
+
+You can write more tests
 
 
 Hope this helps.
