@@ -28,25 +28,23 @@ In a [previous article](http://bulkan-evcimen.com/testing_with_mocha_sinon) I wr
 
 
 You pass in an [options object](https://github.com/mikeal/request#requestoptions-callback) specifying properties like the HTTP method
-to use and other properties such as `url`, `body` & `json`.
+to use and others such as `url`, `body` & `json`.
 
-Here is the example from the [previous article](http://bulkan-evcimen.com/testing_with_mocha_sinon) using but updated to use `request(options)`;
+Here is the example from the [previous article](http://bulkan-evcimen.com/testing_with_mocha_sinon) updated to use `request(options)`;
 
 
-    var request = require('request')
-      , async   = require('async');
+    var request = require('request');
 
     function getProfile(username, cb){
-      async.waterfall([
-        function(callback){
-          request({method: 'GET', url: 'https://api.github.com/users/' + username}, function(err, response, body){
-            if (err) {
-              return callback(err);
-            }
-            callback(null, body);
-          });
+      request({
+        method: 'GET', 
+        url: 'https://api.github.com/users/' + username
+      }, function(err, response, body){
+        if (err) {
+          return cb(err);
         }
-      ], cb)
+        cb(null, body);
+      });
     }
 
     module.exports = getProfile;
@@ -73,11 +71,10 @@ Here is a mocha test case using mockery. This assumes that the above code is in 
           useCleanCache: true
         });
 
-        var requestStub = sinon.stub();
+        requestStub = sinon.stub();
 
         // replace the module `request` with a stub object
         mockery.registerMock('request', requestStub);
-        
       });
 
       after(function(){
