@@ -15,21 +15,21 @@ In a [previous article](http://bulkan-evcimen.com/testing_with_mocha_sinon) I wr
     var request = require('request');
 
     request({
-        method: 'GET',
-        url: 'https://api.github.com/users/bulkan'
+      method: 'GET',
+      url: 'https://api.github.com/users/bulkan'
     }, function(err, response, body){
-        if (err) {
-            return console.err(err);
-        }
+      if (err) {
+        return console.err(err);
+      }
 
-        console.log(body);
+      console.log(body);
     })
 
 
 It allows you to pass in an [options object](https://github.com/mikeal/request#requestoptions-callback) specifying the HTTP method
-and other properties such as `url`, `body` & `json` etc...
+and other properties such as `url`, `body` & `json`.
 
-Here is the example from [previous article](http://bulkan-evcimen.com/testing_with_mocha_sinon);
+Here is the example from [previous article](http://bulkan-evcimen.com/testing_with_mocha_sinon) using `request(options)`;
 
 
     var request = require('request')
@@ -39,7 +39,9 @@ Here is the example from [previous article](http://bulkan-evcimen.com/testing_wi
       async.waterfall([
         function(callback){
           request({method: 'GET', url: 'https://api.github.com/users/' + username}, function(err, response, body){
-            if (err) return callback(err);
+            if (err) {
+              return callback(err);
+            }
             callback(null, body);
           });
         }
@@ -50,7 +52,7 @@ Here is the example from [previous article](http://bulkan-evcimen.com/testing_wi
 
 
 To unit test the `getProfile` function we will need to mock out `request` that is being `require`d by the module that `getProfile` is defined in.
-To mock out  modules function we will use [mockery](https://github.com/padraic/mockery) here is the code assuming the above code is in a file named `gh.js`.
+To mock out  modules function we will use [mockery](https://github.com/mfncooper/mockery) here is the code assuming the above code is in a file named `gh.js`.
 
     var request = require('request')
       , sinon = require('sinon')
@@ -58,16 +60,16 @@ To mock out  modules function we will use [mockery](https://github.com/padraic/m
       , getProfile = require('./gh');
 
     describe('User Profile', function(){
-      before(function(){
+      var requestStub;
 
-        // mockery hijacks the `require` function and replaces modules with mocks
+      before(function(){
         mockery.enable({
           warnOnReplace: false,
           warnOnUnregistered: false,
           useCleanCache: true
         });
 
-        var requestStub = sinon.stub().yields(null, null, JSON.stringify({login: "bulkan"}));
+        var requestStub = sinon.stub();
 
         // replace the module `request` with a stub object
         mockery.registerMock('request', requestStub);
@@ -80,9 +82,13 @@ To mock out  modules function we will use [mockery](https://github.com/padraic/m
       });
 
       it('can get user profile', function(done){
+        requestStub.yields(null, {statusCode: 200}, {login: "bulkan"});
+
         getProfile('bulkan', function(err, result){
-          if(err) return done(err);
-          request.get.called.should.be.equal(true);
+          if(err) {
+            return done(err);
+          }
+          requestStub.called.should.be.equal(true);
           result.should.not.be.empty;
           done();
         });
@@ -90,6 +96,10 @@ To mock out  modules function we will use [mockery](https://github.com/padraic/m
     })
 
 
+`mockery` _hijacks_ the `require` function and replaces modules with our mocks. In the above code
+we register a `sinon` stub to be returned when `require('request')` is called. Then we configure 
+the mock in the test using the method `.yield` on the stub to a call the callback
+function passed with `null` for the _error_, an object for the `response` and 
 
-Bonus
------
+
+Hope this helps.
