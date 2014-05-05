@@ -11,7 +11,7 @@ Summary:
 With Sinon.JS mocking functions are quite easy. Here is how to stub a function
 that returns a Promise.
 
-Here is a potato quality example. Imagine the following code is in a file named
+Demonstrated with a potato quality example. Imagine the following code is in a file named
 `db.js`
 
 ```
@@ -19,24 +19,24 @@ var Promise = require('bluebird');
 
 module.exports.query = function query(q) {
   return Promise.resolve([
-      {
-        username: 'bulkan',
-        verified: true
-      }
-    ])
+    {
+      username: 'bulkan',
+      verified: true
+    }
+  ])
 }
 ```
 
 Using `bluebird` we simulate a database query which returns a Promise that is
 resolved with an Array of Objects.
 
-Imagine the following code `users.js`;
+Imagine the following code located in `users.js`;
 
 ```
 var db = require('./db');
 
 module.exports.getVerified = function getVerified(){
-    return db.query('select * from where verified=true');
+  return db.query('select * from where verified=true');
 }
 ```
 
