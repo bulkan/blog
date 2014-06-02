@@ -8,7 +8,7 @@ lang: en
 Author: Bulkan Evcimen
 Summary:
 
-Broccoli is a relatively new asset builder. It is based on doing operations
+[Broccoli](http://www.solitr.com/blog/2014/02/broccoli-first-release/) is a relatively new asset builder. It is based on doing operations
 on a trees of files.
 
 Here is how I used it to concatenate frontend dependencies installed via 
@@ -40,6 +40,12 @@ This is relative to your project and tells bower where to put the dependencies.
         "directory": "public/vendor"
     }
 
-## package.json
+## Broccoli
+
+Now we need to install broccoli. I usually install the `broccoli-cli` globally and as per the
+official [installation guide](https://github.com/broccolijs/broccoli#installation).
+
+    npm install --save-dev broccoli
+    npm install --global broccoli-cli
 
 ## Brocfile.js
