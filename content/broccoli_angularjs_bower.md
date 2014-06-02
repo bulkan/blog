@@ -38,7 +38,6 @@ This is relative to your project and tells bower where to put the dependencies.
 
     {
         "directory": "public/vendor"
-
     }
 
 ## package.json
