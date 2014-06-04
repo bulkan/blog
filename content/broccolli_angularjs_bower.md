@@ -42,10 +42,19 @@ This is relative to your project and tells bower where to put the dependencies.
 
 ## Broccoli
 
-Now we need to install broccoli. I usually install the `broccoli-cli` globally and as per the
+Now we need to install broccoli. Ive installed the `broccoli-cli` globally and as per the
 official [installation guide](https://github.com/broccolijs/broccoli#installation).
 
     npm install --save-dev broccoli
     npm install --global broccoli-cli
 
+We also need to install plugins for broccoli;
+
+    npm install --saveDev broccoli-bower broccoli-concat broccoli-gzip broccoli-merge-trees broccoli-static-compiler
+
 ## Brocfile.js
+
+Like all __task__ runners broccoli has its own file format to define its operations, though
+its not really a __task__ runner but rather a build tool.
+
+Here is the `brocfile.js` to concatenate all of the above
