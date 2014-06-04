@@ -43,18 +43,51 @@ This is relative to your project and tells bower where to put the dependencies.
 ## Broccoli
 
 Now we need to install broccoli. Ive installed the `broccoli-cli` globally and as per the
-official [installation guide](https://github.com/broccolijs/broccoli#installation).
+[installation guide](https://github.com/broccolijs/broccoli#installation).
 
     npm install --save-dev broccoli
     npm install --global broccoli-cli
 
 We also need to install plugins for broccoli;
 
-    npm install --saveDev broccoli-bower broccoli-concat broccoli-gzip broccoli-merge-trees broccoli-static-compiler
+    npm install --saveDev broccoli-concat broccoli-gzip 
 
 ## Brocfile.js
 
 Like all __task__ runners broccoli has its own file format to define its operations, though
 its not really a __task__ runner but rather a build tool.
 
-Here is the `brocfile.js` to concatenate all of the above
+Here is the `brocfile.js` to concatenate all of the above bower dependencies
+
+
+    var broccoli = require('broccoli');
+    var gzipFiles = require('broccoli-gzip');
+    var concat = require('broccoli-concat');
+
+
+    var concatenated = concat('public/',  {
+      inputFiles: [
+        'vendor/jquery/jquery.min.js',
+        'vendor/jquery-ui/ui/jquery-ui.js',
+        'vendor/bootstrap/dist/js/bootstrap.min.js',
+        'vendor/lodash/dist/lodash.min.js',
+        'vendor/socket.io-client/socket.io.js',
+        'vendor/angular/angular.js',
+        'vendor/angular-flash/dist/angular-flash.min.js',
+        'vendor/select2/select2.js',
+        'vendor/angular-socket-io/socket.js',
+        'vendor/angular-ui-select2/src/select2.js',
+        'vendor/angular-ui-router/release/angular-ui-router.min.js',
+        'vendor/angular-ui-slider/src/slider.js',
+        'js/**/*.js',
+      ],
+      outputFile: '/assets/app.js',
+      separator: '\n', // (optional, defaults to \n)
+      wrapInEval: false // (optional, defaults to false)
+    });
+
+
+    module.exports =  gzipFiles(concatenated, {
+      keepUncompressed: true,
+      extensions: ['js', 'css'],
+    });
