@@ -1,4 +1,6 @@
 blog
 ====
 
-My new blog using pelican static blog engine
+My blog using pelican. 
+
+http://bulkan-evcimen.com
