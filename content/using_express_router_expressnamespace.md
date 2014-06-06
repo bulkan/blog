@@ -8,4 +8,9 @@ lang: en
 Author: Bulkan Evcimen
 Summary:
 
+## Draft
 
+* Express 4.0 is out. Has a Router.
+* Mounts things and keeps order, first in first run. 
+* express-namespace allowed something similair to happen in v3. Also less typing for 
+  route names
