@@ -11,7 +11,7 @@ Summary:
 [Broccoli](http://www.solitr.com/blog/2014/02/broccoli-first-release/) is a relatively new asset builder. It is based on doing operations
 on a trees of files.
 
-Here is how I used it to concatenate frontend dependencies installed via 
+Here is how I used it to concatenate frontend dependencies installed via
 bower and an angular.js app.
 
 ## Bower
@@ -25,7 +25,6 @@ Here is an example `bower.json` that lists the frontend dependencies. Note the `
     {
       "dependencies": {
         "angular-ui-router": "0.2.8-bowratic-tedium",
-        "angular-socket-io": "~0.6.0"
       },
       "resolutions": {
         "angular": "~1.2.16"
@@ -50,7 +49,7 @@ Now we need to install broccoli. Ive installed the `broccoli-cli` globally and a
 
 We also need to install plugins for broccoli;
 
-    npm install --saveDev broccoli-concat broccoli-gzip 
+    npm install --saveDev broccoli-concat
 
 ## Brocfile.js
 
@@ -61,24 +60,13 @@ Here is the `brocfile.js` to concatenate all of the above bower dependencies
 
 
     var broccoli = require('broccoli');
-    var gzipFiles = require('broccoli-gzip');
     var concat = require('broccoli-concat');
-
 
     var concatenated = concat('public/',  {
       inputFiles: [
         'vendor/jquery/jquery.min.js',
-        'vendor/jquery-ui/ui/jquery-ui.js',
-        'vendor/bootstrap/dist/js/bootstrap.min.js',
-        'vendor/lodash/dist/lodash.min.js',
-        'vendor/socket.io-client/socket.io.js',
         'vendor/angular/angular.js',
-        'vendor/angular-flash/dist/angular-flash.min.js',
-        'vendor/select2/select2.js',
-        'vendor/angular-socket-io/socket.js',
-        'vendor/angular-ui-select2/src/select2.js',
         'vendor/angular-ui-router/release/angular-ui-router.min.js',
-        'vendor/angular-ui-slider/src/slider.js',
         'js/**/*.js',
       ],
       outputFile: '/assets/app.js',
@@ -86,8 +74,14 @@ Here is the `brocfile.js` to concatenate all of the above bower dependencies
       wrapInEval: false // (optional, defaults to false)
     });
 
+    module.exports =  concatenated;
 
-    module.exports =  gzipFiles(concatenated, {
-      keepUncompressed: true,
-      extensions: ['js', 'css'],
-    });
+
+We explicitly define the order of concatenation to the `concat` function. This
+way we have jQuery loading before angular, and angular loading before ui-router
+and our app code (which is assumed to exist in `public/js`).
+
+Now running `broccoli serve` will start a http server on port 4200 and the
+concatenated Javascript will be available at __http://localhost:4200/assets/app.js__.
+
+Hope that helps.
