@@ -8,15 +8,15 @@ lang: en
 Author: Bulkan Evcimen
 Summary:
 
-## express 4.0
-
 express 4.0 has been out for a while and it seems people are still using
 [express-namespace](https://www.npmjs.org/package/express-namespace). According to
 npm it had 183 downloads on the 8th of June.
 
-express-namespace can be easilly replaced with the Router that comes with express 4.
-I believe that express-namespace doesnt suppport express 4 and hasn't been updated
-in 2 years !
+express-namespace can be easilly replaced with the Router that comes with express 4
+as it hasn't been updated in 2 years ! 
+
+Also I've found that the middleware mounting on namespace roots would mount it
+at the the application level. This is what the router solves.
 
 The router is quite handy. It allows you to seperate out __routes__ into different 
 modules with its own middleware. 
@@ -28,29 +28,30 @@ Here is the example from express-namespace written using express 4.0 using the R
         threadRouter = express.Router(),
         app = express();
 
-
-    app.use('/forum/:id', router);
-
-    forumRouter.get('(view)?', function(req, res){
+    forumRouter.get('/:id/((view)?)', function(req, res){
       res.send('GET forum ' + req.params.id);
     });
 
-    forumRouter.get('/edit', function(req, res){
+    forumRouter.get('/:id/edit', function(req, res){
       res.send('GET forum ' + req.params.id + ' edit page');
     });
 
-    forumRouter.del('/', function(req, res){
+    forumRouter.delete('/', function(req, res){
       res.send('DELETE forum ' + req.params.id);
     });
 
+    app.use('/forum', forumRouter);
 
-    app.user('/thread', threadRouter);
-
-    threadRouter.get('/:tid', function(req, res){
+    threadRouter.get('/:id/thread/:tid', function(req, res){
       res.send('GET forum ' + req.params.id + ' thread ' + req.params.tid);
     });
 
+    app.use('/forum', threadRouter);
+
+    app.listen(3333);
+
 A little bit more typing but easier to explain to others and no monkey patching
 weirdness of express-namespace.
+
 
 Hope this helps
