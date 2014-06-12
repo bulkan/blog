@@ -12,16 +12,14 @@ express 4.0 has been out for a while and it seems people are still using
 [express-namespace](https://www.npmjs.org/package/express-namespace). According to
 npm it had 183 downloads on the 8th of June.
 
-express-namespace can be easilly replaced with the Router that comes with express 4
-as it hasn't been updated in 2 years ! 
+express-namespace hasnt been updated in nearly two years and it can now be
+replaced with the Router that comes with express 4.
 
 Also I've found that the middleware mounting on namespace roots would mount it
-at the the application level. This is what the router solves.
+at the the application level. This is else that the router solves as it allows 
+you to seperate out __routes__ into different modules with its own middleware. 
 
-The router is quite handy. It allows you to seperate out __routes__ into different 
-modules with its own middleware. 
-
-Here is the example from express-namespace written using express 4.0 using the Router.
+Here is the example from express-namespace written using the Router in express 4.0.
 
     var express = require('express'),
         forumRouter = express.Router(),
@@ -53,5 +51,6 @@ Here is the example from express-namespace written using express 4.0 using the R
 A little bit more typing but easier to explain to others and no monkey patching
 weirdness of express-namespace.
 
+The routes are more little more explicitly defined.
 
-Hope this helps
+Hope this helps.
