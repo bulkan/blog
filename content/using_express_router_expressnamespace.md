@@ -1,5 +1,5 @@
 Title: Using Express Router instead of express-namespace
-Status: draft
+Status: published
 Date: 2014-06-09 15:00
 Tags: node.js, express, javascript
 Category:

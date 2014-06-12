@@ -1,5 +1,5 @@
 Title: Broccoli and Angular.js
-Status: published
+Status: draft
 Date: 2014-05-28 10:12
 Tags: node.js, broccoli, angular
 Category:
