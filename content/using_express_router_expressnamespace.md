@@ -21,6 +21,7 @@ you to seperate out __routes__ into different modules with its own middleware.
 
 Here is the example from express-namespace written using the Router in express 4.0.
 
+
     var express = require('express'),
         forumRouter = express.Router(),
         threadRouter = express.Router(),
@@ -34,7 +35,8 @@ Here is the example from express-namespace written using the Router in express 4
       res.send('GET forum ' + req.params.id + ' edit page');
     });
 
-    forumRouter.delete('/', function(req, res){
+
+    forumRouter.delete('/:id', function(req, res){
       res.send('DELETE forum ' + req.params.id);
     });
 
@@ -44,9 +46,10 @@ Here is the example from express-namespace written using the Router in express 4
       res.send('GET forum ' + req.params.id + ' thread ' + req.params.tid);
     });
 
-    app.use('/forum', threadRouter);
+    forumRouter.use('/', threadRouter);
 
     app.listen(3333);
+
 
 A little bit more typing but easier to explain to others and no monkey patching
 weirdness of express-namespace.
