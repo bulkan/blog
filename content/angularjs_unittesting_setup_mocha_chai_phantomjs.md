@@ -10,3 +10,9 @@ Summary:
 
 
 ## Draft
+
+* create a simple controller using the style guide here --> https://github.com/franq/angularjs-style-guide#services
+* create a test
+* npm deps
+* bower deps
+* write the runner.html
