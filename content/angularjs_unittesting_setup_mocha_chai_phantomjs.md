@@ -12,6 +12,21 @@ Summary:
 ## Draft
 
 * create a simple controller using the style guide here --> https://github.com/franq/angularjs-style-guide#services
+* we will be using angular-ui-router
+
+    
+    angular.module('MyApp')
+      .config(function($stateProvider){
+        $stateProvider.state('root', {
+          url: '/',
+          template: '<ui-view></ui-view>',
+          controller: 'TodoController'
+        })
+      })
+      .controller('TodoController', function(){
+      });
+
+
 * npm deps
 
     npm install phantomjs
@@ -24,7 +39,7 @@ Summary:
     }
 
 
-    bower install --save angular
+    bower install --save angular angular-ui-router
     bower install --save-dev mocha chai
 
 * create a test
