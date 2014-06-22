@@ -23,7 +23,7 @@ Summary:
           controller: 'TodoController'
         })
       })
-      .controller('TodoController', function(){
+      .controller('TodoController', function($state, $http){
       });
 
 
@@ -43,4 +43,9 @@ Summary:
     bower install --save-dev mocha chai
 
 * create a test
+
+    describe('TodoController', function(){
+      it('should load todos from server');
+      it('should send a PUT request when a todo is checked off');
+    });
 * write the runner.html
