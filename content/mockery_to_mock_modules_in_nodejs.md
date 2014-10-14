@@ -56,13 +56,12 @@ It allows us to change what gets returned when a module is imported.
 
 Here is a mocha test case using mockery. This assumes that the above code is in a file named `gh.js`.
 
-    var request = require('request')
-      , sinon = require('sinon')
+    var sinon = require('sinon')
       , mockery = require('mockery')
-      , getProfile = require('./gh');
+      , should = require('chai').should();
 
     describe('User Profile', function(){
-      var requestStub;
+      var requestStub, getProfile
 
       before(function(){
         mockery.enable({
@@ -75,10 +74,11 @@ Here is a mocha test case using mockery. This assumes that the above code is in 
 
         // replace the module `request` with a stub object
         mockery.registerMock('request', requestStub);
+
+        getProfile = require('./gh');
       });
 
       after(function(){
-        request.get.restore();
         mockery.disable();
       });
 
@@ -91,10 +91,12 @@ Here is a mocha test case using mockery. This assumes that the above code is in 
           }
           requestStub.called.should.be.equal(true);
           result.should.not.be.empty;
+          result.should.have.property('login');
           done();
         });
       });
     })
+
 
 
 `mockery` _hijacks_ the `require` function and replaces modules with our mocks. In the above code
