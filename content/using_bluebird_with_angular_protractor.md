@@ -12,11 +12,10 @@ Summary:
 
 Just return a Promise from a function named `onPrepare` in your config.js
 
-  onPrepare: function(){
-    var Promise = require('bluebird');
-
-    return Promise.delay(2000);
-  }
+    onPrepare: function(){
+      var Promise = require('bluebird');
+      return Promise.delay(2000);
+    }
 
  
 This can be used to perform some async setup task like creating a fake User in your database
@@ -26,10 +25,10 @@ to be able to login.
     var User = require('./models/User');
     
     onPrepare: function() {
-        return User.create({
-            username: 'bulkan',
-            password': 'igotdis'
-        });
+      return User.create({
+        username: 'bulkan',
+        password': 'igotdis'
+      });
     }
 
 
