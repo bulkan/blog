@@ -24,10 +24,10 @@ Here is an example `bower.json` that lists the frontend dependencies. Note the `
 
     {
       "dependencies": {
-        "angular-ui-router": "0.2.8-bowratic-tedium",
+        "angular-ui-router": "0.2.11",
       },
       "resolutions": {
-        "angular": "~1.2.16"
+        "angular": "~1.3.0"
       }
     }
 
