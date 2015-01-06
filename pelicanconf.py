@@ -9,7 +9,8 @@ CSS_FILE = 'stylesheet.css'
 
 TEMPLATE_PAGES = {
     'music.html': 'music.html',
-    'musician.html': 'musician.html'
+    'musician.html': 'musician.html',
+    'mira.html': 'mira.html'
 }
 
 TIMEZONE = 'Australia/Melbourne'
