@@ -11,7 +11,7 @@ Summary:
 
 ## Draft
 
-* create a simple controller using the style guide here --> https://github.com/franq/angularjs-style-guide#services
+* create a simple controller using the style guide here
 * we will be using angular-ui-router
 
     

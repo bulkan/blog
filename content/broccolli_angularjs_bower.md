@@ -1,6 +1,6 @@
 Title: Broccoli and Angular.js
-Status: draft
-Date: 2014-05-28 10:12
+Status: published
+Date: 2016-02-16 03:38
 Tags: node.js, broccoli, angular
 Category:
 Slug: broccoli_and_angularjs
@@ -8,10 +8,15 @@ lang: en
 Author: Bulkan Evcimen
 Summary:
 
+
+### Warning
+
+This post was initially written on 2014-05-28 and not published. Things might have changed.
+
 [Broccoli](http://www.solitr.com/blog/2014/02/broccoli-first-release/) is a relatively new asset builder. It is based on doing operations
 on a trees of files.
 
-Here is how I used it to concatenate frontend dependencies installed via
+Here is how I used it to concatenate front end dependencies installed via
 bower and an angular.js app.
 
 ## Bower
@@ -41,7 +46,7 @@ This is relative to your project and tells bower where to put the dependencies.
 
 ## Broccoli
 
-Now we need to install broccoli. Ive installed the `broccoli-cli` globally and as per the
+Now we need to install broccoli. I've installed the `broccoli-cli` globally and as per the
 [installation guide](https://github.com/broccolijs/broccoli#installation).
 
     npm install --save-dev broccoli
