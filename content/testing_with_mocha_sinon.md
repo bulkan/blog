@@ -27,7 +27,7 @@ GET some data
 -------------
 
 
-Here is a function that will get any users public GitHub profile from the GitHub API. We will use the awesome `async` module to help with the asyncronousness.
+Here is a function that will get any users public GitHub profile from using the GitHub API. We will use the `async` module to help with the asyncronousness.
 
 
 ```
@@ -61,8 +61,8 @@ The first function in `async.waterfall` function list does a request to GitHub A
 
 Last, we export our function as the module so we can use it later.
 
-Tests taste better Mocha
-------------------------
+Tests taste better with Mocha
+-----------------------------
 
 To test the above code we can write a Mocha test assuming the above code is in a file named `gh.js`.
 
@@ -87,8 +87,8 @@ We can run the above test via the following line assuming the Mocha test is in a
 
 `./node_modules/.bin/mocha --require should --ui bdd gh_test.js`
 
-The problem with the this test is that each time we run it will do a HTTP GET to GitHub API which will slow the test. The more tests we add that do actual
-HTTP requests to will slow the tests even more.  What we can do is we can mock out the request.  
+The problem with this test is that each time we run it will do a HTTP GET to GitHub API which will be a slow. The more tests we add that do actual
+HTTP requests to third parties will slow the tests even more.  What we can do is we can mock out the request.  
 
 
 We can change the test code.
@@ -100,16 +100,14 @@ var request    = require('request')
   , getProfile = require('./gh');
 
 describe('User Profile', function(){
-  before(function(done){
+  before(function(){
     sinon
       .stub(request, 'get')
       .yields(null, null, JSON.stringify({login: "bulkan"}));
-    done();
   });
 
-  after(function(done){
+  after(function(){
     request.get.restore();
-    done();
   });
 
   it('can get user profile', function(done){
@@ -132,7 +130,7 @@ The after call restores the default `request.get` method.
 
 Our test case tests that `request.get` was called.
 
-In Node.js `require(..)` loads modules once into a [cache](http://nodejs.org/api/modules.html#modules_caching). As our test case runs first it will loads the `request` module first. We use the
+In Node.js `require(..)` loads modules once into a [cache](http://nodejs.org/api/modules.html#modules_caching). As our test case runs first it will load the `request` module first. We use the
 reference to the module to be able to stub methods on it. Later on when we load `getProfile` module it will do a `require('request')` call which will retrieve the module from the cache with 
 the `get` method stubbed out.
 
