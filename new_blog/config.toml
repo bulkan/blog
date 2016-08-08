@@ -1,0 +1,16 @@
+baseurl = "http://bulkan-evcimen.com"
+languageCode = "en-us"
+title = "Bulkan Evcimen"
+theme = "purehugo"
+uglyURLs = true
+paginate = 3
+
+[taxonomies]
+  tag = "tags"
+
+[params]
+  disqusShortname = "bulkanevcimen"
+  twitterName = "bulkanevcimen"
+  githubName = "bulkan"
+  google_analytics = "UA-1620638-6"
+  description = "Software Engineer that plays the Ney"
