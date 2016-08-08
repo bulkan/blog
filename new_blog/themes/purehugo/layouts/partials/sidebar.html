@@ -2,14 +2,20 @@
     <div class="header">
 
         <hgroup>
-          <img class="bulkan-image" src="img/bulkan_ney.png">
-          <img class="bulkan-logo" src="img/logo.png">
+            <a href="http://bulkan-evcimen.com">
+              <img class="bulkan-image" src="/img/bulkan_ney.png">
+              <img class="bulkan-logo" src="/img/logo.png">
+            </a>
             <h1 class="brand-title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
             <h2 class="brand-tagline">{{ with .Site.Params.description }} {{.}} {{end}}</h2>
         </hgroup>
 
         <nav class="nav">
             <ul class="nav-list">
+                <li class="nav-item">
+                  <a class="pure-button" href="http://photography.bulkan-evcimen.com/"><i class="fa fa-camera"></i> Photography</a>
+                </li>
+
                 {{ with .Site.Params.twitterName }}
                 <li class="nav-item">
                     <a class="pure-button" href="https://twitter.com/{{ . }}"><i class="fa fa-twitter"></i> Twitter</a>
