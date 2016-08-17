@@ -38,6 +38,13 @@
                     <div class="post-description">
                         {{ .Content }}
                     </div>
+
+                    <div class="tags">
+                        {{ range .Params.tags }}
+                      <a class="button-xsmall pure-button" href="tags/{{ . | urlize }}.html">{{ . }}</a>
+                        {{ end }}
+                    </div>
+
                     {{ partial "disqus.html" . }}
                 </section>
             </div>

@@ -1,0 +1,25 @@
+{{ partial "header.html" . }}
+
+<div id="layout" class="pure-g">
+    {{ partial "sidebar.html" . }}
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+          <h2>{{ .Title | pluralize }}</h2>
+          <table class="table">
+          {{ $data := .Data }}
+                               {{ range $key, $value := .Data.Terms.ByCount }}
+                                   <tr>
+                                       <td><a href="{{ $value.Name | urlize }}.html">{{ $value.Name }}</a></td>
+                                       <td>{{ $value.Count }}</td>
+                                   </tr>
+                               {{ end }}
+                           </table>
+            {{ partial "footer.html" . }}
+        </div>
+    </div>
+</div>
+
+{{ partial "analytics.html" . }}
+</body>
+</html>

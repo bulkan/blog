@@ -2,11 +2,13 @@ baseurl = "http://bulkan-evcimen.com"
 languageCode = "en-us"
 title = "Bulkan Evcimen"
 theme = "purehugo"
+metaDataFormat = "yaml"
 uglyURLs = true
-paginate = 3
+paginate = 5
 
 [taxonomies]
   tag = "tags"
+  category = "categories"
 
 [params]
   disqusShortname = "bulkanevcimen"
