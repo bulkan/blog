@@ -28,7 +28,7 @@ I like to create a separate file to store all my event types and the dispatcher 
 Create a new file in the `events_tutorial` directory and call it `events.js` and copy/paste in the following.
 
 
-    <script src="https://gist.github.com/bulkan/5500582.js"></script>
+<script src="https://gist.github.com/bulkan/5500582.js"></script>
 
 Closure provides goog.events.EventTarget for dispatching events and listening to them. The documentation blurb writes;
 
@@ -43,7 +43,7 @@ Time to use this event in a new Sprite.
 Create a new new file in `events_tutorial` called `coloredsprite.js` directory and paste in the following.
 
 
-    <script src="https://gist.github.com/bulkan/5500571.js"></script>
+<script src="https://gist.github.com/bulkan/5500571.js"></script>
 
 Here we create a subclass from lime.Sprite_ in which the constructor requires the width and height parameters that define it's size. The changeColor method will be the callback method which will be registered in the event listener when the user touches or clicks on the Sprite. This method is straight forward, generate a random number and if it is greater than 128 fire a new instance of our event class we defined in `events.js`.
 
@@ -55,7 +55,7 @@ Before we move on run the following so that we update our dependencies.
 Let us now connect all of this together in `events_tutorial.js` which will look like the following.
 
 
-    <script src="https://gist.github.com/bulkan/5500572.js"></script>
+<script src="https://gist.github.com/bulkan/5500572.js"></script>
 
 Most of the code above is boiler plate code. We create an instance of Director, Scene and Layer. The getting started guide for LimeJS_ describes what each of these objects do.
 
