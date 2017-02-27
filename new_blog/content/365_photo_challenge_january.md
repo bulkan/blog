@@ -6,16 +6,23 @@ tags: ["photography", "PhotoBlog365"]
 slug: "photo_a_day_challenge_53_days"
 ---
 
-Another year and another attempt at this challenge. Today was the 53rd day of taking photos for 53 consecutively days.
+Another year and another attempt at this challenge. Today was the 53rd day of taking photos for 53 days consecutively.
 
-When I had attempted this challenge last year with my X100T, I had struggled during the autumn and winter periods because Melbourne is in two states
-(bone dry cold and gale force winds or pouring down rain). My excuse back then for not going out was that my X100T wasn't weather sealed.
+When I had attempted this challenge last year with my X100T, I struggled during the autumn and winter periods because Melbourne is in two states
+bone dry cold and gale force winds or pouring down rain. My excuse for not going out was that my X100T wasn't weather sealed.
 
-Well this year I have two secret weapons; an X-T2 and the [PhotoBlog365 calendar](https://www.photoblog.com/learn/365-shooting-prompt-challenge-2017).
+Well this year I have two secret weapons; a weather sealed X-T2 and the [PhotoBlog365 calendar](https://www.photoblog.com/learn/365-shooting-prompt-challenge-2017).
 
-In fact, I have enjoyed capturing a nice summer with blue skies. I'm glad to say that January has been very productive & creative in my photography.
+In fact, I have enjoyed capturing a nice summer with blue skies. I'm glad to say that so far the 53 days has been a very productive and creative in my photography.
+
 The theme calendar has been very helpful for those days in which I've gone out during my lunch break with no idea on what to shoot.
 The daily themes have become that tiny spark in triggering my the creative juices.
+
+For example the following photo was taken on day 18 in which the theme was "C is for,,," and in Melbourne C is for Coffee;
+
+<center>
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:33.33333333333333% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BO0-0h8hKNQ/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">4/365: Hot Drinks</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A post shared by Bulkan Evcimen (@bulkan.evcimen) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2017-01-04T03:45:12+00:00">Jan 3, 2017 at 7:45pm PST</time></p></div></blockquote> <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+</center>
 
 On the other hand I've struggled to find the time to get out of the office. As a full time worker, the only free time I have is during my lunch break.
 This means that I can't venture out too far away, as I need to get back in time. Thus I keep walking the same places/streets and finding new interesting
