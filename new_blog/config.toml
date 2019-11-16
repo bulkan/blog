@@ -1,4 +1,4 @@
-baseurl = "http://bulkan-evcimen.com"
+baseurl = "https://bulkan-evcimen.com"
 languageCode = "en-us"
 title = "Bulkan Evcimen"
 theme = "purehugo"
