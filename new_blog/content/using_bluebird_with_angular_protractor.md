@@ -43,7 +43,7 @@ creating a fake User in your database to be able to login.
 ### Test structure
 
 Protractor uses [Jasmine 1.3](https://github.com/juliemr/minijasminenode) and has updated it to
-[automatically resolve Promises](http://angular.github.io/protractor/#/control-flow).
+[automatically resolve Promises](https://angular.github.io/protractor/#/control-flow).
 
 
     describe('Home page', function(){

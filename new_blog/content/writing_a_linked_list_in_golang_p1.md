@@ -6,19 +6,19 @@ slug: "writing_linked_list_using_golang_part_one"
 
 ---
 
-In this article series I will briefly talk about Linked Lists then go about implementing one using [Go](http://golang.org). This is both a learning exercise for me to get comfortable using Go and to possibly help other developers transition into becoming a Go programmer. That being said please bear in mind I am still learning Go so excuse the code.
+In this article series I will briefly talk about Linked Lists then go about implementing one using [Go](https://golang.org). This is both a learning exercise for me to get comfortable using Go and to possibly help other developers transition into becoming a Go programmer. That being said please bear in mind I am still learning Go so excuse the code.
 
-Also, Go already has a [linked list](http://golang.org/pkg/container/list/) implemented so better use that in your production code.
+Also, Go already has a [linked list](https://golang.org/pkg/container/list/) implemented so better use that in your production code.
 
-Lets begin with a quick refresher on linked lists and for a more detailed analysis read this [PDF](http://cslibrary.stanford.edu/103/LinkedListBasics.pdf) by Stanford University.
+Lets begin with a quick refresher on linked lists and for a more detailed analysis read this [PDF](https://cslibrary.stanford.edu/103/LinkedListBasics.pdf) by Stanford University.
 
 That being said have a look at the following diagram.
 
-<img src="http://i.imgur.com/gVLWlWn.jpg" width="50%" title="Drawn with a Faber-Castell Ambition in pearwood"/>
+<img src="https://i.imgur.com/gVLWlWn.jpg" width="50%" title="Drawn with a Faber-Castell Ambition in pearwood"/>
 
 A linked list is a simple data structure that is used as the basis for other complex data structures. They are comprised of _nodes_ each containing some _data_ field and a reference field to the next node in the list. In the diagram above our nodes contain an integer field as the data. With this information let us write out the code for a node.
 
-If we were using an Object Oriented language like Python then we could just create a class to represent the node. But Go is a procedural language and it does not have classes. That being said it does have a something similar called [struct type](http://golang.org/ref/spec#Struct_types) which we can use to encapsulate the fields of a node.
+If we were using an Object Oriented language like Python then we could just create a class to represent the node. But Go is a procedural language and it does not have classes. That being said it does have a something similar called [struct type](https://golang.org/ref/spec#Struct_types) which we can use to encapsulate the fields of a node.
 
 ```
 type node struct {
@@ -36,7 +36,7 @@ Here is what I mean.
 EDIT
 ----
 
-As per the [feedback](http://www.reddit.com/r/golang/comments/1fdfud/im_learning_go_so_i_started_writing_a_linked_list/ca9ci1k) on reddit Ive simplified the `AddToHead` method
+As per the [feedback](https://www.reddit.com/r/golang/comments/1fdfud/im_learning_go_so_i_started_writing_a_linked_list/ca9ci1k) on reddit Ive simplified the `AddToHead` method
 
 <script src="https://gist.github.com/bulkan/5677425.js"></script>
 
@@ -47,7 +47,7 @@ Then we create a method called `AddToHead` and associate it with the `LinkedList
 * when the list is empty ?
 * when there is at least one node in the list (its not a empty list) ?
 
-We handle the first case by checking if the head of the list `ll.head` is `nil` which is the [zeroed](http://golang.org/doc/effective_go.html#allocation_new) value for a pointer in Go. If `ll.head` is `nil` we can just assign `ll.head` to our `tmp` node.
+We handle the first case by checking if the head of the list `ll.head` is `nil` which is the [zeroed](https://golang.org/doc/effective_go.html#allocation_new) value for a pointer in Go. If `ll.head` is `nil` we can just assign `ll.head` to our `tmp` node.
 
 If `ll.head` is not `nil` we have at least one node in the linked list so we cant just just assign `tmp` to `ll.head` as we would lose the references to the rest of the linked list and all of the data. First we have to set the `tmp` nodes `next` reference to `ll.head` to not lose this reference, then reassign `ll.head` to `tmp`.
 

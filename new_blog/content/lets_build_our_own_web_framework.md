@@ -14,7 +14,7 @@ EDIT: I've put this post back up, because it's my own opinion. Hey, Free Speech 
 
 There is one thing plenty of in this "web 2.0" buzz word ridden internet, Web Frameworks. From any language of your choice there is a web framework.
 
-<http://en.wikipedia.org/wiki/List_of_web_application_frameworks>
+<https://en.wikipedia.org/wiki/List_of_web_application_frameworks>
 
 See what i mean !
 
@@ -29,7 +29,7 @@ To cut the time required in developing this new framework, a requirements or eve
 
 So how would you approach a situation like this ? And you can choose any of the following options :D
 
-![framework](http://farm4.static.flickr.com/3279/3062622888_336f2a69c5.jpg)
+![framework](https://farm4.static.flickr.com/3279/3062622888_336f2a69c5.jpg)
 
 Design & Prototype....Rinse & Repeat
 -------------------------------

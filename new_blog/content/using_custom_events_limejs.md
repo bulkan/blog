@@ -7,7 +7,7 @@ slug: "using_custom_events_with_limejs"
 ---
 
 
-[LimeJS]( http://limejs.com/0-getting-started) is an open source JavaScript HTML5 game creation framework built using Google Closure. In this article I will show you how to create a new event type and dispatch it, which is more so a Closure feature than LimeJS. I am going to assume you have installed LimeJS if not read the instruction.
+[LimeJS]( https://limejs.com/0-getting-started) is an open source JavaScript HTML5 game creation framework built using Google Closure. In this article I will show you how to create a new event type and dispatch it, which is more so a Closure feature than LimeJS. I am going to assume you have installed LimeJS if not read the instruction.
 
 We will create a simple *game* that will display a Sprite with the same width and height as the viewport. We will listen to touch & click events on this Sprite, generate a random number when these events fired, between 0-256 and fire a custom event once this number is greater than 128.
 

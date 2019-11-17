@@ -12,4 +12,4 @@ Running QTP tests from the command line is useful for doing scheduled automatic 
 
 The following is a Python script that is able to run a test and print out *Passed* or *Failed*.  It is a direct port of example code in the documentation written in VBScript
 
-<script src="http://gist.github.com/188917.js"></script>
+<script src="https://gist.github.com/188917.js"></script>

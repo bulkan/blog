@@ -35,10 +35,10 @@ running;
 Some installers might install the program under different GUID's each time you install it. If this is the case I have found that the above command for uninstallation doesn't work,
 as Install Shield doesn't know _what_ to uninstall. The solution is to work out the _UninstallString_ from the Registry (which is what Windows uses to uninstall the program via Add/Remove Software).
 
-Here is a python script that uses the registry module (http://pypi.python.org/pypi/registry/) to find out the full UninstallString. You first need to manually find this string
+Here is a python script that uses the registry module (https://pypi.python.org/pypi/registry/) to find out the full UninstallString. You first need to manually find this string
 in your registry by looking under `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall` so that you can pass into this function a unique
 string that is present in the UninstallString of your program
 
 EDIT: the following script is quite ugly actually. I have a new version in which I use regobj it makes things easier.
 
-<script src="http://gist.github.com/245264.js?file=uninstall.py"></script>
+<script src="https://gist.github.com/245264.js?file=uninstall.py"></script>

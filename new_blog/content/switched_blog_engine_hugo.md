@@ -7,7 +7,7 @@ date: 2016-08-09T13:54:18+10:00
 
 ## Out with the old
 
-I've been using the static site generator [Pelican](http://docs.getpelican.com/en/3.6.3/) for a very long time to generate my blog. The problem I've had for a
+I've been using the static site generator [Pelican](https://docs.getpelican.com/en/3.6.3/) for a very long time to generate my blog. The problem I've had for a
 while with Pelican is that I had to also use [virtualenv](https://virtualenv.pypa.io/en/stable/) to isolate the dependencies, having to manually run `make html` to generate the html output. I
 was never able to get the development server setup with Pelican.
 
@@ -24,7 +24,7 @@ I'm sure this process could have been automated.
 brew install hugo
 ```
 
-After installing, I just followed the [quickstart](https://gohugo.io/overview/quickstart/) guide to get started then I picked a theme - [purehugo](http://themes.gohugo.io/purehugo/) -
+After installing, I just followed the [quickstart](https://gohugo.io/overview/quickstart/) guide to get started then I picked a theme - [purehugo](https://themes.gohugo.io/purehugo/) -
 that resembled my old blog. I tinkered the theme until I got it exactly the way I wanted it. This required me to edit and create some template files based on Go's built in
 templating.
 

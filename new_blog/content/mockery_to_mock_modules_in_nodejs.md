@@ -7,7 +7,7 @@ slug: "using_mockery_to_mock_modules_nodejs"
 ---
 
 
-In a [previous article](http://bulkan-evcimen.com/testing_with_mocha_sinon) I wrote about mocking methods on the [request module](https://github.com/mikeal/request).
+In a [previous article](https://bulkan-evcimen.com/testing_with_mocha_sinon) I wrote about mocking methods on the [request module](https://github.com/mikeal/request).
 
 `request` also supports another workflow in which you directly call the imported module;
 
@@ -28,7 +28,7 @@ In a [previous article](http://bulkan-evcimen.com/testing_with_mocha_sinon) I wr
 You pass in an [options object](https://github.com/mikeal/request#requestoptions-callback) specifying properties like the HTTP method
 to use and others such as `url`, `body` & `json`.
 
-Here is the example from the [previous article](http://bulkan-evcimen.com/testing_with_mocha_sinon) updated to use `request(options)`;
+Here is the example from the [previous article](https://bulkan-evcimen.com/testing_with_mocha_sinon) updated to use `request(options)`;
 
 
     var request = require('request');

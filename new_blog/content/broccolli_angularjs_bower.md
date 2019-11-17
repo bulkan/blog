@@ -11,7 +11,7 @@ slug: "broccoli_and_angularjs"
 
 This post was initially written on 2014-05-28 and not published. Things might have changed.
 
-[Broccoli](http://www.solitr.com/blog/2014/02/broccoli-first-release/) is a relatively new asset builder. It is based on doing operations
+[Broccoli](https://www.solitr.com/blog/2014/02/broccoli-first-release/) is a relatively new asset builder. It is based on doing operations
 on a trees of files.
 
 Here is how I used it to concatenate front end dependencies installed via
@@ -93,6 +93,6 @@ way we have jQuery loading before angular, and angular loading before ui-router
 and our app code (which is assumed to exist in `public/js`).
 
 Now running `broccoli serve` will start a http server on port 4200 and the
-concatenated Javascript will be available at __http://localhost:4200/assets/app.js__.
+concatenated Javascript will be available at __https://localhost:4200/assets/app.js__.
 
 Hope that helps.

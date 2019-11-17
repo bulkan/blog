@@ -117,7 +117,7 @@ describe('User Profile', function(){
 });
 ```
 
-We add a `before` call that [stubs](http://sinonjs.org/docs/#stubs) out `request.get`.
+We add a `before` call that [stubs](https://sinonjs.org/docs/#stubs) out `request.get`.
 
 The `yields` allows us to simulate the call to the callback that is passed to `request.get`. In this case
 we return `null` for _err_, `null` for the _response_ and JSON string of a simple object.
@@ -126,7 +126,7 @@ The after call restores the default `request.get` method.
 
 Our test case tests that `request.get` was called.
 
-In Node.js `require(..)` loads modules once into a [cache](http://nodejs.org/api/modules.html#modules_caching). As our test case runs first it will load the `request` module first. We use the
+In Node.js `require(..)` loads modules once into a [cache](https://nodejs.org/api/modules.html#modules_caching). As our test case runs first it will load the `request` module first. We use the
 reference to the module to be able to stub methods on it. Later on when we load `getProfile` module it will do a `require('request')` call which will retrieve the module from the cache with
 the `get` method stubbed out.
 
