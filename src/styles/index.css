@@ -1,0 +1,44 @@
+.post-feed {
+  display: grid;
+  justify-content: space-between;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 680px) {
+  .post-feed {
+    grid-template-columns: 1fr;
+  }
+}
+
+.social-icon {
+  color: hsla(0, 0%, 0%, 0.65);
+}
+
+.social-icon.twitter:hover {
+  color: #1da1f2;
+}
+
+.social-icon.github:hover {
+  color: #181717;
+}
+
+.social-icon.stackoverflow:hover {
+  color: #fe7a16;
+}
+
+.social-icon.exercism:hover {
+  color: #009cab;
+}
+
+.social-icon.linkedin:hover {
+  color: #0077b5;
+}
+
+.social-icon .icon {
+  transition: transform 0.1s ease-in-out;
+}
+
+.social-icon .icon:hover {
+  transform: scale(1.2);
+}
